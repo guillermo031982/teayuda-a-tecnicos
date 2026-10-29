@@ -9,7 +9,7 @@ const GUIAS = [
     status: 'fotos',
     title: 'Cucaracha alemana',
     latin: 'Blattella germanica',
-    summary: 'Vivienda: hablar, contrastar el grado con la reseña, gel y trampas, y cerrar.',
+    summary: 'Identificar, presentarse, revisar la infestación, gel, trampas, cobro y pegatina.',
     source: 'protocolos-texto/cucaracha-alemana.txt',
     products: [
       {name: 'Gel Max Force Prime, Optimus o Advion', dose: 'Listo al uso', note: 'Tratamiento principal en vivienda'},
@@ -34,8 +34,22 @@ const GUIAS = [
     ],
     steps: [
       {
-        short: 'Hablar',
-        title: 'Presentarse y hablar a fondo',
+        short: 'Identificar',
+        title: 'Identificar la plaga',
+        summary: 'Ninfas, adulto y ooteca.',
+        blocks: [
+          {t: 'p', text: 'Antes de tratar, confirma que es Blattella germanica (cucaracha alemana). El adulto lleva dos bandas oscuras en el pronoto.'},
+          {t: 'ul', items: [
+            'Ninfas: más pequeñas, sin alas desarrolladas.',
+            'Adulto: las dos bandas oscuras.',
+            'Ooteca: la cápsula de huevos.'
+          ]},
+          {t: 'photos', items: [ph('01-identificacion-blatella.png', 'Lámina de cucaracha alemana con ninfas, adulto y ooteca', 'Ninfas, adulto y ooteca')]}
+        ]
+      },
+      {
+        short: 'Presentarse',
+        title: 'Presentarse',
         summary: 'Preséntate y pregunta dónde está el foco.',
         blocks: [
           {t: 'p', text: 'Preséntate como técnico de Teneplagas. Habla con el cliente el tiempo que haga falta: dónde ve más cucarachas, desde cuándo, si salen de día y si hay crías.'},
@@ -44,103 +58,119 @@ const GUIAS = [
             'Debajo de electrodomésticos, cajones y zócalos.',
             'Si el problema viene de un vecino o de una zona concreta.'
           ]},
-          {t: 'p', text: 'Confirma que es cucaracha alemana (dos bandas oscuras en el pronoto). La foto es el ciclo, de ninfa a adulto.'},
-          {t: 'photos', items: [ph('img_01.jpg', 'Ciclo de la cucaracha alemana, de ninfa a adulto', 'Ciclo: ninfa → adulto')]}
+          {t: 'photos', items: [ph('02-presentacion.png', 'Técnico de Teneplagas saludando a la clienta en la puerta', 'Presentación en la puerta')]}
         ]
       },
       {
-        short: 'Inspección',
-        title: 'Inspeccionar y contrastar con la reseña',
+        short: 'Infestación',
+        title: 'Revisar la infestación',
         summary: 'Confirma si es baja, media o alta.',
         blocks: [
-          {t: 'p', text: 'Inspecciona y compara con la reseña del calendario. El importe orienta el grado, pero manda lo que ves en la casa.'},
+          {t: 'p', text: 'Inspecciona cajones, cocina, baños, sala y habitaciones. El importe de la reseña orienta el grado, pero manda lo que ves en la casa.'},
           {t: 'ul', items: [
             'Baja: solo las ve en la cocina.',
             'Media: cocina, sala y baño.',
             'Alta: toda la casa.'
           ]},
           {t: 'p', text: 'Mira cajones, bajo el fregadero, nevera, horno, zócalos y baños. No te quedes solo con lo que contó el cliente.'},
-          {t: 'callout', title: 'Si no coincide con la cita', text: 'Si el grado real es alto y la cita estaba como cebo en gel, no trates la casa como una baja. Sigue el paso 3 antes de aplicar.'},
-          {t: 'photos', multi: true, items: [
-            ph('img_02.jpg', 'Inspección de cajones en una habitación', 'Inspección en cajones / habitación'),
-            ph('img_08.jpg', 'Ejemplo de reseña del calendario antes del tratamiento', 'Ejemplo de reseña en el calendario (antes)')
-          ]}
-        ]
-      },
-      {
-        short: 'Alta',
-        title: 'Si es alta y la cita era gel',
-        summary: 'Oficina, WhatsApp o cobrar la alta y dejar el gel.',
-        blocks: [
-          {t: 'p', text: 'Este paso es solo cuando la infestación es alta y la cita era cebo en gel. Si el grado coincide con la reseña, pasa al paso 4.'},
-          {t: 'callout', title: 'Qué hacer, en este orden', items: [
+          {t: 'callout', title: 'Si es alta y la cita era gel', items: [
             'De 9:00 a 17:00 consulta a oficina antes de cambiar el trabajo.',
             'Si no contestan, escribe al grupo de WhatsApp de dudas de tratamientos.',
             'Si no pueden salir de la vivienda: cobra el importe de infestación alta, aplica gel ahora y deja que oficina cite la fumigación.',
+            'La fumigación con líquido lleva plazo de seguridad (12 horas). No la hagas si la vivienda no se puede abandonar.',
             'Escríbelo en la reseña para que oficina lo vea.'
           ]},
-          {t: 'p', text: 'La fumigación con líquido lleva plazo de seguridad (12 horas). No la hagas si la vivienda no se puede abandonar. El gel de hoy no sustituye esa cita.'},
-          {t: 'note', text: 'Fuera de horario de oficina, la guía Fuera de horario manda: grupo de fumigar y, si en 15 minutos no hay respuesta, el criterio del técnico.'}
+          {t: 'note', text: 'Fuera de horario de oficina, la guía Fuera de horario manda: grupo de fumigar y, si en 15 minutos no hay respuesta, el criterio del técnico.'},
+          {t: 'photos', items: [ph('03-inspeccion.jpg', 'Técnico revisando el interior de un mueble de cocina', 'Revisión de la infestación en la cocina')]}
         ]
       },
       {
-        short: 'Aplicar',
-        title: 'Aplicar según el grado',
-        summary: 'Gel y trampas como marca el protocolo.',
+        short: 'Gel',
+        title: 'Aplicar gel',
+        summary: 'Cocina, sala, baño y habitación.',
         blocks: [
-          {t: 'p', text: 'Coloca el tratamiento según el grado que confirmaste. En vivienda el eje es gel más trampas de feromona. El líquido de la reseña, solo cuando toca y se puede cumplir el plazo.'},
+          {t: 'p', text: 'Gel (Max Force Prime, Optimus o Advion) en cocina, sala, baño y habitación. En baja, concentra el gel en la cocina y pon menos en sala, baño y habitaciones. En media, baño y sala van con la misma intensidad que la cocina. En alta, no dejes un sitio sin gel.'},
           {t: 'callout', title: 'Local comercial', text: 'No apliques gel si la reseña no lo dice. En local: Actibiol (baja) o granulado (media y alta), trampas, y Adylac o Stop rastreros.'},
-          {t: 'h', text: 'Dónde va el gel'},
-          {t: 'photos', items: [ph('img_03.jpg', 'Aplicación de gel en tuberías', 'Aplicación de gel en tuberías')]},
-          {t: 'p', text: 'Elige el grado y sigue esa lista. Las trampas de cocina y baño se repiten; cambia el alcance del gel y las trampas de salón y habitaciones.'}
+          {t: 'photos', multi: true, items: [
+            ph('04-gel-termo-latiguillos.png', 'Aplicación de gel en el termo y los latiguillos', 'Gel en termo y latiguillos'),
+            ph('04b-gel-cajones.png', 'Aplicación de gel en los cajones de una habitación', 'Gel en cajones de la habitación')
+          ]},
+          {t: 'p', text: 'Elige el grado y sigue esa lista. Las trampas van en el paso siguiente.'}
         ],
         degrees: {
           baja: [
             {t: 'h', text: 'Infestación baja'},
-            {t: 'p', text: 'Gel concentrado en la cocina. En habitaciones y sala, menos cantidad que en la cocina.'},
+            {t: 'p', text: 'Gel concentrado en la cocina. En sala, baño y habitaciones, menos cantidad que en la cocina.'},
             {t: 'ul', items: [
               'Bisagras, bajo la encimera, cajones y tuberías.',
+              'Termo y latiguillos.',
               'Bajo los muebles altos de la cocina.',
-              'Nevera: retírala, gel detrás y una trampa en el motor. Pide un cepillo y deja la zona lo más limpia posible.',
+              'Nevera: retírala y pon gel detrás. Pide un cepillo y deja la zona lo más limpia posible.',
               'Zócalos de puerta y de muebles bajos, microondas, horno y parte baja de electrodomésticos.',
-              'Debajo de la placa, retirando el horno. Cuidado de no estropear el mecanismo.'
-            ]},
-            {t: 'h', text: 'Trampas'},
+              'Debajo de la placa, retirando el horno. Cuidado de no estropear el mecanismo.',
+              'Sala, baño y habitación: cajones, zócalos y rincones, en menor grado.'
+            ]}
+          ],
+          media: [
+            {t: 'h', text: 'Infestación media'},
+            {t: 'p', text: 'El mismo gel que en baja, y además baño y sala con la misma intensidad que la cocina. Habitaciones, en menor grado.'},
+            {t: 'ul', items: [
+              'Cocina: bisagras, encimera, cajones, tuberías, termo, latiguillos, nevera, zócalos y electrodomésticos.',
+              'Baño y sala: misma intensidad que la cocina.',
+              'Habitaciones: cajones y zócalos, en menor grado.'
+            ]}
+          ],
+          alta: [
+            {t: 'h', text: 'Infestación alta'},
+            {t: 'p', text: 'Gel en toda la casa, sin dejar un sitio: cocina, baño, sala y habitaciones.'},
+            {t: 'callout', title: 'Líquido solo si pueden salir', items: [
+              'Si pueden abandonar la vivienda: biocida líquido de la reseña (normalmente 1 monodosis de granulado por garrafa). Plazo de seguridad de 12 horas.',
+              'Si no pueden salir: no fumigues con líquido. Cobra la alta, gel ahora, y oficina cita la fumigación. El aviso está en el paso 3.',
+              'Refléjalo en la reseña.'
+            ]}
+          ]
+        }
+      },
+      {
+        short: 'Trampas',
+        title: 'Colocar trampas',
+        summary: 'Fregadero y motor de la nevera, y el resto según el grado.',
+        blocks: [
+          {t: 'p', text: 'Trampas de feromona (Trap-A-Roach). En la cocina, una bajo el fregadero (latiguillos) y otra en el motor de la nevera. El resto depende del grado.'},
+          {t: 'photos', multi: true, items: [
+            ph('05-trampa-fregadero.png', 'Trampa Trap-A-Roach bajo el fregadero, junto a los latiguillos', 'Trampa bajo el fregadero'),
+            ph('05b-trampa-nevera.png', 'Trampa Trap-A-Roach en el motor de la nevera', 'Trampa en el motor de la nevera')
+          ]},
+          {t: 'p', text: 'Elige el grado. En cocina y baño se repiten; en media y alta sumas salón y, si es alta, habitaciones.'}
+        ],
+        degrees: {
+          baja: [
+            {t: 'h', text: 'Infestación baja'},
             {t: 'ol', items: [
+              '1 bajo el fregadero, en los latiguillos.',
               '1 en el motor de la nevera.',
               '1 encima del horno. Quita los tornillos frontales para retirarlo.',
-              '1 bajo el fregadero, en los latiguillos.',
               '1 bajo los muebles de la cocina, sacando los zócalos si se puede.',
               '1 en el baño: pedestal del lavabo o latiguillos.'
             ]}
           ],
           media: [
             {t: 'h', text: 'Infestación media'},
-            {t: 'p', text: 'El mismo gel que en baja, y además baños y sala con la misma intensidad que la cocina. Habitaciones, en menor grado.'},
-            {t: 'h', text: 'Trampas'},
             {t: 'ol', items: [
+              '1 bajo el fregadero, en los latiguillos.',
               '1 en el motor de la nevera.',
               '1 encima del horno (tornillos frontales fuera para retirarlo).',
-              '1 bajo el fregadero, en los latiguillos.',
               '1 bajo los muebles de la cocina, zócalos fuera si se puede.',
               '1 en el baño: pedestal o latiguillos.',
               '1 en el salón.'
-            ]},
-            {t: 'callout', title: 'Si al inspeccionar ves que es alta', text: 'No la dejes en media. Vuelve al paso 3 si la cita era gel y no pueden salir 12 horas.'}
+            ]}
           ],
           alta: [
             {t: 'h', text: 'Infestación alta'},
-            {t: 'p', text: 'Gel en toda la casa, sin dejar un sitio: cocina, baños, sala y habitaciones. En baños, habitaciones y sala la trampa va en menor grado que en cocina, pero el gel no se escatima.'},
-            {t: 'callout', title: 'Líquido solo si pueden salir', items: [
-              'Si pueden abandonar la vivienda: biocida líquido de la reseña (normalmente 1 monodosis de granulado por garrafa). Plazo de seguridad de 12 horas.',
-              'Si no pueden salir: no fumigues con líquido. Cobra la alta, gel ahora, y oficina cita la fumigación (paso 3).',
-              'Refléjalo en la reseña.'
-            ]},
-            {t: 'h', text: 'Trampas'},
             {t: 'ol', items: [
+              '1 bajo el fregadero, en los latiguillos.',
               '1 en el motor de la nevera.',
               '1 encima del horno.',
-              '1 bajo el fregadero, en los latiguillos.',
               '1 bajo los muebles de la cocina, zócalos fuera si se puede.',
               '1 en el baño: pedestal o latiguillos.',
               '1 o 2 en el salón.',
@@ -149,30 +179,32 @@ const GUIAS = [
           ]
         },
         after: [
-          {t: 'h', text: 'Cómo quedan las trampas'},
-          {t: 'photos', multi: true, items: [
-            ph('img_04.jpg', 'Trampa de feromona en el motor de la nevera', 'Trampa detrás de la nevera (motor)'),
-            ph('img_05.jpg', 'Trampa bajo el fregadero, en los latiguillos', 'Trampa bajo fregadero / latiguillos'),
-            ph('img_10.jpg', 'Captura en una trampa de feromona', 'Ejemplo de captura en trampa'),
-            ph('img_11.jpg', 'Trampa con varias cucarachas capturadas', 'Otra captura en trampa'),
-            ph('img_12.jpg', 'Dos trampas con infestación alta', 'Infestación alta visible en trampas'),
-            ph('img_13.jpg', 'Trampa llena de cucarachas', 'Trampa llena: infestación alta'),
-            ph('img_14.jpg', 'Trampa saturada de cucarachas', 'Trampa saturada: infestación alta')
-          ]},
           {t: 'note', text: 'Repasos: aplica según lo que te diga el cliente y, sobre todo, donde las está viendo. No hace falta gel o líquido en toda la casa en todos los repasos.'}
         ]
       },
       {
-        short: 'Cierre',
-        title: 'Cerrar la visita',
-        summary: 'Contrato, cobro, pegatina, Google y reseña.',
+        short: 'Cobro',
+        title: 'Material de cobro',
+        summary: 'Contrato, pegatina, recomendaciones y tarjeta Google.',
         blocks: [
-          {t: 'p', text: 'No salgas de la vivienda sin cerrar el papeleo. La reseña del calendario se hace antes de seguir la ruta.'},
+          {t: 'p', text: 'Deja el material de cierre antes de salir: contrato, cobro, hoja de recomendaciones y tarjeta de Google. La pegatina de garantía va en este lote; se coloca en el cuadro en el paso siguiente.'},
           {t: 'checks', items: [
             {id: 'al-contrato', label: 'Contrato rellenado. Si la reseña trae una condición especial, va en el contrato.'},
             {id: 'al-cobro', label: 'Contrato cobrado.'},
+            {id: 'al-recom', label: 'Hoja de recomendaciones entregada.'},
+            {id: 'al-google', label: 'Tarjeta de Google entregada, para la reseña.'}
+          ]},
+          {t: 'photos', items: [ph('06-material-cobro.png', 'Contrato, tarjeta de Google, pegatina de garantía y hoja de recomendaciones', 'Contrato, pegatina, tarjeta Google y recomendaciones')]}
+        ]
+      },
+      {
+        short: 'Pegatina',
+        title: 'Pegatina en el cuadro',
+        summary: 'Garantía en el cuadro de la luz, y reseña antes de seguir.',
+        blocks: [
+          {t: 'p', text: 'Pega la garantía en el cuadro de la luz y anota la fecha de la visita. La reseña del calendario se hace antes de seguir la ruta.'},
+          {t: 'checks', items: [
             {id: 'al-pegatina', label: 'Pegatina de garantía en el cuadro de la luz.'},
-            {id: 'al-google', label: 'Tarjeta de Google entregada, para la reseña.'},
             {id: 'al-resena', label: 'Reseña del calendario duplicada y escrita, antes de seguir la ruta.'}
           ]},
           {t: 'h', text: 'Qué anotar en la reseña'},
@@ -185,11 +217,7 @@ const GUIAS = [
             'Tarjeta Google entregada.',
             'Otro: lo que hayas visto o hablado con el cliente.'
           ]},
-          {t: 'photos', multi: true, items: [
-            ph('img_06.jpg', 'Pegatina de garantía de Teneplagas en el cuadro de la luz', 'Pegatina de garantía en el cuadro'),
-            ph('img_07.jpg', 'Contrato, tarjeta de Google y hoja de recomendaciones', 'Contrato, tarjeta Google y recomendaciones'),
-            ph('img_09.jpg', 'Ejemplo de reseña escrita en el calendario después del tratamiento', 'Ejemplo de reseña hecha en el calendario')
-          ]}
+          {t: 'photos', items: [ph('07-pegatina-cuadro.png', 'Pegatina de garantía de Teneplagas en el cuadro de la luz', 'Pegatina de garantía en el cuadro')]}
         ]
       }
     ]
@@ -684,7 +712,7 @@ function renderInfo() {
   return `<h1>Info</h1>
     <div class="card">
       <h3>Cómo se usa en ruta</h3>
-      <p>Abre la plaga, entra en el paso y sigue el texto. En alemana, las fotos son las del protocolo.</p>
+      <p>Abre la plaga, entra en el paso y sigue el texto. En alemana, las fotos van en el orden de la visita: identificar, presentarse, infestación, gel, trampas, cobro y pegatina del cuadro.</p>
       <p>Oficina, de 9:00 a 17:00. A partir de las 17:30 usa Fuera de horario.</p>
     </div>
     <div class="card">
@@ -715,7 +743,7 @@ function renderDetail(g) {
     `<button type="button" class="step" data-go="#/plaga/${g.id}/${i + 1}"><span class="num">${i + 1}</span><span><b>${esc(s.title)}</b><span>${esc(s.summary)}</span></span></button>`
   ).join('');
   const portada = g.id === 'alemana'
-    ? renderPhotos([ph('img_01.jpg', 'Ciclo de la cucaracha alemana, de ninfa a adulto', 'Identificar: ninfa y adulto')])
+    ? renderPhotos([ph('01-identificacion-blatella.png', 'Cucaracha alemana: ninfas, adulto y ooteca', 'Ninfas, adulto y ooteca')])
     : '';
   return `${portada}
     <p class="kicker">${esc(g.latin)}</p>

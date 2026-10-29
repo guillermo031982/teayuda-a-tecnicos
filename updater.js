@@ -1,5 +1,5 @@
 /* Actualizador in-app. En cada release subir APP_V y version.json */
-const APP_V = 1, APP_CP = 'ta-';
+const APP_V = 2, APP_CP = 'ta-';
 (function () {
   let LAST = 0, NEWV = 0;
   function tst(m) { if (window.toast) toast(m); else alert(m); }

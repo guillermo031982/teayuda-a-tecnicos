@@ -1,20 +1,28 @@
-# Teayuda a técnicos — Teneplagas
+# TeAyuda · Teneplagas
 
-Guía de campo para técnicos (sobre todo nuevos): protocolos de tratamiento paso a paso.
+Guía de campo instalable para técnicos. Misma cara que TePresupuesto: cabecera blanca con línea roja, cards y barra inferior.
 
-## Abrir la guía
+Cucaracha alemana lleva los 5 pasos validados y las fotos de `fotos/cucaracha-alemana/`. Americana, hormigas, roedores, dosis y fuera de horario salen de `protocolos-texto/` (esas tres plagas, todavía sin fotos).
 
-Abre [`index.html`](./index.html) en el navegador del móvil o del PC (lleva las fotos incrustadas).
+## Abrir en local
 
-Ahora mismo incluye **cucaracha alemana** (validada oct 2026): presentarse, contrastar con la reseña, consulta oficina/WhatsApp si la cita era gel pero la infestación es alta, aplicación por grado, trampas y cierre.
+Hace falta un servidor estático. Abrir `index.html` como archivo no instala la app ni registra el service worker.
 
-## Contenido
+```bash
+python3 -m http.server 8080
+```
 
-- `index.html` — guía consultable con fotos
-- `fotos/cucaracha-alemana/` — fotos del protocolo Word
-- `protocolos-texto/` — texto extraído de los protocolos actuales (base para seguir mejorando)
+Entra en http://localhost:8080
 
-## Próximo
+## Instalar en el móvil
 
-- Fotos y validación de americana, hormigas y roedores
-- Más tratamientos según se vayan actualizando
+La carpeta tiene que servirse por HTTPS, o en la red local del teléfono.
+
+1. Android (Chrome): menú → **Añadir a pantalla de inicio** o **Instalar aplicación**.
+2. iPhone (Safari): Compartir → **Añadir a pantalla de inicio**.
+
+Se abre a pantalla completa, con el icono de Teneplagas.
+
+## Fuente
+
+`protocolos-texto/` sigue siendo el texto de los protocolos. Si se actualiza un `.txt`, hay que reflejarlo en `app.js`.

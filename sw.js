@@ -1,4 +1,4 @@
-const C = 'ta-v1';
+const C = 'ta-v2';
 const F = [
   './',
   'index.html',
@@ -10,20 +10,15 @@ const F = [
   'icon-192.png',
   'icon-512.png',
   'apple-touch-icon.png',
-  'fotos/cucaracha-alemana/img_01.jpg',
-  'fotos/cucaracha-alemana/img_02.jpg',
-  'fotos/cucaracha-alemana/img_03.jpg',
-  'fotos/cucaracha-alemana/img_04.jpg',
-  'fotos/cucaracha-alemana/img_05.jpg',
-  'fotos/cucaracha-alemana/img_06.jpg',
-  'fotos/cucaracha-alemana/img_07.jpg',
-  'fotos/cucaracha-alemana/img_08.jpg',
-  'fotos/cucaracha-alemana/img_09.jpg',
-  'fotos/cucaracha-alemana/img_10.jpg',
-  'fotos/cucaracha-alemana/img_11.jpg',
-  'fotos/cucaracha-alemana/img_12.jpg',
-  'fotos/cucaracha-alemana/img_13.jpg',
-  'fotos/cucaracha-alemana/img_14.jpg'
+  'fotos/cucaracha-alemana/01-identificacion-blatella.png',
+  'fotos/cucaracha-alemana/02-presentacion.png',
+  'fotos/cucaracha-alemana/03-inspeccion.jpg',
+  'fotos/cucaracha-alemana/04-gel-termo-latiguillos.png',
+  'fotos/cucaracha-alemana/04b-gel-cajones.png',
+  'fotos/cucaracha-alemana/05-trampa-fregadero.png',
+  'fotos/cucaracha-alemana/05b-trampa-nevera.png',
+  'fotos/cucaracha-alemana/06-material-cobro.png',
+  'fotos/cucaracha-alemana/07-pegatina-cuadro.png'
 ];
 self.addEventListener('install', e => {
   self.skipWaiting();

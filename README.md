@@ -2,7 +2,7 @@
 
 Guía de campo instalable para técnicos. Misma cara que TePresupuesto: cabecera blanca con línea roja, cards y barra inferior.
 
-Cucaracha alemana lleva los 5 pasos validados y las fotos de `fotos/cucaracha-alemana/`. Americana, hormigas, roedores, dosis y fuera de horario salen de `protocolos-texto/` (esas tres plagas, todavía sin fotos).
+Cucaracha alemana lleva los 7 pasos de la visita y las fotos reales de `fotos/cucaracha-alemana/` (01 identificar, 02 presentarse, 03 infestación, 04 gel, 05 trampas, 06 cobro, 07 pegatina del cuadro). Americana, hormigas, roedores, dosis y fuera de horario salen de `protocolos-texto/` (esas tres plagas, todavía sin fotos).
 
 ## Abrir en local
 

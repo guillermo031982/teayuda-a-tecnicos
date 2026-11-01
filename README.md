@@ -2,7 +2,7 @@
 
 Guía de campo instalable para técnicos. Misma cara que TePresupuesto: cabecera blanca con línea roja, cards y barra inferior.
 
-Cucaracha alemana lleva los 7 pasos de la visita y las fotos reales de `fotos/cucaracha-alemana/` (01 identificar, 02 presentarse, 03 infestación, 04 gel, 05 trampas, 06 cobro, 07 pegatina del cuadro). Americana, hormigas, roedores, dosis y fuera de horario salen de `protocolos-texto/` (esas tres plagas, todavía sin fotos).
+Cucaracha alemana lleva los 7 pasos de la visita y las fotos reales de `fotos/cucaracha-alemana/` (01 identificar, 02 presentarse, 03 infestación, 04 gel, 05 trampas, 06 cobro, 07 pegatina del cuadro). Al final del último paso hay un vídeo de cómo duplicar la reseña (`videos/ejemplo-duplicar-resena.mp4`) y un ejemplo de cómo debe quedar en el calendario: oficina y duplicado del técnico. Americana, hormigas, roedores, dosis y fuera de horario salen de `protocolos-texto/` (esas tres plagas, todavía sin fotos).
 
 Productos está en Inicio y en la barra inferior. Las fotos viven en `fotos/productos/`. Geles para cucarachas: Advion, Biogel, Defens, Victor Gel y Aquiles (Aquiles cucarachas figura como nombre adicional de Victor Gel en el registro oficial). Trampas de feromonas de cucarachas: Trap a Roach azul, Trap a Roach negro y Teneplagas.
 

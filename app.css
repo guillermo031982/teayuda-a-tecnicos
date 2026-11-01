@@ -64,6 +64,10 @@ button.card:active{transform:scale(.995)}
 .shots img{width:100%;height:auto;display:block;background:#fafafa}
 .shots figcaption{padding:8px 10px 10px;font-size:13px;color:var(--g)}
 
+.clip{margin:12px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px #0001;max-width:420px}
+.clip video{width:100%;height:auto;display:block;background:#111}
+.clip figcaption{padding:8px 10px 10px;font-size:13px;color:var(--g)}
+
 .catalog{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
 @media(min-width:700px){.catalog{grid-template-columns:repeat(3,1fr)}}
 .catalog figure{margin:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px #0001;cursor:zoom-in;display:flex;flex-direction:column}

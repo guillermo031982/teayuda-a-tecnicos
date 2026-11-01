@@ -226,7 +226,14 @@ const GUIAS = [
             'Tarjeta Google entregada.',
             'Otro: lo que hayas visto o hablado con el cliente.'
           ]},
-          {t: 'photos', items: [ph('07-pegatina-cuadro.png', 'Pegatina de garantía de Teneplagas en el cuadro de la luz', 'Pegatina de garantía en el cuadro')]}
+          {t: 'photos', items: [ph('07-pegatina-cuadro.png', 'Pegatina de garantía de Teneplagas en el cuadro de la luz', 'Pegatina de garantía en el cuadro')]},
+          {t: 'h', text: 'Ejemplo de cómo duplicar una reseña'},
+          {t: 'p', text: 'Abre la cita de oficina, pulsa Duplicar, escribe el trabajo encima y guarda. La reseña original se queda igual.'},
+          {t: 'video', src: 'videos/ejemplo-duplicar-resena.mp4', label: 'Ejemplo de cómo duplicar una reseña en el calendario', cap: 'Duplicar la cita, escribir el detalle y guardar'},
+          {t: 'h', text: 'Así debe quedar la reseña en el calendario'},
+          {t: 'p', text: 'A la izquierda queda la cita como la dejó oficina. A la derecha, el duplicado del técnico: los mismos datos de la cita y, encima, el detalle de la intervención.'},
+          {t: 'photos', items: [ph('08-ejemplo-resena-calendario.png', 'Ejemplo del calendario: reseña de oficina a la izquierda y duplicado del técnico a la derecha', 'Oficina y duplicado del técnico')]},
+          {t: 'note', text: 'Toca la imagen para verla grande.'}
         ]
       }
     ]
@@ -669,6 +676,10 @@ function renderBlocks(blocks) {
       return `<div class="callout"><strong>${esc(b.title || 'Importante')}</strong>${text}${list}</div>`;
     }
     if (b.t === 'photos') return renderPhotos(b.items, b.multi);
+    if (b.t === 'video') {
+      const cap = b.cap ? `<figcaption>${esc(b.cap)}</figcaption>` : '';
+      return `<figure class="clip"><video controls playsinline preload="metadata" src="${esc(b.src)}" aria-label="${esc(b.label || b.cap || 'Vídeo')}"></video>${cap}</figure>`;
+    }
     if (b.t === 'names') {
       const items = (b.items || []).map(i => `<li>${esc(i)}</li>`).join('');
       const text = b.text ? `<p>${esc(b.text)}</p>` : '';
@@ -777,7 +788,7 @@ function renderInfo() {
   return `<h1>Info</h1>
     <div class="card">
       <h3>Cómo se usa en ruta</h3>
-      <p>Abre la plaga, entra en el paso y sigue el texto. En alemana, las fotos van en el orden de la visita: identificar, presentarse, infestación, gel, trampas, cobro y pegatina del cuadro.</p>
+      <p>Abre la plaga, entra en el paso y sigue el texto. En alemana, las fotos van en el orden de la visita: identificar, presentarse, infestación, gel, trampas, cobro y pegatina del cuadro. Al final de ese paso están el vídeo de cómo duplicar la reseña y el ejemplo de cómo debe quedar en el calendario.</p>
       <p>Oficina, de 9:00 a 17:00. A partir de las 17:30 usa Fuera de horario. Los geles y las trampas de feromonas están en Productos.</p>
     </div>
     <div class="card">

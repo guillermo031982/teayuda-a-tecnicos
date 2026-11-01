@@ -1,4 +1,4 @@
-const C = 'ta-v4';
+const C = 'ta-v5';
 const F = [
   './',
   'index.html',
@@ -19,6 +19,8 @@ const F = [
   'fotos/cucaracha-alemana/05b-trampa-nevera.png',
   'fotos/cucaracha-alemana/06-material-cobro.png',
   'fotos/cucaracha-alemana/07-pegatina-cuadro.png',
+  'fotos/cucaracha-alemana/08-ejemplo-resena-calendario.png',
+  'videos/ejemplo-duplicar-resena.mp4',
   'fotos/productos/geles-cucarachas.png',
   'fotos/productos/advion-gel-cucarachas.png',
   'fotos/productos/biogel.png',

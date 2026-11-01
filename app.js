@@ -608,6 +608,45 @@ const GUIAS = [
   }
 ];
 
+const FOTO_PROD = 'fotos/productos/';
+const PRODUCTOS = [
+  {
+    id: 'geles-cucarachas',
+    title: 'Geles para cucarachas',
+    lead: 'Referencias de envase. Fotografías comerciales reales.',
+    sheet: {
+      src: FOTO_PROD + 'geles-cucarachas.png',
+      alt: 'Geles cebo para cucarachas: Advion, Biogel, Defens, Victor Gel y Aquiles',
+      cap: 'Lámina completa. Toca para ampliar.'
+    },
+    items: [
+      {name: 'Advion Gel cucarachas', file: 'advion-gel-cucarachas.png', alt: 'Envase de Advion Gel cucarachas', note: 'Presentación comercial'},
+      {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial'},
+      {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial'},
+      {name: 'Victor Gel', file: 'victor-gel.png', alt: 'Envase de Victor Gel', note: 'Presentación comercial'},
+      {name: 'Aquiles cucarachas', file: 'aquiles-cucarachas.png', alt: 'Envase de Aquiles gel cucarachas', note: 'Mismo registro que Victor Gel'}
+    ],
+    calloutTitle: 'Aquiles y Victor Gel',
+    callout: 'Aquiles cucarachas figura como nombre adicional de Victor Gel en el registro oficial.',
+    note: 'Las fotos pueden corresponder a distintos formatos comerciales.'
+  },
+  {
+    id: 'trampas-feromonas',
+    title: 'Trampas de feromonas de cucarachas',
+    lead: 'Referencias visuales del material.',
+    sheet: {
+      src: FOTO_PROD + 'trampas-feromonas-cucarachas.png',
+      alt: 'Trampas de feromonas para cucarachas: Trap a Roach azul, Trap a Roach negro y Teneplagas',
+      cap: 'Lámina completa. Toca para ampliar.'
+    },
+    items: [
+      {name: 'Trap a Roach azul', file: 'trap-a-roach-azul.png', alt: 'Trampa Trap a Roach azul', note: 'Referencia visual'},
+      {name: 'Trap a Roach negro', file: 'trap-a-roach-negro.png', alt: 'Trampa Trap a Roach negra', note: 'Referencia visual'},
+      {name: 'Teneplagas', file: 'trampa-teneplagas.png', alt: 'Trampa Teneplagas para cucarachas', note: 'Referencia visual'}
+    ]
+  }
+];
+
 const byId = id => GUIAS.find(g => g.id === id);
 let degree = sessionStorage.getItem('ta-grado') || 'baja';
 let gradoBlocks = null;
@@ -642,6 +681,13 @@ function renderBlocks(blocks) {
     }
     return '';
   }).join('');
+}
+
+function renderCatalog(items) {
+  return `<div class="catalog">${items.map(p => {
+    const note = p.note ? `<small>${esc(p.note)}</small>` : '';
+    return `<figure><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}</figcaption></figure>`;
+  }).join('')}</div>`;
 }
 
 function renderPhotos(items, multi) {
@@ -682,6 +728,7 @@ function route() {
   const parts = (location.hash.replace(/^#/, '') || '/').split('/').filter(Boolean);
   if (!parts.length) return {name: 'home'};
   if (parts[0] === 'guias') return {name: 'guias'};
+  if (parts[0] === 'productos') return {name: 'productos'};
   if (parts[0] === 'info') return {name: 'info'};
   if (parts[0] === 'plaga' && parts[1]) {
     const step = parts[2] ? parseInt(parts[2], 10) : 0;
@@ -705,6 +752,12 @@ function renderHome() {
     </section>
     <p class="kicker">Plagas</p>
     ${plagas.map(card).join('')}
+    <p class="kicker">Material</p>
+    <button type="button" class="card" data-go="#/productos">
+      <div class="cardtop"><span class="pill on">Envases</span><span class="chev">›</span></div>
+      <h2>Productos</h2>
+      <p>Geles para cucarachas (Advion, Biogel, Defens, Victor Gel y Aquiles) y trampas de feromonas.</p>
+    </button>
     <p class="note">Dosis y fuera de horario están en Guías. La cucaracha alemana es la guía con fotos.</p>`;
 }
 
@@ -725,7 +778,7 @@ function renderInfo() {
     <div class="card">
       <h3>Cómo se usa en ruta</h3>
       <p>Abre la plaga, entra en el paso y sigue el texto. En alemana, las fotos van en el orden de la visita: identificar, presentarse, infestación, gel, trampas, cobro y pegatina del cuadro.</p>
-      <p>Oficina, de 9:00 a 17:00. A partir de las 17:30 usa Fuera de horario.</p>
+      <p>Oficina, de 9:00 a 17:00. A partir de las 17:30 usa Fuera de horario. Los geles y las trampas de feromonas están en Productos.</p>
     </div>
     <div class="card">
       <h3>De dónde sale</h3>
@@ -742,6 +795,24 @@ function renderInfo() {
       <p class="note">Queda con el icono de Teneplagas y se abre a pantalla completa.</p>
     </div>
     ${upd}`;
+}
+
+function renderProductos() {
+  const blocks = PRODUCTOS.map(s => {
+    const callout = s.callout
+      ? `<div class="callout"><strong>${esc(s.calloutTitle || 'Importante')}</strong><p>${esc(s.callout)}</p></div>`
+      : '';
+    const note = s.note ? `<p class="note">${esc(s.note)}</p>` : '';
+    return `<h2 id="${esc(s.id)}">${esc(s.title)}</h2>
+      <p>${esc(s.lead)}</p>
+      ${renderPhotos([s.sheet])}
+      ${renderCatalog(s.items)}
+      ${callout}
+      ${note}`;
+  }).join('');
+  return `<h1>Productos</h1>
+    <p class="muted">Referencias para reconocer el material en la furgoneta.</p>
+    ${blocks}`;
 }
 
 function renderDetail(g) {
@@ -819,6 +890,11 @@ function render() {
     subtitle = 'Información';
     html = renderInfo();
     document.title = 'Info · TeAyuda';
+  } else if (r.name === 'productos') {
+    tab = 'productos';
+    subtitle = 'Productos';
+    html = renderProductos();
+    document.title = 'Productos · TeAyuda';
   } else if (r.name === 'plaga') {
     const g = byId(r.id);
     tab = sessionStorage.getItem('ta-from') === 'guias' ? 'guias' : 'home';
@@ -898,7 +974,7 @@ document.addEventListener('click', e => {
     location.hash = go.dataset.go;
     return;
   }
-  const fig = e.target.closest('#view .shots figure');
+  const fig = e.target.closest('#view .shots figure, #view .catalog figure');
   if (fig) {
     const img = fig.querySelector('img');
     if (img) openLightbox(img.getAttribute('src'), img.alt);

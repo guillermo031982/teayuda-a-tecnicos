@@ -1,4 +1,4 @@
-const C = 'ta-v3';
+const C = 'ta-v4';
 const F = [
   './',
   'index.html',
@@ -18,7 +18,17 @@ const F = [
   'fotos/cucaracha-alemana/05-trampa-fregadero.png',
   'fotos/cucaracha-alemana/05b-trampa-nevera.png',
   'fotos/cucaracha-alemana/06-material-cobro.png',
-  'fotos/cucaracha-alemana/07-pegatina-cuadro.png'
+  'fotos/cucaracha-alemana/07-pegatina-cuadro.png',
+  'fotos/productos/geles-cucarachas.png',
+  'fotos/productos/advion-gel-cucarachas.png',
+  'fotos/productos/biogel.png',
+  'fotos/productos/defens-gel-cucarachas.png',
+  'fotos/productos/victor-gel.png',
+  'fotos/productos/aquiles-cucarachas.png',
+  'fotos/productos/trampas-feromonas-cucarachas.png',
+  'fotos/productos/trap-a-roach-azul.png',
+  'fotos/productos/trap-a-roach-negro.png',
+  'fotos/productos/trampa-teneplagas.png'
 ];
 self.addEventListener('install', e => {
   self.skipWaiting();

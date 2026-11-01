@@ -64,6 +64,13 @@ button.card:active{transform:scale(.995)}
 .shots img{width:100%;height:auto;display:block;background:#fafafa}
 .shots figcaption{padding:8px 10px 10px;font-size:13px;color:var(--g)}
 
+.catalog{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media(min-width:700px){.catalog{grid-template-columns:repeat(3,1fr)}}
+.catalog figure{margin:0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px #0001;cursor:zoom-in;display:flex;flex-direction:column}
+.catalog img{width:100%;height:200px;object-fit:contain;background:#fff;display:block}
+.catalog figcaption{padding:8px 10px 12px;font-size:13px;color:#222;font-weight:700;line-height:1.3}
+.catalog figcaption small{display:block;margin-top:2px;font-weight:600;color:var(--g)}
+
 .nombres{background:#fff;border-radius:12px;padding:14px 16px 8px;box-shadow:0 2px 8px #0001;margin:0 0 12px;border-top:4px solid var(--r)}
 .nombres h2{margin:0 0 6px;font-size:1.05rem;color:#222}
 .nombres p{color:var(--g);font-size:.95rem}

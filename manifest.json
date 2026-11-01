@@ -1,7 +1,7 @@
 {
   "name": "TeAyuda · Teneplagas",
   "short_name": "TeAyuda",
-  "description": "Guías de campo para técnicos de Teneplagas",
+  "description": "Guías de campo y productos para técnicos de Teneplagas",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

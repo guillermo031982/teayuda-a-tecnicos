@@ -64,6 +64,11 @@ button.card:active{transform:scale(.995)}
 .shots img{width:100%;height:auto;display:block;background:#fafafa}
 .shots figcaption{padding:8px 10px 10px;font-size:13px;color:var(--g)}
 
+.nombres{background:#fff;border-radius:12px;padding:14px 16px 8px;box-shadow:0 2px 8px #0001;margin:0 0 12px;border-top:4px solid var(--r)}
+.nombres h2{margin:0 0 6px;font-size:1.05rem;color:#222}
+.nombres p{color:var(--g);font-size:.95rem}
+.nombres ul{margin:0 0 8px}
+
 .seg{display:flex;gap:8px;margin:12px 0}
 .seg button{flex:1;padding:12px 6px;border:2px solid var(--r);background:#fff;color:var(--r);border-radius:8px;font-weight:700}
 .seg button.on{background:var(--r);color:#fff}

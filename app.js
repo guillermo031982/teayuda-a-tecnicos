@@ -14,14 +14,13 @@ const GUIAS = [
     products: [
       {name: 'Gel Max Force Prime, Optimus o Advion', dose: 'Listo al uso', note: 'Tratamiento principal en vivienda'},
       {name: 'Trampas Trap-A-Roach', dose: 'Feromona', note: 'Nevera, horno, latiguillos, muebles, baño'},
-      {name: 'Actibiol', dose: '50 ml / garrafa', note: 'Si la reseña pide líquido en infestación baja'},
       {name: 'Granulado', dose: '30 g / garrafa o 1 monodosis', note: 'Media y alta, cuando toque líquido'},
       {name: 'Adylac o Stop rastreros', dose: 'Listo al uso', note: 'Locales. En vivienda, solo si encaja el plazo'}
     ],
     warnings: [
       {
         title: 'Local comercial: no eches gel por tu cuenta',
-        text: 'En locales, gel solo si la reseña lo indica. Si no lo pone, Actibiol o granulado, trampas, Adylac o Stop rastreros.'
+        text: 'En locales, gel solo si la reseña lo indica. Si no lo pone: trampas, Adylac o Stop rastreros y, en media y alta, granulado.'
       },
       {
         title: 'Alta y la cita era gel',
@@ -44,7 +43,17 @@ const GUIAS = [
             'Adulto: las dos bandas oscuras.',
             'Ooteca: la cápsula de huevos.'
           ]},
-          {t: 'photos', items: [ph('01-identificacion-blatella.png', 'Lámina de cucaracha alemana con ninfas, adulto y ooteca', 'Ninfas, adulto y ooteca')]}
+          {t: 'photos', items: [ph('01-identificacion-blatella.png', 'Lámina de cucaracha alemana con ninfas, adulto y ooteca', 'Ninfas, adulto y ooteca')]},
+          {t: 'names', title: 'Cómo la llama la gente', text: 'Si el cliente usa uno de estos nombres, se refiere a la cucaracha alemana (Blattella germanica).', items: [
+            'cucaracha del café',
+            'rubia',
+            'chiripa',
+            'alemana',
+            'inglesa',
+            'alargada',
+            'la pequeñita',
+            'la de los bares o restaurantes'
+          ]}
         ]
       },
       {
@@ -90,7 +99,7 @@ const GUIAS = [
         summary: 'Cocina, sala, baño y habitación.',
         blocks: [
           {t: 'p', text: 'Gel (Max Force Prime, Optimus o Advion) en cocina, sala, baño y habitación. En baja, concentra el gel en la cocina y pon menos en sala, baño y habitaciones. En media, baño y sala van con la misma intensidad que la cocina. En alta, no dejes un sitio sin gel.'},
-          {t: 'callout', title: 'Local comercial', text: 'No apliques gel si la reseña no lo dice. En local: Actibiol (baja) o granulado (media y alta), trampas, y Adylac o Stop rastreros.'},
+          {t: 'callout', title: 'Local comercial', text: 'No apliques gel si la reseña no lo dice. En local: trampas, Adylac o Stop rastreros y, en media y alta, granulado.'},
           {t: 'photos', multi: true, items: [
             ph('04-gel-termo-latiguillos.png', 'Aplicación de gel en el termo y los latiguillos', 'Gel en termo y latiguillos'),
             ph('04b-gel-cajones.png', 'Aplicación de gel en los cajones de una habitación', 'Gel en cajones de la habitación')
@@ -518,13 +527,11 @@ const GUIAS = [
       {t: 'ul', items: [
         'Gel: Max Force Prime o Advion, listo al uso.',
         'Trampas Trap-A-Roach.',
-        'Actibiol: 50 ml en 1 garrafa, infestación baja.',
         'Granulado: 30 g en 1 garrafa, o 1 monodosis, en media y alta.'
       ]},
       {t: 'h', text: 'Cucaracha alemana · local'},
       {t: 'callout', title: 'Gel solo si lo dice la reseña', text: 'En local no se aplica gel por defecto.'},
       {t: 'ul', items: [
-        'Actibiol: 50 ml en 1 garrafa, infestación baja.',
         'Granulado: 30 g en 1 garrafa, o 1 monodosis, en media y alta.',
         'Trampas Trap-A-Roach.',
         'Adylac Spray y Stop rastreros, listos al uso.'
@@ -623,6 +630,11 @@ function renderBlocks(blocks) {
       return `<div class="callout"><strong>${esc(b.title || 'Importante')}</strong>${text}${list}</div>`;
     }
     if (b.t === 'photos') return renderPhotos(b.items, b.multi);
+    if (b.t === 'names') {
+      const items = (b.items || []).map(i => `<li>${esc(i)}</li>`).join('');
+      const text = b.text ? `<p>${esc(b.text)}</p>` : '';
+      return `<section class="nombres" aria-label="Nombres comunes"><p class="kicker">Nombres comunes</p><h2>${esc(b.title || 'Cómo la llama la gente')}</h2>${text}<ul>${items}</ul></section>`;
+    }
     if (b.t === 'checks') {
       return `<div class="card">${b.items.map(i =>
         `<label class="chk"><input type="checkbox" data-check="${esc(i.id)}"> <span>${esc(i.label)}</span></label>`

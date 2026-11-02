@@ -52,6 +52,18 @@ button.card:active{transform:scale(.995)}
 .callout p:last-child,.callout ul:last-child{margin-bottom:0}
 .callout li{margin:3px 0}
 
+h2.intro{margin-top:0}
+.zonas{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:10px;margin:12px 0}
+.zona{background:#fff;border-radius:12px;box-shadow:0 2px 8px #0001;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.zona h3{margin:0;padding:10px 12px;color:#fff;font-size:.95rem;line-height:1.25}
+.zona.casa h3{background:var(--r)}
+.zona.local h3{background:#2b2b2b}
+.zona-lead{margin:10px 12px 0;color:var(--g);font-size:11px;font-weight:700;letter-spacing:.35px;text-transform:uppercase}
+.zona ul{margin:6px 12px 12px;padding-left:1.15rem}
+.zona li{margin:3px 0}
+.zona ul:has(+ .zona-solo){margin-bottom:8px}
+.zona-solo{margin:0 10px 12px;background:#fde8eb;border-left:4px solid var(--r);border-radius:8px;padding:8px 10px;color:var(--r);font-weight:700;font-size:.9rem;line-height:1.3}
+
 .prod{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid #eee}
 .prod:last-child{border-bottom:0}
 .prod b{display:block}

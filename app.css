@@ -129,7 +129,12 @@ body.stepping{padding-bottom:calc(136px + env(safe-area-inset-bottom))}
 .faq summary:after{content:'+';position:absolute;right:12px;top:12px;color:var(--r);font-weight:800;font-size:1.25rem;line-height:1}
 .faq[open] summary{color:var(--r)}
 .faq[open] summary:after{content:'–'}
-.faq p{margin:0;padding:0 14px 14px;color:#222}
+.faq-a{padding:0 14px 14px;color:#222}
+.faq-a p{margin:0 0 8px}
+.faq-a ul{margin:0 0 8px;padding-left:1.2rem}
+.faq-a li{margin:3px 0}
+.faq-a p:last-child,.faq-a ul:last-child{margin-bottom:0}
+.faq-a a{color:var(--r);font-weight:700;overflow-wrap:anywhere}
 
 .lightbox{position:fixed;inset:0;background:#000e;z-index:80;display:flex;align-items:center;justify-content:center;padding:16px}
 .lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}

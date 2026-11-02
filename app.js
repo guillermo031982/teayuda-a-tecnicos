@@ -758,6 +758,31 @@ function loadAyuda() {
   });
 }
 
+function linkify(safe) {
+  return safe.replace(/https?:\/\/[^\s)<]+/g, url =>
+    `<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+}
+
+function renderFaqText(text) {
+  const lines = String(text).split('\n');
+  let html = '';
+  let list = [];
+  const flush = () => {
+    if (!list.length) return;
+    html += `<ul>${list.map(li => `<li>${linkify(esc(li))}</li>`).join('')}</ul>`;
+    list = [];
+  };
+  lines.forEach(line => {
+    const t = line.trim();
+    if (!t) { flush(); return; }
+    if (t.startsWith('- ')) { list.push(t.slice(2)); return; }
+    flush();
+    html += `<p>${linkify(esc(t))}</p>`;
+  });
+  flush();
+  return html || `<p>${linkify(esc(text))}</p>`;
+}
+
 function renderAyuda() {
   if (ayudaState !== 'lista') {
     if (ayudaState === 'error') {
@@ -769,7 +794,7 @@ function renderAyuda() {
   const secciones = ayudaData.secciones || [];
   const bloques = secciones.map(sec => {
     const items = (sec.preguntas || []).map(item =>
-      `<details class="faq"><summary>${esc(item.p)}</summary><p>${esc(item.r)}</p></details>`
+      `<details class="faq"><summary>${esc(item.p)}</summary><div class="faq-a">${renderFaqText(item.r)}</div></details>`
     ).join('');
     return `<section class="faqsec" data-cat="${esc(sec.id)}"><h2>${esc(sec.titulo)}</h2>${items}</section>`;
   }).join('');
@@ -827,7 +852,7 @@ function renderHome() {
     <button type="button" class="card" data-go="#/ayuda">
       <div class="cardtop"><span class="pill on">Dudas</span><span class="chev">›</span></div>
       <h2>Ayuda</h2>
-      <p>Parte, cobro, oficina y qué hacer después del tratamiento de cucarachas.</p>
+      <p>Parte, cobro, oficina y cucaracha alemana: identificación, tratamiento y seguimiento.</p>
     </button>
     <p class="note">Dosis y fuera de horario están en Guías. La cucaracha alemana es la guía con fotos.</p>`;
 }
@@ -1021,7 +1046,7 @@ function bind(view) {
   const q = view.querySelector('#ayudaq');
   if (q) {
     const items = [...view.querySelectorAll('.faq')];
-    const hay = items.map(el => fold(el.querySelector('summary').textContent + ' ' + el.querySelector('p').textContent));
+    const hay = items.map(el => fold(el.querySelector('summary').textContent + ' ' + el.querySelector('.faq-a').textContent));
     const cats = [...view.querySelectorAll('.faqcats button')];
     let cat = 'todas';
     const apply = () => {

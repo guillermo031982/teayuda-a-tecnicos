@@ -735,11 +735,90 @@ function card(g) {
   </button>`;
 }
 
+function fold(s) {
+  return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+let ayudaData = null;
+let ayudaState = 'pendiente';
+
+function loadAyuda() {
+  if (ayudaState === 'lista' || ayudaState === 'cargando') return;
+  ayudaState = 'cargando';
+  fetch('ayuda.json').then(r => {
+    if (!r.ok) throw new Error('http');
+    return r.json();
+  }).then(data => {
+    ayudaData = data;
+    ayudaState = 'lista';
+    if (route().name === 'ayuda') render();
+  }).catch(() => {
+    ayudaState = 'error';
+    if (route().name === 'ayuda') render();
+  });
+}
+
+function linkify(safe) {
+  return safe.replace(/https?:\/\/[^\s)<]+/g, url =>
+    `<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+}
+
+function renderFaqText(text) {
+  const lines = String(text).split('\n');
+  let html = '';
+  let list = [];
+  const flush = () => {
+    if (!list.length) return;
+    html += `<ul>${list.map(li => `<li>${linkify(esc(li))}</li>`).join('')}</ul>`;
+    list = [];
+  };
+  lines.forEach(line => {
+    const t = line.trim();
+    if (!t) { flush(); return; }
+    if (t.startsWith('- ')) { list.push(t.slice(2)); return; }
+    flush();
+    html += `<p>${linkify(esc(t))}</p>`;
+  });
+  flush();
+  return html || `<p>${linkify(esc(text))}</p>`;
+}
+
+function renderAyuda() {
+  if (ayudaState !== 'lista') {
+    if (ayudaState === 'error') {
+      return `<h1>Ayuda</h1><div class="card"><h3>No se han podido cargar las preguntas</h3><p>Abre la app con conexión una vez para guardarlas en el móvil.</p></div>`;
+    }
+    loadAyuda();
+    return `<h1>Ayuda</h1><p class="muted">Cargando preguntas…</p>`;
+  }
+  const secciones = ayudaData.secciones || [];
+  const bloques = secciones.map(sec => {
+    const items = (sec.preguntas || []).map(item =>
+      `<details class="faq"><summary>${esc(item.p)}</summary><div class="faq-a">${renderFaqText(item.r)}</div></details>`
+    ).join('');
+    return `<section class="faqsec" data-cat="${esc(sec.id)}"><h2>${esc(sec.titulo)}</h2>${items}</section>`;
+  }).join('');
+  const cats = [`<button type="button" class="on" data-cat="todas" aria-pressed="true">Todas</button>`]
+    .concat(secciones.map(sec =>
+      `<button type="button" data-cat="${esc(sec.id)}" aria-pressed="false">${esc(sec.titulo)}</button>`
+    )).join('');
+  const total = secciones.reduce((n, s) => n + (s.preguntas || []).length, 0);
+  return `<h1>Ayuda</h1>
+    <label class="buscar">Buscar
+      <input id="ayudaq" type="search" placeholder="Palabra clave" autocomplete="off" enterkeyhint="search">
+    </label>
+    <div class="faqcats" role="group" aria-label="Categoría">${cats}</div>
+    <p class="note" id="ayudan" aria-live="polite">${total} preguntas</p>
+    <div id="faqlist">${bloques}</div>
+    <p class="note" id="ayudavacio" hidden>Ninguna pregunta coincide.</p>`;
+}
+
 function route() {
   const parts = (location.hash.replace(/^#/, '') || '/').split('/').filter(Boolean);
   if (!parts.length) return {name: 'home'};
   if (parts[0] === 'guias') return {name: 'guias'};
   if (parts[0] === 'productos') return {name: 'productos'};
+  if (parts[0] === 'ayuda') return {name: 'ayuda'};
   if (parts[0] === 'info') return {name: 'info'};
   if (parts[0] === 'plaga' && parts[1]) {
     const step = parts[2] ? parseInt(parts[2], 10) : 0;
@@ -768,6 +847,12 @@ function renderHome() {
       <div class="cardtop"><span class="pill on">Envases</span><span class="chev">›</span></div>
       <h2>Productos</h2>
       <p>Geles para cucarachas (Advion, Biogel, Defens, Victor Gel y Aquiles) y trampas de feromonas.</p>
+    </button>
+    <p class="kicker">Ayuda</p>
+    <button type="button" class="card" data-go="#/ayuda">
+      <div class="cardtop"><span class="pill on">Dudas</span><span class="chev">›</span></div>
+      <h2>Ayuda</h2>
+      <p>Parte, cobro, oficina y cucaracha alemana: identificación, tratamiento y seguimiento.</p>
     </button>
     <p class="note">Dosis y fuera de horario están en Guías. La cucaracha alemana es la guía con fotos.</p>`;
 }
@@ -906,6 +991,11 @@ function render() {
     subtitle = 'Productos';
     html = renderProductos();
     document.title = 'Productos · TeAyuda';
+  } else if (r.name === 'ayuda') {
+    tab = 'ayuda';
+    subtitle = 'Ayuda';
+    html = renderAyuda();
+    document.title = 'Ayuda · TeAyuda';
   } else if (r.name === 'plaga') {
     const g = byId(r.id);
     tab = sessionStorage.getItem('ta-from') === 'guias' ? 'guias' : 'home';
@@ -953,6 +1043,42 @@ function render() {
 }
 
 function bind(view) {
+  const q = view.querySelector('#ayudaq');
+  if (q) {
+    const items = [...view.querySelectorAll('.faq')];
+    const hay = items.map(el => fold(el.querySelector('summary').textContent + ' ' + el.querySelector('.faq-a').textContent));
+    const cats = [...view.querySelectorAll('.faqcats button')];
+    let cat = 'todas';
+    const apply = () => {
+      const words = fold(q.value).split(/\s+/).filter(Boolean);
+      let shown = 0;
+      let pool = 0;
+      items.forEach((el, i) => {
+        const inCat = cat === 'todas' || el.closest('.faqsec').dataset.cat === cat;
+        const ok = inCat && words.every(w => hay[i].includes(w));
+        el.hidden = !ok;
+        if (inCat) pool++;
+        if (ok) shown++;
+      });
+      view.querySelectorAll('.faqsec').forEach(sec => {
+        sec.hidden = ![...sec.querySelectorAll('.faq')].some(el => !el.hidden);
+      });
+      const vacio = view.querySelector('#ayudavacio');
+      if (vacio) vacio.hidden = shown !== 0;
+      const n = view.querySelector('#ayudan');
+      if (n) n.textContent = words.length ? shown + ' de ' + pool : pool + ' preguntas';
+    };
+    cats.forEach(btn => btn.addEventListener('click', () => {
+      cat = btn.dataset.cat;
+      cats.forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      apply();
+    }));
+    q.addEventListener('input', apply);
+  }
   view.querySelectorAll('[data-check]').forEach(el => {
     const k = 'ta-check-' + el.dataset.check;
     el.checked = sessionStorage.getItem(k) === '1';

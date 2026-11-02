@@ -1,9 +1,10 @@
-const C = 'ta-v5';
+const C = 'ta-v8';
 const F = [
   './',
   'index.html',
   'app.css',
   'app.js',
+  'ayuda.json',
   'updater.js',
   'manifest.json',
   'logo.png',

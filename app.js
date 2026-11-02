@@ -771,13 +771,18 @@ function renderAyuda() {
     const items = (sec.preguntas || []).map(item =>
       `<details class="faq"><summary>${esc(item.p)}</summary><p>${esc(item.r)}</p></details>`
     ).join('');
-    return `<section class="faqsec"><h2>${esc(sec.titulo)}</h2>${items}</section>`;
+    return `<section class="faqsec" data-cat="${esc(sec.id)}"><h2>${esc(sec.titulo)}</h2>${items}</section>`;
   }).join('');
+  const cats = [`<button type="button" class="on" data-cat="todas" aria-pressed="true">Todas</button>`]
+    .concat(secciones.map(sec =>
+      `<button type="button" data-cat="${esc(sec.id)}" aria-pressed="false">${esc(sec.titulo)}</button>`
+    )).join('');
   const total = secciones.reduce((n, s) => n + (s.preguntas || []).length, 0);
   return `<h1>Ayuda</h1>
     <label class="buscar">Buscar
       <input id="ayudaq" type="search" placeholder="Palabra clave" autocomplete="off" enterkeyhint="search">
     </label>
+    <div class="faqcats" role="group" aria-label="Categoría">${cats}</div>
     <p class="note" id="ayudan" aria-live="polite">${total} preguntas</p>
     <div id="faqlist">${bloques}</div>
     <p class="note" id="ayudavacio" hidden>Ninguna pregunta coincide.</p>`;
@@ -822,7 +827,7 @@ function renderHome() {
     <button type="button" class="card" data-go="#/ayuda">
       <div class="cardtop"><span class="pill on">Dudas</span><span class="chev">›</span></div>
       <h2>Ayuda</h2>
-      <p>Preguntas del técnico: parte, cobro, garantía, material y oficina.</p>
+      <p>Parte, cobro, oficina y qué hacer después del tratamiento de cucarachas.</p>
     </button>
     <p class="note">Dosis y fuera de horario están en Guías. La cucaracha alemana es la guía con fotos.</p>`;
 }
@@ -1017,12 +1022,17 @@ function bind(view) {
   if (q) {
     const items = [...view.querySelectorAll('.faq')];
     const hay = items.map(el => fold(el.querySelector('summary').textContent + ' ' + el.querySelector('p').textContent));
+    const cats = [...view.querySelectorAll('.faqcats button')];
+    let cat = 'todas';
     const apply = () => {
       const words = fold(q.value).split(/\s+/).filter(Boolean);
       let shown = 0;
+      let pool = 0;
       items.forEach((el, i) => {
-        const ok = words.every(w => hay[i].includes(w));
+        const inCat = cat === 'todas' || el.closest('.faqsec').dataset.cat === cat;
+        const ok = inCat && words.every(w => hay[i].includes(w));
         el.hidden = !ok;
+        if (inCat) pool++;
         if (ok) shown++;
       });
       view.querySelectorAll('.faqsec').forEach(sec => {
@@ -1031,8 +1041,17 @@ function bind(view) {
       const vacio = view.querySelector('#ayudavacio');
       if (vacio) vacio.hidden = shown !== 0;
       const n = view.querySelector('#ayudan');
-      if (n) n.textContent = words.length ? shown + ' de ' + items.length : items.length + ' preguntas';
+      if (n) n.textContent = words.length ? shown + ' de ' + pool : pool + ' preguntas';
     };
+    cats.forEach(btn => btn.addEventListener('click', () => {
+      cat = btn.dataset.cat;
+      cats.forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      apply();
+    }));
     q.addEventListener('input', apply);
   }
   view.querySelectorAll('[data-check]').forEach(el => {

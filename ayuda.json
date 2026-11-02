@@ -98,6 +98,56 @@
           "r": "Sí, en los clientes nuevos que vengan de otra empresa: retira sus portacebos y pegatinas y anótalo."
         }
       ]
+    },
+    {
+      "id": "despues",
+      "titulo": "Después del tratamiento (cucarachas)",
+      "preguntas": [
+        {
+          "p": "¿Cuánto tiempo se debe dejar actuar el tratamiento antes de valorar el resultado?",
+          "r": "Se recomienda esperar 21 días, ya que los huevos de cucaracha pueden tardar ese tiempo en eclosionar."
+        },
+        {
+          "p": "¿Por qué pueden seguir apareciendo cucarachas después del tratamiento?",
+          "r": "Porque el efecto no siempre es inmediato y pueden eclosionar huevos durante los días posteriores."
+        },
+        {
+          "p": "¿Se deben limpiar en profundidad las zonas tratadas durante los primeros 21 días?",
+          "r": "No. Se recomienda evitar la limpieza profunda para permitir que el tratamiento siga actuando."
+        },
+        {
+          "p": "¿Qué productos de limpieza conviene evitar durante ese periodo?",
+          "r": "Los productos con olores fuertes, como lejía, quitagrasas y limpiadores de suelos."
+        },
+        {
+          "p": "¿Qué zonas se pueden limpiar si es necesario?",
+          "r": "Las superficies que se vayan a utilizar y las zonas donde se manipulen alimentos."
+        },
+        {
+          "p": "¿Se pueden aplicar otros insecticidas después del tratamiento?",
+          "r": "No se deben aplicar otros insecticidas durante los 21 días indicados, sería contraproducente al tratamiento."
+        },
+        {
+          "p": "¿Qué precaución se debe tomar con la comida de las mascotas?",
+          "r": "Retirarla de la cocina durante los 21 días posteriores al tratamiento, ya que es competencia alimentaria al gel."
+        },
+        {
+          "p": "¿Cuánto tiempo se recomienda esperar antes de usar el horno o el microondas?",
+          "r": "Al menos dos días, para que las cucarachas que están dentro puedan comer y morir."
+        },
+        {
+          "p": "¿Para qué sirven las trampas de feromonas colocadas durante el tratamiento?",
+          "r": "Para detectar actividad y controlar el nivel de infestación, incluidas las crías que puedan aparecer; nos ayudan a futuro si vuelve a entrar alguna y se puede pegar antes de empezar a criar."
+        },
+        {
+          "p": "Si hay que limpiar la vivienda por el plazo de seguridad, ¿cuándo es preferible hacerlo?",
+          "r": "Antes del tratamiento, siempre que sea posible. Después, se recomienda limpiar solo las superficies que se vayan a usar o donde se manipulen alimentos."
+        },
+        {
+          "p": "¿Cómo debe comunicar el técnico el plazo de seguridad y el momento de volver a entrar?",
+          "r": "Debe comprobar y explicar las instrucciones de la etiqueta del producto aplicado. El plazo concreto depende del producto utilizado; normalmente suele ser de 12 a 24 horas."
+        }
+      ]
     }
   ]
 }

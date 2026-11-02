@@ -114,6 +114,9 @@ body.stepping{padding-bottom:calc(136px + env(safe-area-inset-bottom))}
 .buscar{display:block;margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--g)}
 .buscar input{display:block;width:100%;margin-top:6px;border:0;border-radius:12px;padding:14px;background:#fff;box-shadow:0 2px 8px #0001;text-transform:none;letter-spacing:0;font-weight:600;font-size:1rem;color:#222}
 .buscar input:focus{outline:2px solid var(--r);outline-offset:2px}
+.faqcats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.faqcats button{flex:0 1 auto;max-width:100%;min-width:0;border:2px solid var(--r);background:#fff;color:var(--r);border-radius:999px;padding:8px 12px;font-weight:700;font-size:.85rem;line-height:1.25;text-align:left}
+.faqcats button.on{background:var(--r);color:#fff}
 .faqsec{margin:0}
 .faqsec[hidden]{display:none}
 .faq{background:#fff;border-radius:12px;box-shadow:0 2px 8px #0001;margin:0 0 10px;border-left:4px solid transparent;overflow:hidden}

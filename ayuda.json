@@ -1,0 +1,103 @@
+{
+  "_comentario": "Preguntas de Ayuda. Para añadir una, copia un objeto {\"p\",\"r\"} dentro de preguntas de la sección. El buscador ignora tildes y mayúsculas.",
+  "secciones": [
+    {
+      "id": "operario",
+      "titulo": "Operario / técnico",
+      "preguntas": [
+        {
+          "p": "¿Qué tengo que apuntar en el parte de trabajo?",
+          "r": "Trabajo realizado, plagas, productos y cantidades, zonas tratadas, cuántos portacebos hay y dónde, y las incidencias."
+        },
+        {
+          "p": "¿Cómo sé si un servicio es un repaso?",
+          "r": "Mira el título de la cita: debe poner si es repaso y cuál (1.º, 2.º…). Si no lo pone, pregunta a la oficina antes de ir."
+        },
+        {
+          "p": "El cliente pide un repaso, ¿entra en garantía?",
+          "r": "No lo confirmes en el momento, a no ser que la reseña lo ponga muy claro. Que el cliente llame a la oficina, o consúltala tú: allí se comprueba la fecha y lo que pone el contrato."
+        },
+        {
+          "p": "El cliente pide tratar una zona que no está en el presupuesto.",
+          "r": "No lo hagas sin confirmación. Avisa a la oficina para que la añada o haga un presupuesto nuevo. Si la oficina está cerrada, enviar un mensaje al grupo de dudas, si nadie contesta queda a criterio del técnico."
+        },
+        {
+          "p": "El cliente tiene dos cocinas en la casa o la casa está dividida en dos apartamentos y en la reseña el precio que pone es de una vivienda.",
+          "r": "En ese caso si tiene dos cocinas son dos apartamentos, son dos tratamientos, si tiene una cocina en la azotea y pertenece a la misma vivienda y no es muy grande y la infestación no es grave, se le aplica un extra de la mitad del cobro que se le tiene que hacer, ejemplo reseña pone 220€, pero tiene una cocina pequeña extra en la azotea se le cobra 110€ más. En total se cobra el tratamiento 330 €, si el cliente no está de acuerdo consultar con la oficina o el grupo de dudas"
+        },
+        {
+          "p": "El cliente no me deja colocar el material.",
+          "r": "Anótalo en el parte con el detalle del material no colocado y avisa a la oficina, porque se factura igualmente."
+        },
+        {
+          "p": "¿Qué hago si cobro en efectivo en un local?",
+          "r": "Entrega el parte, anótalo en el mismo parte y entrégalo a la oficina para que se marque la factura como cobrada e ingresada."
+        },
+        {
+          "p": "¿Cuándo hay que dejar certificado?",
+          "r": "Siempre a organismos, hoteles y empresas con APPCC. A particulares, solo si lo piden. Pasa a la oficina los datos del tratamiento para que lo haga."
+        },
+        {
+          "p": "El cliente me pregunta el precio.",
+          "r": "Remítelo a la oficina. Los precios y las condiciones los fija gerencia, y el técnico no los negocia."
+        },
+        {
+          "p": "¿Cómo pido material?",
+          "r": "Avisa a la oficina con antelación de lo que te falta. La revisión de almacén es los jueves. Las otras islas también piden su material a través de la oficina."
+        },
+        {
+          "p": "No queda stock de un producto.",
+          "r": "Avisa en cuanto lo veas, sin esperar a que se acabe, para que se haga el pedido al proveedor."
+        },
+        {
+          "p": "Tengo horas muertas en la ruta.",
+          "r": "Reparte flyers y pon pegatinas por la zona de tu ruta, y avisa a la oficina por si puede meter otro servicio."
+        },
+        {
+          "p": "¿Qué hago si encuentro una plaga distinta a la indicada?",
+          "r": "Anótala en el parte, haz fotos si puedes y avisa a la oficina o al grupo de dudas para valorar el tratamiento o un presupuesto."
+        },
+        {
+          "p": "¿Cómo actúo con portacebos en hostelería?",
+          "r": "Revisa todas las estaciones y anota el consumo y las capturas de cada una. Repón donde haga falta y deja registrado el número de estación."
+        },
+        {
+          "p": "En la misma dirección hay dos servicios (por ejemplo, vivienda y garaje).",
+          "r": "Comprueba en la cita qué incluye cada uno. Haz solo lo que esté agendado y apunta cada servicio por separado."
+        },
+        {
+          "p": "Llego y el cliente no está o no puedo entrar.",
+          "r": "Avisa a la oficina desde el sitio antes de irte, para que contacte al cliente y reprograme."
+        },
+        {
+          "p": "Veo una cita duplicada o con datos raros.",
+          "r": "Avisa a la oficina antes de ir. Las citas duplicadas ya han provocado devoluciones."
+        },
+        {
+          "p": "El cliente se queja de un servicio anterior.",
+          "r": "Escúchale y anota la queja sin comprometerte a nada y pasa la información cuanto antes. La oficina y gerencia la gestionan."
+        },
+        {
+          "p": "¿Qué indicaciones le doy al cliente después de fumigar?",
+          "r": "El plazo de seguridad, que ventile, que no limpie los puntos con gel y cuánto dura la garantía según lo que figure en la cita."
+        },
+        {
+          "p": "¿Cómo ficho?",
+          "r": "Con Sesame al empezar y al terminar la jornada."
+        },
+        {
+          "p": "¿Qué hago con los datos de los clientes?",
+          "r": "No los compartas por WhatsApp personal ni con terceros. Las contraseñas y los datos bancarios nunca se mandan por chat."
+        },
+        {
+          "p": "El cliente pide factura.",
+          "r": "Dile que la oficina se lo enviará por correo, y avisa a la oficina."
+        },
+        {
+          "p": "¿Tengo que retirar material de la competencia?",
+          "r": "Sí, en los clientes nuevos que vengan de otra empresa: retira sus portacebos y pegatinas y anótalo."
+        }
+      ]
+    }
+  ]
+}

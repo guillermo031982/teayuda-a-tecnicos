@@ -17,11 +17,22 @@ const GUIAS = [
       {name: 'Granulado', dose: '30 g / garrafa o 1 monodosis', note: 'Media y alta, cuando toque líquido'},
       {name: 'Adylac o Stop rastreros', dose: 'Listo al uso', note: 'Locales. En vivienda, solo si encaja el plazo'}
     ],
-    warnings: [
+    sitios: [
       {
-        title: 'Local comercial: no eches gel por tu cuenta',
-        text: 'En locales, gel solo si la reseña lo indica. Si no lo pone: trampas, Adylac o Stop rastreros y, en media y alta, granulado.'
+        id: 'casa',
+        title: 'Viviendas (casa)',
+        lead: 'Productos a utilizar',
+        items: ['Gel', 'Trampas', 'Stop rastreros', 'Granulado']
       },
+      {
+        id: 'local',
+        title: 'Locales',
+        lead: 'Productos a utilizar',
+        items: ['Trampas', 'Granulado'],
+        note: 'Gel solo si lo especifica la reseña'
+      }
+    ],
+    warnings: [
       {
         title: 'Alta y la cita era gel',
         items: [
@@ -724,6 +735,16 @@ function renderWarnings(list) {
   }).join('');
 }
 
+function renderSitios(list) {
+  if (!list || !list.length) return '';
+  return `<section class="zonas" aria-label="Productos según el sitio">${list.map(z => {
+    const items = (z.items || []).map(i => `<li>${esc(i)}</li>`).join('');
+    const lead = z.lead ? `<p class="zona-lead">${esc(z.lead)}</p>` : '';
+    const note = z.note ? `<p class="zona-solo">${esc(z.note).replace(/\bsolo\b/i, '<b>SOLO</b>')}</p>` : '';
+    return `<article class="zona ${esc(z.id)}"><h3>${esc(z.title)}</h3>${lead}<ul>${items}</ul>${note}</article>`;
+  }).join('')}</section>`;
+}
+
 function card(g) {
   const pill = g.status === 'fotos'
     ? '<span class="pill on">Con fotos</span>'
@@ -839,11 +860,26 @@ function renderDetail(g) {
   const portada = g.id === 'alemana'
     ? renderPhotos([ph('01-identificacion-blatella.png', 'Cucaracha alemana: ninfas, adulto y ooteca', 'Ninfas, adulto y ooteca')])
     : '';
+  const empezar = `<button type="button" class="go" data-go="#/plaga/${g.id}/1">Empezar por el paso 1</button>`;
+  if (g.id === 'alemana') {
+    return `<h2 class="intro">Introducción</h2>
+      ${portada}
+      <p class="kicker">${esc(g.latin)}</p>
+      <h1>${esc(g.title)}</h1>
+      <p>${esc(g.summary)}</p>
+      ${renderSitios(g.sitios)}
+      ${renderWarnings(g.warnings)}
+      ${renderProducts(g.products)}
+      <h2>Pasos a seguir por el técnico en el tratamiento</h2>
+      ${empezar}
+      ${steps}
+      <p class="note">Fuente: ${esc(g.source)}</p>`;
+  }
   return `${portada}
     <p class="kicker">${esc(g.latin)}</p>
     <h1>${esc(g.title)}</h1>
     <p>${esc(g.summary)}</p>
-    <button type="button" class="go" data-go="#/plaga/${g.id}/1">Empezar por el paso 1</button>
+    ${empezar}
     ${renderWarnings(g.warnings)}
     ${renderProducts(g.products)}
     <h2>Pasos</h2>

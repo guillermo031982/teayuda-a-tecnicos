@@ -1,4 +1,4 @@
-const C = 'ta-v14';
+const C = 'ta-v15';
 const F = [
   './',
   'index.html',
@@ -32,7 +32,8 @@ const F = [
   'fotos/productos/trampa-teneplagas.png',
   'fotos/productos/ecorex-action-plus-ambiental.png',
   'fotos/productos/nupilac-dc-green.png',
-  'fotos/productos/dobol-granulado.png'
+  'fotos/productos/dobol-granulado.png',
+  'fotos/productos/estopa-rastreros.png'
 ];
 self.addEventListener('install', e => {
   self.skipWaiting();

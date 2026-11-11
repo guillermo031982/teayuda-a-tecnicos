@@ -668,6 +668,18 @@ const PRODUCTOS = [
           {label: 'Dosis', value: 'Consultar etiqueta'},
           {label: 'Plazo de seguridad', value: '12 horas'}
         ]
+      },
+      {
+        id: 'estopa-rastreros',
+        name: 'ESTOPA RASTREROS',
+        file: 'estopa-rastreros.png',
+        alt: 'Spray Estopa Rastreros, Preben laca insecticida de Massó',
+        note: 'Spray. Preben laca insecticida. Elimina cucarachas, hormigas y toda clase de insectos rastreros. Olor suave. 1 año sin insectos. Marca Massó.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}
+        ]
       }
     ]
   },
@@ -735,7 +747,8 @@ function renderCatalog(items) {
   return `<div class="catalog">${items.map(p => {
     const note = p.note ? `<small>${esc(p.note)}</small>` : '';
     const fields = (p.fields || []).map(f => `<small>${esc(f.label)}: ${esc(f.value)}</small>`).join('');
-    return `<figure><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}${fields}</figcaption></figure>`;
+    const id = p.id ? ` id="${esc(p.id)}"` : '';
+    return `<figure${id}><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}${fields}</figcaption></figure>`;
   }).join('')}</div>`;
 }
 
@@ -746,10 +759,17 @@ function renderPhotos(items, multi) {
   ).join('')}</div>`;
 }
 
+function prodTitle(name) {
+  const needle = 'Stop rastreros';
+  const i = name.indexOf(needle);
+  if (i < 0) return esc(name);
+  return `${esc(name.slice(0, i))}<a data-go="#/productos/estopa-rastreros">${needle}</a>${esc(name.slice(i + needle.length))}`;
+}
+
 function renderProducts(list) {
   if (!list || !list.length) return '';
   return `<div class="card"><h3>Productos</h3>${list.map(p =>
-    `<div class="prod"><div><b>${esc(p.name)}</b><small>${esc(p.note || '')}</small></div><div class="dose">${esc(p.dose)}</div></div>`
+    `<div class="prod"><div><b>${prodTitle(p.name)}</b><small>${esc(p.note || '')}</small></div><div class="dose">${esc(p.dose)}</div></div>`
   ).join('')}</div>`;
 }
 
@@ -855,7 +875,7 @@ function route() {
   const parts = (location.hash.replace(/^#/, '') || '/').split('/').filter(Boolean);
   if (!parts.length) return {name: 'home'};
   if (parts[0] === 'guias') return {name: 'guias'};
-  if (parts[0] === 'productos') return {name: 'productos'};
+  if (parts[0] === 'productos') return {name: 'productos', anchor: parts[1] || ''};
   if (parts[0] === 'ayuda') return {name: 'ayuda'};
   if (parts[0] === 'info') return {name: 'info'};
   if (parts[0] === 'plaga' && parts[1]) {
@@ -1076,7 +1096,9 @@ function render() {
     else b.removeAttribute('aria-current');
   });
   bind(view);
-  window.scrollTo(0, 0);
+  const anchor = r.anchor && document.getElementById(r.anchor);
+  if (anchor) anchor.scrollIntoView({block: 'start'});
+  else window.scrollTo(0, 0);
 }
 
 function bind(view) {

@@ -622,7 +622,7 @@ const PRODUCTOS = [
     title: 'Geles para cucarachas',
     lead: 'Referencias de envase. Fotografías comerciales reales.',
     items: [
-      {name: 'Advion Gel cucarachas', file: 'advion-gel-cucarachas.png', alt: 'Envase de Advion Gel cucarachas', note: 'Presentación comercial'},
+      {name: 'GEL ADVION CUCARACHAS', file: 'advion-gel-cucarachas.png', alt: 'Gel Advion Cucarachas de Syngenta, aplicación urbana, 30 g', note: 'Syngenta. Gel. Aplicación urbana. 30 g. Presentación comercial'},
       {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial'},
       {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial'},
       {name: 'Victor Gel', file: 'victor-gel.png', alt: 'Envase de Victor Gel', note: 'Presentación comercial'},

@@ -655,7 +655,7 @@ const PRODUCTOS = [
         fields: [
           {label: 'Dosis', value: 'Consultar etiqueta'},
           {label: 'Materia activa', value: 'Consultar etiqueta'},
-          {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
+          {label: 'Plazo de seguridad', value: '12 horas'}
         ]
       },
       {
@@ -666,7 +666,7 @@ const PRODUCTOS = [
         fields: [
           {label: 'Composición', value: 'Consultar etiqueta'},
           {label: 'Dosis', value: 'Consultar etiqueta'},
-          {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
+          {label: 'Plazo de seguridad', value: '12 horas'}
         ]
       }
     ]

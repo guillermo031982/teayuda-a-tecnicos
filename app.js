@@ -621,35 +621,102 @@ const PRODUCTOS = [
     id: 'geles-cucarachas',
     title: 'Geles para cucarachas',
     lead: 'Referencias de envase. Fotografías comerciales reales.',
-    sheet: {
-      src: FOTO_PROD + 'geles-cucarachas.png',
-      alt: 'Geles cebo para cucarachas: Advion, Biogel, Defens, Victor Gel y Aquiles',
-      cap: 'Lámina completa. Toca para ampliar.'
-    },
     items: [
-      {name: 'Advion Gel cucarachas', file: 'advion-gel-cucarachas.png', alt: 'Envase de Advion Gel cucarachas', note: 'Presentación comercial'},
-      {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial'},
-      {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial'},
-      {name: 'Victor Gel', file: 'victor-gel.png', alt: 'Envase de Victor Gel', note: 'Presentación comercial'},
-      {name: 'Aquiles cucarachas', file: 'aquiles-cucarachas.png', alt: 'Envase de Aquiles gel cucarachas', note: 'Mismo registro que Victor Gel'}
+      {name: 'GEL ADVION CUCARACHAS', file: 'advion-gel-cucarachas.png', alt: 'Gel Advion Cucarachas de Syngenta, aplicación urbana, 30 g', note: 'Syngenta. Gel. Aplicación urbana. 30 g. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'BIOGEL ULTRA', file: 'biogel.png', alt: 'Jeringa de Biogel Ultra, cebo en gel de Biocides', note: 'Biocides. Cebo en gel. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'VICTOR GEL CUCARACHAS', file: 'victor-gel.png', alt: 'Jeringa de Victor Gel cucarachas, cebo en gel listo para su uso', note: 'Cebo en gel listo para su uso. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'Aquiles cucarachas', file: 'aquiles-cucarachas.png', alt: 'Envase de Aquiles gel cucarachas', note: 'Mismo registro que Victor Gel', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]}
     ],
     calloutTitle: 'Aquiles y Victor Gel',
     callout: 'Aquiles cucarachas figura como nombre adicional de Victor Gel en el registro oficial.',
     note: 'Las fotos pueden corresponder a distintos formatos comerciales.'
   },
   {
+    id: 'geles-hormigas',
+    title: 'Geles para hormigas',
+    lead: 'Cebo insecticida en gel. Referencias de envase.',
+    items: [
+      {
+        name: 'BIOGEL HORMIGAS',
+        file: 'biogel-hormigas.png',
+        alt: 'Jeringa de Biogel Ants, cebo insecticida en gel para hormigas de Biocides',
+        note: 'Biocides. Biogel Ants. Cebo insecticida en gel para hormigas.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}
+        ]
+      }
+    ]
+  },
+  {
     id: 'trampas-feromonas',
     title: 'Trampas de feromonas de cucarachas',
     lead: 'Referencias visuales del material.',
-    sheet: {
-      src: FOTO_PROD + 'trampas-feromonas-cucarachas.png',
-      alt: 'Trampas de feromonas para cucarachas: Trap a Roach azul, Trap a Roach negro y Teneplagas',
-      cap: 'Lámina completa. Toca para ampliar.'
-    },
     items: [
       {name: 'Trap a Roach azul', file: 'trap-a-roach-azul.png', alt: 'Trampa Trap a Roach azul', note: 'Referencia visual'},
       {name: 'Trap a Roach negro', file: 'trap-a-roach-negro.png', alt: 'Trampa Trap a Roach negra', note: 'Referencia visual'},
       {name: 'Teneplagas', file: 'trampa-teneplagas.png', alt: 'Trampa Teneplagas para cucarachas', note: 'Referencia visual'}
+    ]
+  },
+  {
+    id: 'insecticidas-liquidos',
+    title: 'Insecticidas líquidos y lacas',
+    lead: 'Referencias de envase: líquido para pulverizar y laca de aplicación directa.',
+    items: [
+      {
+        name: 'ECOREX ACTION PLUS AMBIENTAL',
+        file: 'ecorex-action-plus-ambiental.png',
+        alt: 'Envase de Ecorex Action Plus Ambiental, insecticida concentrado de uso ambiental',
+        note: 'Uso ambiental. Insecticida concentrado (emulsión), líquido para pulverizar.',
+        fields: [
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Materia activa', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
+      },
+      {
+        name: 'NUPILAC DC GREEN',
+        file: 'nupilac-dc-green.png',
+        alt: 'Garrafa de 5 L de Nupilac DC Green, laca insecticida D+S oabe',
+        note: 'D+S oabe. Envase 5 L. Laca insecticida de aplicación directa contra cucarachas, hormigas e insectos resistentes.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
+      },
+      {
+        id: 'estopa-rastreros',
+        name: 'ESTOPA RASTREROS',
+        file: 'estopa-rastreros.png',
+        alt: 'Spray Estopa Rastreros, Preben laca insecticida de Massó',
+        note: 'Spray. Preben laca insecticida. Elimina cucarachas, hormigas y toda clase de insectos rastreros. Olor suave. 1 año sin insectos. Marca Massó.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}
+        ]
+      }
+    ]
+  },
+  {
+    id: 'granulados-polvos',
+    title: 'Granulados / polvos',
+    lead: 'Referencias de envase para espolvoreo o pulverización.',
+    items: [
+      {
+        name: 'DOBOL GRANULADO',
+        file: 'dobol-granulado.png',
+        alt: 'Envase de 1 kg de Dobol Granulado, insecticida para insectos rastreros',
+        note: 'Dobol Professional Swirr 2 MG Hormigas. Insecticida para insectos rastreros, uso ambiental y en la industria alimentaria. 1 kg. Espolvoreo o pulverización. Dosificador de 20 g incluido. Uso exclusivo por personal especializado.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
+      }
     ]
   }
 ];
@@ -697,7 +764,9 @@ function renderBlocks(blocks) {
 function renderCatalog(items) {
   return `<div class="catalog">${items.map(p => {
     const note = p.note ? `<small>${esc(p.note)}</small>` : '';
-    return `<figure><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}</figcaption></figure>`;
+    const fields = (p.fields || []).map(f => `<small>${esc(f.label)}: ${esc(f.value)}</small>`).join('');
+    const id = p.id ? ` id="${esc(p.id)}"` : '';
+    return `<figure${id}><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}${fields}</figcaption></figure>`;
   }).join('')}</div>`;
 }
 
@@ -708,10 +777,17 @@ function renderPhotos(items, multi) {
   ).join('')}</div>`;
 }
 
+function prodTitle(name) {
+  const needle = 'Stop rastreros';
+  const i = name.indexOf(needle);
+  if (i < 0) return esc(name);
+  return `${esc(name.slice(0, i))}<a data-go="#/productos/estopa-rastreros">${needle}</a>${esc(name.slice(i + needle.length))}`;
+}
+
 function renderProducts(list) {
   if (!list || !list.length) return '';
   return `<div class="card"><h3>Productos</h3>${list.map(p =>
-    `<div class="prod"><div><b>${esc(p.name)}</b><small>${esc(p.note || '')}</small></div><div class="dose">${esc(p.dose)}</div></div>`
+    `<div class="prod"><div><b>${prodTitle(p.name)}</b><small>${esc(p.note || '')}</small></div><div class="dose">${esc(p.dose)}</div></div>`
   ).join('')}</div>`;
 }
 
@@ -735,11 +811,90 @@ function card(g) {
   </button>`;
 }
 
+function fold(s) {
+  return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+let ayudaData = null;
+let ayudaState = 'pendiente';
+
+function loadAyuda() {
+  if (ayudaState === 'lista' || ayudaState === 'cargando') return;
+  ayudaState = 'cargando';
+  fetch('ayuda.json').then(r => {
+    if (!r.ok) throw new Error('http');
+    return r.json();
+  }).then(data => {
+    ayudaData = data;
+    ayudaState = 'lista';
+    if (route().name === 'ayuda') render();
+  }).catch(() => {
+    ayudaState = 'error';
+    if (route().name === 'ayuda') render();
+  });
+}
+
+function linkify(safe) {
+  return safe.replace(/https?:\/\/[^\s)<]+/g, url =>
+    `<a href="${url}" target="_blank" rel="noopener">${url}</a>`);
+}
+
+function renderFaqText(text) {
+  const lines = String(text).split('\n');
+  let html = '';
+  let list = [];
+  const flush = () => {
+    if (!list.length) return;
+    html += `<ul>${list.map(li => `<li>${linkify(esc(li))}</li>`).join('')}</ul>`;
+    list = [];
+  };
+  lines.forEach(line => {
+    const t = line.trim();
+    if (!t) { flush(); return; }
+    if (t.startsWith('- ')) { list.push(t.slice(2)); return; }
+    flush();
+    html += `<p>${linkify(esc(t))}</p>`;
+  });
+  flush();
+  return html || `<p>${linkify(esc(text))}</p>`;
+}
+
+function renderAyuda() {
+  if (ayudaState !== 'lista') {
+    if (ayudaState === 'error') {
+      return `<h1>Ayuda</h1><div class="card"><h3>No se han podido cargar las preguntas</h3><p>Abre la app con conexión una vez para guardarlas en el móvil.</p></div>`;
+    }
+    loadAyuda();
+    return `<h1>Ayuda</h1><p class="muted">Cargando preguntas…</p>`;
+  }
+  const secciones = ayudaData.secciones || [];
+  const bloques = secciones.map(sec => {
+    const items = (sec.preguntas || []).map(item =>
+      `<details class="faq"><summary>${esc(item.p)}</summary><div class="faq-a">${renderFaqText(item.r)}</div></details>`
+    ).join('');
+    return `<section class="faqsec" data-cat="${esc(sec.id)}"><h2>${esc(sec.titulo)}</h2>${items}</section>`;
+  }).join('');
+  const cats = [`<button type="button" class="on" data-cat="todas" aria-pressed="true">Todas</button>`]
+    .concat(secciones.map(sec =>
+      `<button type="button" data-cat="${esc(sec.id)}" aria-pressed="false">${esc(sec.titulo)}</button>`
+    )).join('');
+  const total = secciones.reduce((n, s) => n + (s.preguntas || []).length, 0);
+  return `<h1>Ayuda</h1>
+    <label class="buscar">Buscar
+      <input id="ayudaq" type="search" placeholder="Palabra clave" autocomplete="off" enterkeyhint="search">
+    </label>
+    <div class="faqcats" role="group" aria-label="Categoría">${cats}</div>
+    <p class="note" id="ayudan" aria-live="polite">${total} preguntas</p>
+    <div id="faqlist">${bloques}</div>
+    <p class="note" id="ayudavacio" hidden>Ninguna pregunta coincide.</p>`;
+}
+
 function route() {
   const parts = (location.hash.replace(/^#/, '') || '/').split('/').filter(Boolean);
   if (!parts.length) return {name: 'home'};
   if (parts[0] === 'guias') return {name: 'guias'};
-  if (parts[0] === 'productos') return {name: 'productos'};
+  if (parts[0] === 'productos') return {name: 'productos', anchor: parts[1] || ''};
+  if (parts[0] === 'ayuda') return {name: 'ayuda'};
   if (parts[0] === 'info') return {name: 'info'};
   if (parts[0] === 'plaga' && parts[1]) {
     const step = parts[2] ? parseInt(parts[2], 10) : 0;
@@ -768,6 +923,12 @@ function renderHome() {
       <div class="cardtop"><span class="pill on">Envases</span><span class="chev">›</span></div>
       <h2>Productos</h2>
       <p>Geles para cucarachas (Advion, Biogel, Defens, Victor Gel y Aquiles) y trampas de feromonas.</p>
+    </button>
+    <p class="kicker">Ayuda</p>
+    <button type="button" class="card" data-go="#/ayuda">
+      <div class="cardtop"><span class="pill on">Dudas</span><span class="chev">›</span></div>
+      <h2>Ayuda</h2>
+      <p>Parte, cobro, oficina y cucaracha alemana: identificación, tratamiento y seguimiento.</p>
     </button>
     <p class="note">Dosis y fuera de horario están en Guías. La cucaracha alemana es la guía con fotos.</p>`;
 }
@@ -816,7 +977,6 @@ function renderProductos() {
     const note = s.note ? `<p class="note">${esc(s.note)}</p>` : '';
     return `<h2 id="${esc(s.id)}">${esc(s.title)}</h2>
       <p>${esc(s.lead)}</p>
-      ${renderPhotos([s.sheet])}
       ${renderCatalog(s.items)}
       ${callout}
       ${note}`;
@@ -906,6 +1066,11 @@ function render() {
     subtitle = 'Productos';
     html = renderProductos();
     document.title = 'Productos · TeAyuda';
+  } else if (r.name === 'ayuda') {
+    tab = 'ayuda';
+    subtitle = 'Ayuda';
+    html = renderAyuda();
+    document.title = 'Ayuda · TeAyuda';
   } else if (r.name === 'plaga') {
     const g = byId(r.id);
     tab = sessionStorage.getItem('ta-from') === 'guias' ? 'guias' : 'home';
@@ -949,10 +1114,48 @@ function render() {
     else b.removeAttribute('aria-current');
   });
   bind(view);
-  window.scrollTo(0, 0);
+  const anchor = r.anchor && document.getElementById(r.anchor);
+  if (anchor) anchor.scrollIntoView({block: 'start'});
+  else window.scrollTo(0, 0);
 }
 
 function bind(view) {
+  const q = view.querySelector('#ayudaq');
+  if (q) {
+    const items = [...view.querySelectorAll('.faq')];
+    const hay = items.map(el => fold(el.querySelector('summary').textContent + ' ' + el.querySelector('.faq-a').textContent));
+    const cats = [...view.querySelectorAll('.faqcats button')];
+    let cat = 'todas';
+    const apply = () => {
+      const words = fold(q.value).split(/\s+/).filter(Boolean);
+      let shown = 0;
+      let pool = 0;
+      items.forEach((el, i) => {
+        const inCat = cat === 'todas' || el.closest('.faqsec').dataset.cat === cat;
+        const ok = inCat && words.every(w => hay[i].includes(w));
+        el.hidden = !ok;
+        if (inCat) pool++;
+        if (ok) shown++;
+      });
+      view.querySelectorAll('.faqsec').forEach(sec => {
+        sec.hidden = ![...sec.querySelectorAll('.faq')].some(el => !el.hidden);
+      });
+      const vacio = view.querySelector('#ayudavacio');
+      if (vacio) vacio.hidden = shown !== 0;
+      const n = view.querySelector('#ayudan');
+      if (n) n.textContent = words.length ? shown + ' de ' + pool : pool + ' preguntas';
+    };
+    cats.forEach(btn => btn.addEventListener('click', () => {
+      cat = btn.dataset.cat;
+      cats.forEach(b => {
+        const on = b === btn;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      apply();
+    }));
+    q.addEventListener('input', apply);
+  }
   view.querySelectorAll('[data-check]').forEach(el => {
     const k = 'ta-check-' + el.dataset.check;
     el.checked = sessionStorage.getItem(k) === '1';

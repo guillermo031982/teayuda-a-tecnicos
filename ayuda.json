@@ -1,0 +1,603 @@
+{
+  "_comentario": "Preguntas de Ayuda. Para añadir una, copia un objeto {\"p\",\"r\"} dentro de preguntas de la sección. El buscador ignora tildes y mayúsculas.",
+  "secciones": [
+    {
+      "id": "operario",
+      "titulo": "Operario / técnico",
+      "preguntas": [
+        {
+          "p": "¿Qué tengo que apuntar en el parte de trabajo?",
+          "r": "Trabajo realizado, plagas, productos y cantidades, zonas tratadas, cuántos portacebos hay y dónde, y las incidencias."
+        },
+        {
+          "p": "¿Cómo sé si un servicio es un repaso?",
+          "r": "Mira el título de la cita: debe poner si es repaso y cuál (1.º, 2.º…). Si no lo pone, pregunta a la oficina antes de ir."
+        },
+        {
+          "p": "El cliente pide un repaso, ¿entra en garantía?",
+          "r": "No lo confirmes en el momento, a no ser que la reseña lo ponga muy claro. Que el cliente llame a la oficina, o consúltala tú: allí se comprueba la fecha y lo que pone el contrato."
+        },
+        {
+          "p": "El cliente pide tratar una zona que no está en el presupuesto.",
+          "r": "No lo hagas sin confirmación. Avisa a la oficina para que la añada o haga un presupuesto nuevo. Si la oficina está cerrada, enviar un mensaje al grupo de dudas, si nadie contesta queda a criterio del técnico."
+        },
+        {
+          "p": "El cliente tiene dos cocinas en la casa o la casa está dividida en dos apartamentos y en la reseña el precio que pone es de una vivienda.",
+          "r": "En ese caso si tiene dos cocinas son dos apartamentos, son dos tratamientos, si tiene una cocina en la azotea y pertenece a la misma vivienda y no es muy grande y la infestación no es grave, se le aplica un extra de la mitad del cobro que se le tiene que hacer, ejemplo reseña pone 220€, pero tiene una cocina pequeña extra en la azotea se le cobra 110€ más. En total se cobra el tratamiento 330 €, si el cliente no está de acuerdo consultar con la oficina o el grupo de dudas"
+        },
+        {
+          "p": "El cliente no me deja colocar el material.",
+          "r": "Anótalo en el parte con el detalle del material no colocado y avisa a la oficina, porque se factura igualmente."
+        },
+        {
+          "p": "¿Qué hago si cobro en efectivo en un local?",
+          "r": "Entrega el parte, anótalo en el mismo parte y entrégalo a la oficina para que se marque la factura como cobrada e ingresada."
+        },
+        {
+          "p": "¿Cuándo hay que dejar certificado?",
+          "r": "Siempre a organismos, hoteles y empresas con APPCC. A particulares, solo si lo piden. Pasa a la oficina los datos del tratamiento para que lo haga."
+        },
+        {
+          "p": "El cliente me pregunta el precio.",
+          "r": "Remítelo a la oficina. Los precios y las condiciones los fija gerencia, y el técnico no los negocia."
+        },
+        {
+          "p": "¿Cómo pido material?",
+          "r": "Avisa a la oficina con antelación de lo que te falta. La revisión de almacén es los jueves. Las otras islas también piden su material a través de la oficina."
+        },
+        {
+          "p": "No queda stock de un producto.",
+          "r": "Avisa en cuanto lo veas, sin esperar a que se acabe, para que se haga el pedido al proveedor."
+        },
+        {
+          "p": "Tengo horas muertas en la ruta.",
+          "r": "Reparte flyers y pon pegatinas por la zona de tu ruta, y avisa a la oficina por si puede meter otro servicio."
+        },
+        {
+          "p": "¿Qué hago si encuentro una plaga distinta a la indicada?",
+          "r": "Anótala en el parte, haz fotos si puedes y avisa a la oficina o al grupo de dudas para valorar el tratamiento o un presupuesto."
+        },
+        {
+          "p": "¿Cómo actúo con portacebos en hostelería?",
+          "r": "Revisa todas las estaciones y anota el consumo y las capturas de cada una. Repón donde haga falta y deja registrado el número de estación."
+        },
+        {
+          "p": "En la misma dirección hay dos servicios (por ejemplo, vivienda y garaje).",
+          "r": "Comprueba en la cita qué incluye cada uno. Haz solo lo que esté agendado y apunta cada servicio por separado."
+        },
+        {
+          "p": "Llego y el cliente no está o no puedo entrar.",
+          "r": "Avisa a la oficina desde el sitio antes de irte, para que contacte al cliente y reprograme."
+        },
+        {
+          "p": "Veo una cita duplicada o con datos raros.",
+          "r": "Avisa a la oficina antes de ir. Las citas duplicadas ya han provocado devoluciones."
+        },
+        {
+          "p": "El cliente se queja de un servicio anterior.",
+          "r": "Escúchale y anota la queja sin comprometerte a nada y pasa la información cuanto antes. La oficina y gerencia la gestionan."
+        },
+        {
+          "p": "¿Qué indicaciones le doy al cliente después de fumigar?",
+          "r": "El plazo de seguridad, que ventile, que no limpie los puntos con gel y cuánto dura la garantía según lo que figure en la cita."
+        },
+        {
+          "p": "¿Cómo ficho?",
+          "r": "Con Sesame al empezar y al terminar la jornada."
+        },
+        {
+          "p": "¿Qué hago con los datos de los clientes?",
+          "r": "No los compartas por WhatsApp personal ni con terceros. Las contraseñas y los datos bancarios nunca se mandan por chat."
+        },
+        {
+          "p": "El cliente pide factura.",
+          "r": "Dile que la oficina se lo enviará por correo, y avisa a la oficina."
+        },
+        {
+          "p": "¿Tengo que retirar material de la competencia?",
+          "r": "Sí, en los clientes nuevos que vengan de otra empresa: retira sus portacebos y pegatinas y anótalo."
+        }
+      ]
+    },
+    {
+      "id": "despues",
+      "titulo": "Después del tratamiento (cucarachas)",
+      "preguntas": [
+        {
+          "p": "¿Cuánto tiempo se debe dejar actuar el tratamiento antes de valorar el resultado?",
+          "r": "Se recomienda esperar 21 días, ya que los huevos de cucaracha pueden tardar ese tiempo en eclosionar."
+        },
+        {
+          "p": "¿Por qué pueden seguir apareciendo cucarachas después del tratamiento?",
+          "r": "Porque el efecto no siempre es inmediato y pueden eclosionar huevos durante los días posteriores."
+        },
+        {
+          "p": "¿Se deben limpiar en profundidad las zonas tratadas durante los primeros 21 días?",
+          "r": "No. Se recomienda evitar la limpieza profunda para permitir que el tratamiento siga actuando."
+        },
+        {
+          "p": "¿Qué productos de limpieza conviene evitar durante ese periodo?",
+          "r": "Los productos con olores fuertes, como lejía, quitagrasas y limpiadores de suelos."
+        },
+        {
+          "p": "¿Qué zonas se pueden limpiar si es necesario?",
+          "r": "Las superficies que se vayan a utilizar y las zonas donde se manipulen alimentos."
+        },
+        {
+          "p": "¿Se pueden aplicar otros insecticidas después del tratamiento?",
+          "r": "No se deben aplicar otros insecticidas durante los 21 días indicados, sería contraproducente al tratamiento."
+        },
+        {
+          "p": "¿Qué precaución se debe tomar con la comida de las mascotas?",
+          "r": "Retirarla de la cocina durante los 21 días posteriores al tratamiento, ya que es competencia alimentaria al gel."
+        },
+        {
+          "p": "¿Cuánto tiempo se recomienda esperar antes de usar el horno o el microondas?",
+          "r": "Al menos dos días, para que las cucarachas que están dentro puedan comer y morir."
+        },
+        {
+          "p": "¿Para qué sirven las trampas de feromonas colocadas durante el tratamiento?",
+          "r": "Para detectar actividad y controlar el nivel de infestación, incluidas las crías que puedan aparecer; nos ayudan a futuro si vuelve a entrar alguna y se puede pegar antes de empezar a criar."
+        },
+        {
+          "p": "Si hay que limpiar la vivienda por el plazo de seguridad, ¿cuándo es preferible hacerlo?",
+          "r": "Antes del tratamiento, siempre que sea posible. Después, se recomienda limpiar solo las superficies que se vayan a usar o donde se manipulen alimentos."
+        },
+        {
+          "p": "¿Cómo debe comunicar el técnico el plazo de seguridad y el momento de volver a entrar?",
+          "r": "Debe comprobar y explicar las instrucciones de la etiqueta del producto aplicado. El plazo concreto depende del producto utilizado; normalmente suele ser de 12 a 24 horas."
+        }
+      ]
+    },
+    {
+      "id": "identificacion",
+      "titulo": "Identificación y diagnóstico",
+      "preguntas": [
+        {
+          "p": "¿Qué nombres puede usar el cliente para referirse a la cucaracha alemana?",
+          "r": "Cucaracha alemana, rubia, chiripa, cucaracha inglesa, de bares, restaurantes o supermercados, cucaracha chica, cuqui, cuquita, cuquilla o cuqui."
+        },
+        {
+          "p": "¿Qué características ayudan a identificarla?",
+          "r": "Suele ser pequeña, marrón clara y rápida. Es más activa por la noche y tiende a esconderse cuando se enciende la luz. Las ninfas pueden verse más oscuras y rechonchas. También puede haber ootecas y excrementos parecidos a posos de café. Si hay dudas, no confirmes la especie sin evidencia suficiente."
+        },
+        {
+          "p": "¿Qué insectos pueden confundirse con ella?",
+          "r": "La cucaracha americana es mucho mayor y puede volar. Sus ninfas pueden ser más difíciles de distinguir; pueden tener antenas más largas y, a veces, dos marcas claras en el dorso. También pueden confundirse otros insectos pequeños. Solicita una foto o vídeo nítido con una moneda al lado."
+        },
+        {
+          "p": "¿Dónde conviene inspeccionar primero?",
+          "r": "Principalmente en la cocina: muebles, electrodomésticos, motores de frigorífico, lavavajillas y hornos. También revisa baños, salones, solanas y lavaderos. En negocios, presta atención a bares, cafeterías, restaurantes, supermercados y heladerías."
+        },
+        {
+          "p": "¿Viven en los desagües?",
+          "r": "No suelen tenerlos como hábitat. Pueden aparecer cerca de ellos para beber agua."
+        },
+        {
+          "p": "¿Pueden vivir dentro del frigorífico?",
+          "r": "No suelen vivir dentro del compartimento, pero pueden refugiarse en el motor o en zonas cálidas, como las gomas de la puerta."
+        },
+        {
+          "p": "¿Cómo se puede orientar el nivel de infestación?",
+          "r": "Como orientación inicial:\n- Baja: se ven unas pocas, normalmente de noche y en la cocina. Las notas internas mencionan hasta unas 20 como referencia, no como límite diagnóstico.\n- Media: aparecen también en zonas como baños, salón, solana o lavadero.\n- Alta: se ven a diario, de día y de noche, en varias zonas o en dormitorios.\nLa clasificación definitiva corresponde al técnico, tras valorar las evidencias y las condiciones del lugar."
+        }
+      ]
+    },
+    {
+      "id": "atencion",
+      "titulo": "Primera atención y preguntas de valoración",
+      "preguntas": [
+        {
+          "p": "¿Cómo puede iniciar la llamada quien atiende?",
+          "r": "«Buenos días/tardes, soy Dunia de TenePlagas. ¿En qué puedo ayudarle?»"
+        },
+        {
+          "p": "¿Qué preguntas básicas debe hacer?",
+          "r": "«¿Las ve grandes o pequeñas? ¿En qué zonas las ha visto? ¿Es una vivienda o un negocio? ¿Cuántos metros cuadrados tiene aproximadamente? También puede indicarme el número de habitaciones.»"
+        },
+        {
+          "p": "¿Qué preguntas ayudan a valorar la actividad?",
+          "r": "«¿Las ve a diario, solo por la noche o también durante el día? ¿Ha llegado a verlas en las habitaciones? ¿Puede enviarnos una foto o un vídeo nítido con una moneda al lado?»"
+        },
+        {
+          "p": "¿Cuándo debe preguntar por niños, mascotas, embarazo o si el cliente puede salir de casa?",
+          "r": "Cuando se esté valorando un tratamiento que requiera plazo de seguridad o medidas especiales. Las instrucciones concretas dependen del producto y deben confirmarse antes de dar indicaciones."
+        },
+        {
+          "p": "¿Qué hacer si el cliente no sabe qué insecto ha visto?",
+          "r": "Solicita una foto o vídeo nítido, con una moneda al lado para comparar el tamaño. Si no es suficiente para identificarlo, deriva el caso para valoración."
+        }
+      ]
+    },
+    {
+      "id": "tratamiento",
+      "titulo": "Tratamiento y preparación",
+      "preguntas": [
+        {
+          "p": "¿Cuándo se suele valorar el tratamiento con gel?",
+          "r": "Según el protocolo de TenePlagas, suele valorarse en infestaciones bajas o medias, o cuando el cliente no puede salir de casa para un tratamiento con plazo de seguridad. La decisión final la toma el técnico."
+        },
+        {
+          "p": "¿Cuándo puede ser necesario valorar otra estrategia?",
+          "r": "Ante una infestación alta, si se sospecha otra especie —como la cucaracha americana— o si las condiciones del lugar dificultan el tratamiento con gel. El técnico debe valorar el caso antes de decidir."
+        },
+        {
+          "p": "¿Qué herramientas profesionales pueden emplearse?",
+          "r": "Gel, trampas de feromonas y producto líquido pulverizado. El técnico decide el método, las zonas y la cantidad según la inspección y las instrucciones del producto."
+        },
+        {
+          "p": "¿Qué debe explicarse sobre el plazo de seguridad?",
+          "r": "No des por supuesto que siempre es de 12 horas. El plazo de reentrada y las demás precauciones dependen del producto aplicado. Comprueba su etiqueta e instrucciones autorizadas antes de informar al cliente. Ministerio de Sanidad: requisitos de etiquetado de biocidas (https://www.sanidad.gob.es/ca/areas/sanidadAmbiental/biocidas/registro/regNacional/requisitos_nacional.htm)"
+        },
+        {
+          "p": "¿Cuánto puede durar una intervención?",
+          "r": "Como referencia, las notas estiman unos 60 minutos para una vivienda de hasta 80 m². La duración real puede variar según el acceso, el tamaño y el alcance del tratamiento."
+        },
+        {
+          "p": "¿Qué debe preparar el cliente antes de la visita?",
+          "r": "Se recomienda limpiar antes; una limpieza profunda puede facilitar el trabajo. En general, no hace falta vaciar los muebles ni mover los electrodomésticos, salvo indicación del técnico. Si se aplicará un producto con plazo de seguridad, guarda o retira los alimentos abiertos siguiendo las instrucciones recibidas."
+        },
+        {
+          "p": "¿Debe estar alguien en casa durante la intervención?",
+          "r": "No siempre es obligatorio, aunque es preferible que haya alguien que pueda indicar dónde observa más actividad."
+        },
+        {
+          "p": "¿Qué debe decirse sobre niños y mascotas si se aplica gel?",
+          "r": "Da las instrucciones específicas del producto y del tratamiento. Evita afirmar que cualquier gel es «inocuo» o que no requiere precauciones: se debe seguir la etiqueta y proteger a niños y animales según corresponda."
+        },
+        {
+          "p": "¿Qué debe hacer el cliente si no puede abandonar la vivienda?",
+          "r": "Según el protocolo, se puede valorar gel si la infestación es baja o media. Si parece alta, deriva el caso para que el equipo técnico valore las opciones."
+        },
+        {
+          "p": "¿Qué se recomienda en un restaurante o negocio de alimentación?",
+          "r": "Derivar a valoración técnica. Las notas internas orientan a valorar un tratamiento con plazo de seguridad, pero el método depende del local y del producto autorizado."
+        }
+      ]
+    },
+    {
+      "id": "seguimiento",
+      "titulo": "Después del tratamiento y seguimiento",
+      "preguntas": [
+        {
+          "p": "¿Cuándo empieza a actuar el gel?",
+          "r": "Según el protocolo, puede empezar a actuar desde la primera noche. Explica que el resultado no tiene por qué ser inmediato."
+        },
+        {
+          "p": "¿Cuánto tiempo se debe esperar para valorar el resultado?",
+          "r": "El protocolo establece un periodo de hasta 21 días para que actúe el tratamiento y puedan eclosionar ootecas."
+        },
+        {
+          "p": "¿Es normal seguir viendo cucarachas después del tratamiento?",
+          "r": "Puede haber actividad durante los días posteriores, incluidas ninfas recién nacidas. Un avistamiento aislado no demuestra por sí solo que el tratamiento haya fallado. Registra lo que observa el cliente y cuándo ocurre."
+        },
+        {
+          "p": "¿Qué son las cápsulas que encuentra el cliente?",
+          "r": "Pueden ser ootecas, cápsulas que contienen huevos. Las notas indican que pueden eclosionar aproximadamente entre 18 y 20 días después de su formación y contener entre 15 y 40 crías. Estos valores son orientativos; no prometas una fecha exacta."
+        },
+        {
+          "p": "¿Por qué puede ver ejemplares oscuros y otros marrones?",
+          "r": "Los ejemplares pequeños y oscuros suelen ser ninfas. Cambian de piel varias veces durante su desarrollo hasta llegar a adultos."
+        },
+        {
+          "p": "¿Cuándo debe volver a llamar si sigue viendo actividad?",
+          "r": "El protocolo indica contactar a partir de los días 21–23 si persiste la actividad. En general, a los 7 o 15 días se recomienda esperar, salvo que el técnico haya dado una indicación diferente para ese caso."
+        },
+        {
+          "p": "¿Qué debe evitar el cliente durante el periodo de actuación?",
+          "r": "No retirar ni limpiar el gel, ni aplicar insecticidas domésticos o remedios caseros en las zonas tratadas. El protocolo también recomienda evitar lejía, quitagrasas, humo o incienso, y no hacer limpiezas, pinturas o reformas que puedan interferir con el tratamiento."
+        },
+        {
+          "p": "¿Qué hacer con la comida de las mascotas?",
+          "r": "Evitar dejarla expuesta en la zona tratada, porque puede atraer a las cucarachas y competir con el cebo."
+        },
+        {
+          "p": "¿Para qué sirven las trampas de feromonas?",
+          "r": "Ayudan a monitorizar la actividad y valorar la evolución de la infestación. No las retires ni cambies de sitio sin indicación técnica."
+        },
+        {
+          "p": "¿Qué hacer si el cliente tuvo que salir de casa por el plazo de seguridad y pregunta cuándo limpiar?",
+          "r": "Indica que debe seguir las instrucciones del producto aplicado. El protocolo recomienda, cuando sea posible, hacer la limpieza antes del tratamiento y después limpiar solo las superficies que vayan a utilizarse o donde se manipulen alimentos, sin retirar el producto de las zonas tratadas."
+        }
+      ]
+    },
+    {
+      "id": "garantia",
+      "titulo": "Garantía y refuerzos",
+      "preguntas": [
+        {
+          "p": "¿Qué garantía contempla el protocolo para Blattella germanica?",
+          "r": "Las notas recogen 12 meses desde la primera aplicación y un máximo de cuatro visitas, incluida la inicial. Antes de confirmar cobertura, comprueba el contrato y sus condiciones."
+        },
+        {
+          "p": "¿Cuándo se puede solicitar un refuerzo?",
+          "r": "Una vez transcurridos los 21 días, si continúa la actividad. El técnico revisa las zonas donde el cliente sigue viendo cucarachas y decide la actuación."
+        },
+        {
+          "p": "¿Qué información debe pedir atención al cliente para revisar la garantía?",
+          "r": "El número de contrato, que puede aparecer en el documento entregado por el técnico o en la pegatina del cuadro eléctrico. Después, ofrece cita según la disponibilidad."
+        },
+        {
+          "p": "¿Qué debe explicarse sobre el posible coste de una visita?",
+          "r": "Las notas indican que podría cobrarse una visita de 50 € si el técnico no encuentra actividad ni evidencias. Comprueba que esa condición se aplique al contrato y comunícala antes de agendar."
+        },
+        {
+          "p": "¿Qué ocurre si el contrato está en su último mes?",
+          "r": "Según las notas, para solicitar un refuerzo durante el último mes antes del vencimiento habría que renovar el contrato. Confirma siempre esta condición en el contrato vigente."
+        },
+        {
+          "p": "¿Qué condiciones pueden afectar a la garantía?",
+          "r": "Las notas indican que depende de seguir las recomendaciones y de que no haya una nueva introducción desde el exterior. Explica las condiciones tal como aparecen en el contrato, sin ampliar ni prometer coberturas."
+        }
+      ]
+    },
+    {
+      "id": "objeciones",
+      "titulo": "Preguntas frecuentes y objeciones",
+      "preguntas": [
+        {
+          "p": "¿Por qué aparecen sobre todo de noche?",
+          "r": "Son principalmente nocturnas, sobre todo cuando la actividad es baja o media. Si el cliente las ve de día y en varias zonas, registra ese dato para la valoración técnica."
+        },
+        {
+          "p": "¿Pueden venir de la vivienda vecina?",
+          "r": "Es posible. También pueden introducirse mediante compras, bolsos o electrodomésticos usados. No atribuyas el origen sin evidencias."
+        },
+        {
+          "p": "¿Desaparecen cuando hace frío?",
+          "r": "No necesariamente. El frío puede ralentizar su actividad y hacer que se vean menos."
+        },
+        {
+          "p": "¿Pueden entrar en la cama?",
+          "r": "En infestaciones altas pueden aparecer en dormitorios. Registra dónde y cuándo las observa el cliente para que el técnico lo valore."
+        },
+        {
+          "p": "¿Muerden?",
+          "r": "La respuesta recogida en las notas es que no suelen morder. Si el cliente presenta una lesión o preocupación médica, no diagnostiques su causa y recomiéndale consultar con un profesional sanitario."
+        },
+        {
+          "p": "¿Pueden contaminar superficies o afectar a la salud?",
+          "r": "Pueden contaminar superficies al desplazarse por distintas zonas. No des diagnósticos médicos; ante síntomas o dudas de salud, recomienda consultar con un profesional sanitario."
+        },
+        {
+          "p": "¿Pueden dañar electrodomésticos?",
+          "r": "Pueden refugiarse en zonas cálidas y causar problemas si se acumulan en componentes o placas electrónicas."
+        },
+        {
+          "p": "¿Qué responder si el cliente dice: «Solo he visto una»?",
+          "r": "«Un solo avistamiento no permite descartar que haya más ocultas. Para orientarle, ¿dónde y cuándo la vio? Si puede, envíenos una foto.»"
+        },
+        {
+          "p": "¿Qué responder si dice: «Mi vecino también tiene»?",
+          "r": "«Es posible que haya actividad en más de una vivienda. Conviene valorar cada caso y, si procede, coordinar una inspección.»"
+        },
+        {
+          "p": "¿Qué responder si dice: «Ya compré un gel»?",
+          "r": "«Los productos domésticos y profesionales pueden tener distintas condiciones de uso. Para recomendarle una actuación adecuada, necesitamos valorar la especie, la actividad y las zonas afectadas.»"
+        },
+        {
+          "p": "¿Qué responder si dice: «Es muy caro»?",
+          "r": "«Entendemos su preocupación. El servicio incluye las condiciones de garantía indicadas en el contrato. Si quiere, podemos explicarle qué cubre y qué seguimiento contempla.»"
+        },
+        {
+          "p": "¿Qué responder si dice: «Otra empresa me cobra menos»?",
+          "r": "«Puede comparar también qué incluye cada servicio, las condiciones de garantía y el seguimiento. Le explicamos con detalle las condiciones de nuestra propuesta.»"
+        },
+        {
+          "p": "¿Qué responder si pregunta: «¿Me garantizan que desaparecen?»",
+          "r": "«El servicio tiene las condiciones de garantía indicadas en el contrato. El resultado también depende de seguir las recomendaciones y de que no haya una nueva introducción. Le explicamos exactamente qué cubre antes de contratar.»"
+        },
+        {
+          "p": "¿Qué responder si dice: «Esperaré»?",
+          "r": "«De acuerdo, quedamos a su disposición si necesita resolver alguna duda o desea solicitar una valoración.»"
+        }
+      ]
+    },
+    {
+      "id": "derivar",
+      "titulo": "Casos que deben derivarse",
+      "preguntas": [
+        {
+          "p": "¿Cuándo debe intervenir una persona o un responsable técnico?",
+          "r": "Si el cliente lo solicita, la especie no puede identificarse, la consulta no tiene una respuesta clara o el caso sale de lo habitual."
+        },
+        {
+          "p": "¿Qué casos deben derivarse para valoración?",
+          "r": "Comunidades, hoteles, varias viviendas, instalaciones complejas, varias plagas, industria alimentaria, restaurantes con mucha actividad, acumulación extrema de objetos o infestación alta cuando el cliente no puede salir de casa."
+        },
+        {
+          "p": "¿Qué hacer ante una cocina extremadamente sucia?",
+          "r": "Registrar las condiciones y derivar para valoración. Las notas orientan a valorar un tratamiento distinto, pero la decisión debe tomarla el equipo técnico."
+        },
+        {
+          "p": "¿Una vivienda vacía o un piso turístico son por sí solos un caso especial?",
+          "r": "No según el protocolo recibido. Se valoran de acuerdo con las condiciones del lugar y el acceso."
+        },
+        {
+          "p": "¿Qué hacer si no hay información suficiente para responder?",
+          "r": "Pedir la información que falta —por ejemplo, ubicación, frecuencia o una foto— o derivar a una persona. No confirmar especie, tratamiento, plazo de seguridad, precio o garantía sin datos suficientes."
+        }
+      ]
+    },
+    {
+      "id": "faq-cliente",
+      "titulo": "FAQ Cliente",
+      "preguntas": [
+        {
+          "p": "¿Cuánto dura la garantía del tratamiento?",
+          "r": "Normalmente el contrato tiene 1 año, con condiciones según la plaga; vale lo que esté escrito. Hay excepciones: en avispas, 3 meses; en ratones, según la desratización, puede ser sin garantía o de 45 días. Si hay dudas, consulte con la oficina."
+        },
+        {
+          "p": "Me siguen saliendo insectos después del tratamiento, ¿qué hago?",
+          "r": "Avise a la oficina e indique la zona y el tipo de plaga. Si está dentro de garantía, programamos un repaso. Fuera de garantía le pasamos un presupuesto nuevo."
+        },
+        {
+          "p": "¿El repaso tiene coste?",
+          "r": "Dentro de garantía, no. Fuera de garantía o en una zona que no se trató al principio, sí: la oficina le enviará presupuesto."
+        },
+        {
+          "p": "¿Me dan un certificado del tratamiento?",
+          "r": "A organismos públicos, hoteles y empresas que lo necesiten se les entrega siempre. A particulares, si lo piden. Se envía por correo después del servicio."
+        },
+        {
+          "p": "¿Cómo tengo que preparar la casa o el local?",
+          "r": "Deje libre el acceso a cocina, baños y zonas afectadas, y guarde los alimentos y los utensilios."
+        },
+        {
+          "p": "¿Cuánto tiempo hay que esperar para volver a entrar después de fumigar?",
+          "r": "Hay que respetar el plazo de seguridad del producto, que le indicará el técnico. Ese plazo no se puede acortar. Luego ventile bien antes de usar la estancia."
+        },
+        {
+          "p": "¿El tratamiento con cebo en gel me obliga a irme de casa?",
+          "r": "No. El gel se coloca en puntos concretos y puede seguir usando la vivienda. No limpie esos puntos durante los días que indique el técnico."
+        },
+        {
+          "p": "¿Es seguro con niños y mascotas?",
+          "r": "Usamos productos autorizados y los colocamos en zonas fuera de su alcance. Siga las indicaciones que le dé el técnico."
+        },
+        {
+          "p": "¿Qué plagas tratan?",
+          "r": "Cucarachas, hormigas, roedores, palomas, carcoma (madera) y otros insectos. También control preventivo, desinsectación y desratización (DDD) y APPCC para hostelería."
+        },
+        {
+          "p": "¿Tienen servicio para restaurantes y hostelería (APPCC)?",
+          "r": "Sí. Hacemos el plan de control de plagas con visitas periódicas, colocamos portacebos y entregamos la documentación que exige Sanidad."
+        },
+        {
+          "p": "¿Cómo pido cita o la cambio?",
+          "r": "Por WhatsApp o por teléfono con la oficina. Para cambiar la cita, avise con antelación. Las fumigaciones con plazo de seguridad y los servicios en viviendas vacacionales tienen fechas difíciles de mover."
+        },
+        {
+          "p": "¿Pueden venir a una hora concreta?",
+          "r": "Eso se habla con la oficina al pedir la cita."
+        },
+        {
+          "p": "¿Cuánto tardan en responder a un aviso?",
+          "r": "Consúltelo con la oficina."
+        },
+        {
+          "p": "¿Qué pasa si no dejo colocar el material (portacebos, trampas)?",
+          "r": "El material que el técnico lleve y no se pueda colocar por decisión del cliente se factura igualmente."
+        },
+        {
+          "p": "¿Qué pasa si tengo facturas pendientes?",
+          "r": "Consúltelo con la oficina."
+        },
+        {
+          "p": "¿Cómo puedo pagar?",
+          "r": "Por transferencia, en efectivo al técnico (con justificante) o con el método que diga su contrato."
+        },
+        {
+          "p": "¿Retiran el material de la empresa anterior?",
+          "r": "Los portacebos de la empresa anterior se retiran y se le dejan al cliente en una bolsa. Las pegatinas sí se cambian por las nuestras."
+        },
+        {
+          "p": "¿Con un contrato se mantienen las condiciones al renovar?",
+          "r": "Sí. Si renueva sin cambios, se mantienen las mismas condiciones."
+        },
+        {
+          "p": "¿Qué hacen con mis datos?",
+          "r": "Los tratamos según la LOPD/RGPD y solo para dar el servicio. Puede pedir acceso a sus datos, corregirlos o borrarlos escribiendo a la oficina."
+        },
+        {
+          "p": "¿Dan servicio en otras islas?",
+          "r": "Sí, trabajamos en varias islas. La oficina le dirá la disponibilidad en su zona."
+        }
+      ]
+    },
+    {
+      "id": "faq-operario",
+      "titulo": "FAQ Operario",
+      "preguntas": [
+        {
+          "p": "¿Qué tengo que apuntar en el parte de trabajo?",
+          "r": "Trabajo realizado, plagas, productos y cantidades, zonas tratadas, cuántos portacebos hay y dónde, y las incidencias."
+        },
+        {
+          "p": "¿Cómo sé si un servicio es un repaso?",
+          "r": "Mira el título de la cita: debe poner si es repaso y cuál (1.º, 2.º…). Si no lo pone, pregunta a la oficina antes de ir."
+        },
+        {
+          "p": "El cliente pide un repaso, ¿entra en garantía?",
+          "r": "No lo confirmes tú. Consúltalo directamente con la oficina."
+        },
+        {
+          "p": "El cliente pide tratar una zona que no está en el presupuesto.",
+          "r": "No lo hagas sin confirmación. Avisa a la oficina para que la añada o haga un presupuesto nuevo."
+        },
+        {
+          "p": "El cliente no me deja colocar el material.",
+          "r": "Anótalo en el parte con el detalle del material no colocado y avisa a la oficina, porque se factura igualmente."
+        },
+        {
+          "p": "¿Qué hago si cobro en efectivo?",
+          "r": "Entrega un justificante, anótalo en el parte y entrégalo a la oficina para que se marque la factura como cobrada e ingresada. Si es una vivienda particular, haz contrato con las condiciones de la reseña."
+        },
+        {
+          "p": "¿Cuándo hay que dejar certificado?",
+          "r": "Siempre a organismos, hoteles y empresas con APPCC. A particulares, solo si lo piden. Pasa a la oficina los datos del tratamiento para que lo haga."
+        },
+        {
+          "p": "El cliente me pregunta el precio.",
+          "r": "Remítelo a la oficina. Los precios y las condiciones los fija gerencia, y el técnico no los negocia."
+        },
+        {
+          "p": "¿Cómo pido material?",
+          "r": "Avisa a la oficina con antelación de lo que te falta. La revisión de almacén es los jueves. Las otras islas también piden su material a través de la oficina."
+        },
+        {
+          "p": "No queda stock de un producto.",
+          "r": "Avisa en cuanto lo veas, sin esperar a que se acabe, para que se haga el pedido al proveedor."
+        },
+        {
+          "p": "Tengo horas muertas en la ruta.",
+          "r": "Reparte flyers y pon pegatinas por la zona de tu ruta, y avisa a la oficina por si puede meter otro servicio."
+        },
+        {
+          "p": "¿Qué hago si encuentro una plaga distinta a la indicada?",
+          "r": "Anótala en el parte, haz fotos si puedes y avisa a la oficina para valorar el tratamiento o un presupuesto. No te vayas del sitio sin confirmación de la oficina o del grupo de apoyo."
+        },
+        {
+          "p": "¿Cómo actúo con portacebos en hostelería (APPCC)?",
+          "r": "Revisa todas las estaciones y anota el consumo y las capturas de cada una. Repón donde haga falta y deja registrado el número de estación."
+        },
+        {
+          "p": "En la misma dirección hay dos servicios (por ejemplo, vivienda y garaje).",
+          "r": "Comprueba en la cita qué incluye cada uno. Haz solo lo que esté agendado y apunta cada servicio por separado."
+        },
+        {
+          "p": "Llego y el cliente no está o no puedo entrar.",
+          "r": "Avisa a la oficina desde el sitio antes de irte, para que contacte al cliente y reprograme."
+        },
+        {
+          "p": "Veo una cita duplicada o con datos raros.",
+          "r": "Avisa a la oficina antes de ir. Las citas duplicadas ya han provocado devoluciones."
+        },
+        {
+          "p": "El cliente se queja de un servicio anterior.",
+          "r": "Escúchale y anota la queja sin comprometerte a nada. La oficina y gerencia la gestionan."
+        },
+        {
+          "p": "¿Qué indicaciones le doy al cliente después de fumigar?",
+          "r": "El plazo de seguridad, que ventile, que no limpie los puntos con gel, cuánto dura la garantía según lo que figure en la cita, y que siga las recomendaciones que le dieron desde la oficina."
+        },
+        {
+          "p": "¿Cómo ficho?",
+          "r": "Con Sesame al empezar y al terminar la jornada."
+        },
+        {
+          "p": "¿Qué hago con los datos de los clientes?",
+          "r": "No los compartas por WhatsApp personal ni con terceros. Las contraseñas y los datos bancarios nunca se mandan por chat."
+        },
+        {
+          "p": "El cliente pide factura o contrato en el momento.",
+          "r": "Dile que la oficina se lo enviará por correo, y avisa a la oficina."
+        },
+        {
+          "p": "¿Tengo que retirar material de la competencia?",
+          "r": "Sí, en los clientes nuevos que vengan de otra empresa: retira sus portacebos (se le dejan al cliente en una bolsa), cambia las pegatinas y anótalo."
+        }
+      ]
+    }
+  ]
+}

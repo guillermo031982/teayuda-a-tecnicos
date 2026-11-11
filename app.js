@@ -644,8 +644,8 @@ const PRODUCTOS = [
   },
   {
     id: 'insecticidas-liquidos',
-    title: 'Insecticidas líquidos',
-    lead: 'Insecticida concentrado para pulverizar. Uso ambiental.',
+    title: 'Insecticidas líquidos y lacas',
+    lead: 'Referencias de envase: líquido para pulverizar y laca de aplicación directa.',
     items: [
       {
         name: 'ECOREX ACTION PLUS AMBIENTAL',
@@ -655,6 +655,17 @@ const PRODUCTOS = [
         fields: [
           {label: 'Dosis', value: 'Consultar etiqueta'},
           {label: 'Materia activa', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
+        ]
+      },
+      {
+        name: 'NUPILAC DC GREEN',
+        file: 'nupilac-dc-green.png',
+        alt: 'Garrafa de 5 L de Nupilac DC Green, laca insecticida D+S oabe',
+        note: 'D+S oabe. Envase 5 L. Laca insecticida de aplicación directa contra cucarachas, hormigas e insectos resistentes.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
           {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
         ]
       }

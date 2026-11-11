@@ -418,6 +418,186 @@
           "r": "Pedir la información que falta —por ejemplo, ubicación, frecuencia o una foto— o derivar a una persona. No confirmar especie, tratamiento, plazo de seguridad, precio o garantía sin datos suficientes."
         }
       ]
+    },
+    {
+      "id": "faq-cliente",
+      "titulo": "FAQ Cliente",
+      "preguntas": [
+        {
+          "p": "¿Cuánto dura la garantía del tratamiento?",
+          "r": "Normalmente el contrato tiene 1 año, con condiciones según la plaga; vale lo que esté escrito. Hay excepciones: en avispas, 3 meses; en ratones, según la desratización, puede ser sin garantía o de 45 días. Si hay dudas, consulte con la oficina."
+        },
+        {
+          "p": "Me siguen saliendo insectos después del tratamiento, ¿qué hago?",
+          "r": "Avise a la oficina e indique la zona y el tipo de plaga. Si está dentro de garantía, programamos un repaso. Fuera de garantía le pasamos un presupuesto nuevo."
+        },
+        {
+          "p": "¿El repaso tiene coste?",
+          "r": "Dentro de garantía, no. Fuera de garantía o en una zona que no se trató al principio, sí: la oficina le enviará presupuesto."
+        },
+        {
+          "p": "¿Me dan un certificado del tratamiento?",
+          "r": "A organismos públicos, hoteles y empresas que lo necesiten se les entrega siempre. A particulares, si lo piden. Se envía por correo después del servicio."
+        },
+        {
+          "p": "¿Cómo tengo que preparar la casa o el local?",
+          "r": "Deje libre el acceso a cocina, baños y zonas afectadas, y guarde los alimentos y los utensilios."
+        },
+        {
+          "p": "¿Cuánto tiempo hay que esperar para volver a entrar después de fumigar?",
+          "r": "Hay que respetar el plazo de seguridad del producto, que le indicará el técnico. Ese plazo no se puede acortar. Luego ventile bien antes de usar la estancia."
+        },
+        {
+          "p": "¿El tratamiento con cebo en gel me obliga a irme de casa?",
+          "r": "No. El gel se coloca en puntos concretos y puede seguir usando la vivienda. No limpie esos puntos durante los días que indique el técnico."
+        },
+        {
+          "p": "¿Es seguro con niños y mascotas?",
+          "r": "Usamos productos autorizados y los colocamos en zonas fuera de su alcance. Siga las indicaciones que le dé el técnico."
+        },
+        {
+          "p": "¿Qué plagas tratan?",
+          "r": "Cucarachas, hormigas, roedores, palomas, carcoma (madera) y otros insectos. También control preventivo, desinsectación y desratización (DDD) y APPCC para hostelería."
+        },
+        {
+          "p": "¿Tienen servicio para restaurantes y hostelería (APPCC)?",
+          "r": "Sí. Hacemos el plan de control de plagas con visitas periódicas, colocamos portacebos y entregamos la documentación que exige Sanidad."
+        },
+        {
+          "p": "¿Cómo pido cita o la cambio?",
+          "r": "Por WhatsApp o por teléfono con la oficina. Para cambiar la cita, avise con antelación. Las fumigaciones con plazo de seguridad y los servicios en viviendas vacacionales tienen fechas difíciles de mover."
+        },
+        {
+          "p": "¿Pueden venir a una hora concreta?",
+          "r": "Eso se habla con la oficina al pedir la cita."
+        },
+        {
+          "p": "¿Cuánto tardan en responder a un aviso?",
+          "r": "Consúltelo con la oficina."
+        },
+        {
+          "p": "¿Qué pasa si no dejo colocar el material (portacebos, trampas)?",
+          "r": "El material que el técnico lleve y no se pueda colocar por decisión del cliente se factura igualmente."
+        },
+        {
+          "p": "¿Qué pasa si tengo facturas pendientes?",
+          "r": "Consúltelo con la oficina."
+        },
+        {
+          "p": "¿Cómo puedo pagar?",
+          "r": "Por transferencia, en efectivo al técnico (con justificante) o con el método que diga su contrato."
+        },
+        {
+          "p": "¿Retiran el material de la empresa anterior?",
+          "r": "Los portacebos de la empresa anterior se retiran y se le dejan al cliente en una bolsa. Las pegatinas sí se cambian por las nuestras."
+        },
+        {
+          "p": "¿Con un contrato se mantienen las condiciones al renovar?",
+          "r": "Sí. Si renueva sin cambios, se mantienen las mismas condiciones."
+        },
+        {
+          "p": "¿Qué hacen con mis datos?",
+          "r": "Los tratamos según la LOPD/RGPD y solo para dar el servicio. Puede pedir acceso a sus datos, corregirlos o borrarlos escribiendo a la oficina."
+        },
+        {
+          "p": "¿Dan servicio en otras islas?",
+          "r": "Sí, trabajamos en varias islas. La oficina le dirá la disponibilidad en su zona."
+        }
+      ]
+    },
+    {
+      "id": "faq-operario",
+      "titulo": "FAQ Operario",
+      "preguntas": [
+        {
+          "p": "¿Qué tengo que apuntar en el parte de trabajo?",
+          "r": "Trabajo realizado, plagas, productos y cantidades, zonas tratadas, cuántos portacebos hay y dónde, y las incidencias."
+        },
+        {
+          "p": "¿Cómo sé si un servicio es un repaso?",
+          "r": "Mira el título de la cita: debe poner si es repaso y cuál (1.º, 2.º…). Si no lo pone, pregunta a la oficina antes de ir."
+        },
+        {
+          "p": "El cliente pide un repaso, ¿entra en garantía?",
+          "r": "No lo confirmes tú. Consúltalo directamente con la oficina."
+        },
+        {
+          "p": "El cliente pide tratar una zona que no está en el presupuesto.",
+          "r": "No lo hagas sin confirmación. Avisa a la oficina para que la añada o haga un presupuesto nuevo."
+        },
+        {
+          "p": "El cliente no me deja colocar el material.",
+          "r": "Anótalo en el parte con el detalle del material no colocado y avisa a la oficina, porque se factura igualmente."
+        },
+        {
+          "p": "¿Qué hago si cobro en efectivo?",
+          "r": "Entrega un justificante, anótalo en el parte y entrégalo a la oficina para que se marque la factura como cobrada e ingresada. Si es una vivienda particular, haz contrato con las condiciones de la reseña."
+        },
+        {
+          "p": "¿Cuándo hay que dejar certificado?",
+          "r": "Siempre a organismos, hoteles y empresas con APPCC. A particulares, solo si lo piden. Pasa a la oficina los datos del tratamiento para que lo haga."
+        },
+        {
+          "p": "El cliente me pregunta el precio.",
+          "r": "Remítelo a la oficina. Los precios y las condiciones los fija gerencia, y el técnico no los negocia."
+        },
+        {
+          "p": "¿Cómo pido material?",
+          "r": "Avisa a la oficina con antelación de lo que te falta. La revisión de almacén es los jueves. Las otras islas también piden su material a través de la oficina."
+        },
+        {
+          "p": "No queda stock de un producto.",
+          "r": "Avisa en cuanto lo veas, sin esperar a que se acabe, para que se haga el pedido al proveedor."
+        },
+        {
+          "p": "Tengo horas muertas en la ruta.",
+          "r": "Reparte flyers y pon pegatinas por la zona de tu ruta, y avisa a la oficina por si puede meter otro servicio."
+        },
+        {
+          "p": "¿Qué hago si encuentro una plaga distinta a la indicada?",
+          "r": "Anótala en el parte, haz fotos si puedes y avisa a la oficina para valorar el tratamiento o un presupuesto. No te vayas del sitio sin confirmación de la oficina o del grupo de apoyo."
+        },
+        {
+          "p": "¿Cómo actúo con portacebos en hostelería (APPCC)?",
+          "r": "Revisa todas las estaciones y anota el consumo y las capturas de cada una. Repón donde haga falta y deja registrado el número de estación."
+        },
+        {
+          "p": "En la misma dirección hay dos servicios (por ejemplo, vivienda y garaje).",
+          "r": "Comprueba en la cita qué incluye cada uno. Haz solo lo que esté agendado y apunta cada servicio por separado."
+        },
+        {
+          "p": "Llego y el cliente no está o no puedo entrar.",
+          "r": "Avisa a la oficina desde el sitio antes de irte, para que contacte al cliente y reprograme."
+        },
+        {
+          "p": "Veo una cita duplicada o con datos raros.",
+          "r": "Avisa a la oficina antes de ir. Las citas duplicadas ya han provocado devoluciones."
+        },
+        {
+          "p": "El cliente se queja de un servicio anterior.",
+          "r": "Escúchale y anota la queja sin comprometerte a nada. La oficina y gerencia la gestionan."
+        },
+        {
+          "p": "¿Qué indicaciones le doy al cliente después de fumigar?",
+          "r": "El plazo de seguridad, que ventile, que no limpie los puntos con gel, cuánto dura la garantía según lo que figure en la cita, y que siga las recomendaciones que le dieron desde la oficina."
+        },
+        {
+          "p": "¿Cómo ficho?",
+          "r": "Con Sesame al empezar y al terminar la jornada."
+        },
+        {
+          "p": "¿Qué hago con los datos de los clientes?",
+          "r": "No los compartas por WhatsApp personal ni con terceros. Las contraseñas y los datos bancarios nunca se mandan por chat."
+        },
+        {
+          "p": "El cliente pide factura o contrato en el momento.",
+          "r": "Dile que la oficina se lo enviará por correo, y avisa a la oficina."
+        },
+        {
+          "p": "¿Tengo que retirar material de la competencia?",
+          "r": "Sí, en los clientes nuevos que vengan de otra empresa: retira sus portacebos (se le dejan al cliente en una bolsa), cambia las pegatinas y anótalo."
+        }
+      ]
     }
   ]
 }

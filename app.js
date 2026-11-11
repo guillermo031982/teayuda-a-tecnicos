@@ -641,6 +641,24 @@ const PRODUCTOS = [
       {name: 'Trap a Roach negro', file: 'trap-a-roach-negro.png', alt: 'Trampa Trap a Roach negra', note: 'Referencia visual'},
       {name: 'Teneplagas', file: 'trampa-teneplagas.png', alt: 'Trampa Teneplagas para cucarachas', note: 'Referencia visual'}
     ]
+  },
+  {
+    id: 'insecticidas-liquidos',
+    title: 'Insecticidas líquidos',
+    lead: 'Insecticida concentrado para pulverizar. Uso ambiental.',
+    items: [
+      {
+        name: 'ECOREX ACTION PLUS AMBIENTAL',
+        file: 'ecorex-action-plus-ambiental.png',
+        alt: 'Envase de Ecorex Action Plus Ambiental, insecticida concentrado de uso ambiental',
+        note: 'Uso ambiental. Insecticida concentrado (emulsión), líquido para pulverizar.',
+        fields: [
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Materia activa', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
+        ]
+      }
+    ]
   }
 ];
 
@@ -687,7 +705,8 @@ function renderBlocks(blocks) {
 function renderCatalog(items) {
   return `<div class="catalog">${items.map(p => {
     const note = p.note ? `<small>${esc(p.note)}</small>` : '';
-    return `<figure><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}</figcaption></figure>`;
+    const fields = (p.fields || []).map(f => `<small>${esc(f.label)}: ${esc(f.value)}</small>`).join('');
+    return `<figure><img src="${esc(FOTO_PROD + p.file)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.name)}${note}${fields}</figcaption></figure>`;
   }).join('')}</div>`;
 }
 

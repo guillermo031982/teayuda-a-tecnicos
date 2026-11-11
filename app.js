@@ -623,7 +623,7 @@ const PRODUCTOS = [
     lead: 'Referencias de envase. Fotografías comerciales reales.',
     items: [
       {name: 'GEL ADVION CUCARACHAS', file: 'advion-gel-cucarachas.png', alt: 'Gel Advion Cucarachas de Syngenta, aplicación urbana, 30 g', note: 'Syngenta. Gel. Aplicación urbana. 30 g. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
-      {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'BIOGEL ULTRA', file: 'biogel.png', alt: 'Jeringa de Biogel Ultra, cebo en gel de Biocides', note: 'Biocides. Cebo en gel. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
       {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
       {name: 'VICTOR GEL CUCARACHAS', file: 'victor-gel.png', alt: 'Jeringa de Victor Gel cucarachas, cebo en gel listo para su uso', note: 'Cebo en gel listo para su uso. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
       {name: 'Aquiles cucarachas', file: 'aquiles-cucarachas.png', alt: 'Envase de Aquiles gel cucarachas', note: 'Mismo registro que Victor Gel', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]}

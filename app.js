@@ -622,11 +622,11 @@ const PRODUCTOS = [
     title: 'Geles para cucarachas',
     lead: 'Referencias de envase. Fotografías comerciales reales.',
     items: [
-      {name: 'GEL ADVION CUCARACHAS', file: 'advion-gel-cucarachas.png', alt: 'Gel Advion Cucarachas de Syngenta, aplicación urbana, 30 g', note: 'Syngenta. Gel. Aplicación urbana. 30 g. Presentación comercial'},
-      {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial'},
-      {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial'},
-      {name: 'Victor Gel', file: 'victor-gel.png', alt: 'Envase de Victor Gel', note: 'Presentación comercial'},
-      {name: 'Aquiles cucarachas', file: 'aquiles-cucarachas.png', alt: 'Envase de Aquiles gel cucarachas', note: 'Mismo registro que Victor Gel'}
+      {name: 'GEL ADVION CUCARACHAS', file: 'advion-gel-cucarachas.png', alt: 'Gel Advion Cucarachas de Syngenta, aplicación urbana, 30 g', note: 'Syngenta. Gel. Aplicación urbana. 30 g. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'Defens Gel cucarachas', file: 'defens-gel-cucarachas.png', alt: 'Envase de Defens Gel cucarachas', note: 'Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'VICTOR GEL CUCARACHAS', file: 'victor-gel.png', alt: 'Jeringa de Victor Gel cucarachas, cebo en gel listo para su uso', note: 'Cebo en gel listo para su uso. Presentación comercial', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]},
+      {name: 'Aquiles cucarachas', file: 'aquiles-cucarachas.png', alt: 'Envase de Aquiles gel cucarachas', note: 'Mismo registro que Victor Gel', fields: [{label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}]}
     ],
     calloutTitle: 'Aquiles y Victor Gel',
     callout: 'Aquiles cucarachas figura como nombre adicional de Victor Gel en el registro oficial.',

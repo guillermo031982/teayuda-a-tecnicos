@@ -621,11 +621,6 @@ const PRODUCTOS = [
     id: 'geles-cucarachas',
     title: 'Geles para cucarachas',
     lead: 'Referencias de envase. Fotografías comerciales reales.',
-    sheet: {
-      src: FOTO_PROD + 'geles-cucarachas.png',
-      alt: 'Geles cebo para cucarachas: Advion, Biogel, Defens, Victor Gel y Aquiles',
-      cap: 'Lámina completa. Toca para ampliar.'
-    },
     items: [
       {name: 'Advion Gel cucarachas', file: 'advion-gel-cucarachas.png', alt: 'Envase de Advion Gel cucarachas', note: 'Presentación comercial'},
       {name: 'Biogel', file: 'biogel.png', alt: 'Envase de Biogel para cucarachas', note: 'Presentación comercial'},
@@ -641,11 +636,6 @@ const PRODUCTOS = [
     id: 'trampas-feromonas',
     title: 'Trampas de feromonas de cucarachas',
     lead: 'Referencias visuales del material.',
-    sheet: {
-      src: FOTO_PROD + 'trampas-feromonas-cucarachas.png',
-      alt: 'Trampas de feromonas para cucarachas: Trap a Roach azul, Trap a Roach negro y Teneplagas',
-      cap: 'Lámina completa. Toca para ampliar.'
-    },
     items: [
       {name: 'Trap a Roach azul', file: 'trap-a-roach-azul.png', alt: 'Trampa Trap a Roach azul', note: 'Referencia visual'},
       {name: 'Trap a Roach negro', file: 'trap-a-roach-negro.png', alt: 'Trampa Trap a Roach negra', note: 'Referencia visual'},
@@ -901,7 +891,6 @@ function renderProductos() {
     const note = s.note ? `<p class="note">${esc(s.note)}</p>` : '';
     return `<h2 id="${esc(s.id)}">${esc(s.title)}</h2>
       <p>${esc(s.lead)}</p>
-      ${renderPhotos([s.sheet])}
       ${renderCatalog(s.items)}
       ${callout}
       ${note}`;

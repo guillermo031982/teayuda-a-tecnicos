@@ -1,4 +1,4 @@
-const C = 'ta-v9';
+const C = 'ta-v10';
 const F = [
   './',
   'index.html',
@@ -22,13 +22,11 @@ const F = [
   'fotos/cucaracha-alemana/07-pegatina-cuadro.png',
   'fotos/cucaracha-alemana/08-ejemplo-resena-calendario.png',
   'videos/ejemplo-duplicar-resena.mp4',
-  'fotos/productos/geles-cucarachas.png',
   'fotos/productos/advion-gel-cucarachas.png',
   'fotos/productos/biogel.png',
   'fotos/productos/defens-gel-cucarachas.png',
   'fotos/productos/victor-gel.png',
   'fotos/productos/aquiles-cucarachas.png',
-  'fotos/productos/trampas-feromonas-cucarachas.png',
   'fotos/productos/trap-a-roach-azul.png',
   'fotos/productos/trap-a-roach-negro.png',
   'fotos/productos/trampa-teneplagas.png'

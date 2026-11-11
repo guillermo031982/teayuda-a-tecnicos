@@ -1,4 +1,4 @@
-const C = 'ta-v18';
+const C = 'ta-v19';
 const F = [
   './',
   'index.html',
@@ -24,6 +24,7 @@ const F = [
   'videos/ejemplo-duplicar-resena.mp4',
   'fotos/productos/advion-gel-cucarachas.png',
   'fotos/productos/biogel.png',
+  'fotos/productos/biogel-hormigas.png',
   'fotos/productos/defens-gel-cucarachas.png',
   'fotos/productos/victor-gel.png',
   'fotos/productos/aquiles-cucarachas.png',

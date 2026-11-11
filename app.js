@@ -633,6 +633,24 @@ const PRODUCTOS = [
     note: 'Las fotos pueden corresponder a distintos formatos comerciales.'
   },
   {
+    id: 'geles-hormigas',
+    title: 'Geles para hormigas',
+    lead: 'Cebo insecticida en gel. Referencias de envase.',
+    items: [
+      {
+        name: 'BIOGEL HORMIGAS',
+        file: 'biogel-hormigas.png',
+        alt: 'Jeringa de Biogel Ants, cebo insecticida en gel para hormigas de Biocides',
+        note: 'Biocides. Biogel Ants. Cebo insecticida en gel para hormigas.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}
+        ]
+      }
+    ]
+  },
+  {
     id: 'trampas-feromonas',
     title: 'Trampas de feromonas de cucarachas',
     lead: 'Referencias visuales del material.',

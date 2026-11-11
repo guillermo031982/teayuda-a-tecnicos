@@ -670,6 +670,24 @@ const PRODUCTOS = [
         ]
       }
     ]
+  },
+  {
+    id: 'granulados-polvos',
+    title: 'Granulados / polvos',
+    lead: 'Referencias de envase para espolvoreo o pulverización.',
+    items: [
+      {
+        name: 'DOBOL GRANULADO',
+        file: 'dobol-granulado.png',
+        alt: 'Envase de 1 kg de Dobol Granulado, insecticida para insectos rastreros',
+        note: 'Dobol Professional Swirr 2 MG Hormigas. Insecticida para insectos rastreros, uso ambiental y en la industria alimentaria. 1 kg. Espolvoreo o pulverización. Dosificador de 20 g incluido. Uso exclusivo por personal especializado.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
+      }
+    ]
   }
 ];
 

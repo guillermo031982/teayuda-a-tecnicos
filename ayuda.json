@@ -598,6 +598,48 @@
           "r": "Sí, en los clientes nuevos que vengan de otra empresa: retira sus portacebos (se le dejan al cliente en una bolsa), cambia las pegatinas y anótalo."
         }
       ]
+    },
+    {
+      "id": "horario",
+      "titulo": "Fuera de horario",
+      "preguntas": [
+        {
+          "p": "A partir de las 17:30, si surge una duda de ruta, documentación, teléfono, tratamiento o producto:",
+          "r": "Audio o texto al grupo de fumigar de WhatsApp, para que puedan responder Oliver o Guillermo.\nSi a los 15 minutos no hay respuesta, sigue con el criterio que creas más conveniente. Abajo van los casos habituales."
+        },
+        {
+          "p": "No quieren firmar y el encargado no está",
+          "r": "Se cobra la factura y se hace un parte diciendo que no han querido firmar el contrato. Se anota en la reseña. Si hay que cobrar y no cobran, no se hace el trabajo pactado, salvo que la reseña diga lo contrario."
+        },
+        {
+          "p": "El local no está preparado",
+          "r": "Si hay personal de cocina o camareros, diles qué estorba para fumigar y que lo retiren, o que al día siguiente tendrán que limpiar. Fumiga como si los objetos ya estuvieran retirados."
+        },
+        {
+          "p": "No hay nadie",
+          "r": "Llama y escribe por WhatsApp al contacto de la reseña. Espera 15 minutos. Si no contestan, avisa en el grupo de fumigar por si Oliver o Guillermo pueden localizarlos. Si nadie responde, sigue la ruta y déjalo escrito en el grupo."
+        },
+        {
+          "p": "No estoy seguro del producto",
+          "r": "Inspecciona y saca la plaga real.\nSigue el primer paso del protocolo de esa plaga.\nSi no hay respuesta, busca tratamientos anteriores en el calendario.\nSi aun así no se resuelve, aplica el mejor tratamiento según tu criterio y anótalo.\nPuedes mirar Dosis y productos en esta app."
+        },
+        {
+          "p": "No llevo el producto de siempre",
+          "r": "No debería pasar: el técnico sale con los biocidas y las herramientas. Si pasa, termina el trabajo con lo que tengas."
+        },
+        {
+          "p": "No pueden abandonar la vivienda",
+          "r": "Tratamiento con productos sin plazo de seguridad. En el contrato, que si hace falta otro servicio tendrán que salir las horas necesarias."
+        },
+        {
+          "p": "El coche se ha quedado tirado",
+          "r": "Lleva la documentación del seguro y el teléfono de la grúa. El coche va al Taller Híbrid, en Guargacho, calle Hipotenusa. Avisa en el grupo de fumigar."
+        },
+        {
+          "p": "Hace falta dinero para millo u otro material",
+          "r": "Pide el dinero a quien esté en oficina, con la solicitud de dinero para material. Trae el cambio y la factura a nombre de Teneplagas SL, CIF B76725753."
+        }
+      ]
     }
   ]
 }

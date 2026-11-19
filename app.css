@@ -29,6 +29,12 @@ li{margin:4px 0}
 .hero img{width:96px;height:96px;object-fit:contain;filter:drop-shadow(0 4px 10px #0006)}
 .hero h1{margin:8px 0 2px;letter-spacing:3px;font-size:1.7rem}
 .hero p{margin:0;opacity:.95}
+.homebtns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.homebtn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:112px;background:#fff;border:0;border-top:4px solid var(--r);border-radius:12px;padding:16px 14px;box-shadow:0 2px 8px #0001;text-align:left;color:inherit}
+.homebtn:active{transform:scale(.995)}
+.homeico{font-size:1.6rem;line-height:1}
+.homebtn b{font-size:1.15rem;color:#222}
+.homebtn small{color:var(--g);font-weight:600;font-size:.82rem;line-height:1.25}
 
 .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 8px #0001;margin-bottom:12px}
 button.card{width:100%;text-align:left;border:0;color:inherit;display:block}
@@ -109,9 +115,9 @@ body.stepping{padding-bottom:calc(136px + env(safe-area-inset-bottom))}
 
 .nav{position:fixed;bottom:0;left:0;right:0;display:flex;flex-direction:column;background:#fff;border-top:1px solid #ddd;z-index:30;padding-bottom:env(safe-area-inset-bottom)}
 #tabs{display:flex}
-#tabs button{flex:1;min-width:0;border:0;background:#fafafa;color:var(--g);padding:8px 2px;font-weight:700;font-size:13px;border-top:3px solid transparent;border-radius:0}
+#tabs button{flex:1;min-width:0;border:0;background:#fafafa;color:var(--g);padding:8px 1px;font-weight:700;font-size:12px;border-top:3px solid transparent;border-radius:0}
 #tabs button.on{color:var(--r);border-top-color:var(--r);background:#fff}
-#tabs span{display:block;font-size:11px;line-height:1.15}
+#tabs span{display:block;font-size:10px;line-height:1.15}
 
 .buscar{display:block;margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--g)}
 .buscar input{display:block;width:100%;margin-top:6px;border:0;border-radius:12px;padding:14px;background:#fff;box-shadow:0 2px 8px #0001;text-transform:none;letter-spacing:0;font-weight:600;font-size:1rem;color:#222}

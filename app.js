@@ -509,16 +509,10 @@ const GUIAS = [
         ]
       }
     ]
-  },
-  {
-    id: 'dosis',
-    group: 'consulta',
-    status: 'texto',
-    title: 'Dosis y productos',
-    latin: 'Ficha rápida',
-    summary: 'Qué producto y qué dosis según la plaga.',
-    source: 'protocolos-texto/dosis-productos.txt',
-    page: [
+  }
+];
+
+const DOSIS = [
       {t: 'p', text: 'Dosis de la ficha. Si la reseña marca otra cosa, manda la reseña.'},
       {t: 'h', text: 'Cucaracha americana'},
       {t: 'ul', items: [
@@ -573,47 +567,7 @@ const GUIAS = [
         'Trampas de feromona: americana y alemana.',
         'Líquido con disolvente, listo al uso: cucaracha americana.'
       ]}
-    ]
-  },
-  {
-    id: 'horario',
-    group: 'consulta',
-    status: 'texto',
-    title: 'Fuera de horario',
-    latin: 'Después de las 17:30',
-    summary: 'Cuando ya no queda nadie en oficina.',
-    source: 'protocolos-texto/fuera-horario.txt',
-    page: [
-      {t: 'p', text: 'A partir de las 17:30, si surge una duda de ruta, documentación, teléfono, tratamiento o producto:'},
-      {t: 'ol', items: [
-        'Audio o texto al grupo de fumigar de WhatsApp, para que puedan responder Oliver o Guillermo.',
-        'Si a los 15 minutos no hay respuesta, sigue con el criterio que creas más conveniente. Abajo van los casos habituales.'
-      ]},
-      {t: 'h', text: 'No quieren firmar y el encargado no está'},
-      {t: 'p', text: 'Se cobra la factura y se hace un parte diciendo que no han querido firmar el contrato. Se anota en la reseña. Si hay que cobrar y no cobran, no se hace el trabajo pactado, salvo que la reseña diga lo contrario.'},
-      {t: 'h', text: 'El local no está preparado'},
-      {t: 'p', text: 'Si hay personal de cocina o camareros, diles qué estorba para fumigar y que lo retiren, o que al día siguiente tendrán que limpiar. Fumiga como si los objetos ya estuvieran retirados.'},
-      {t: 'h', text: 'No hay nadie'},
-      {t: 'p', text: 'Llama y escribe por WhatsApp al contacto de la reseña. Espera 15 minutos. Si no contestan, avisa en el grupo de fumigar por si Oliver o Guillermo pueden localizarlos. Si nadie responde, sigue la ruta y déjalo escrito en el grupo.'},
-      {t: 'h', text: 'No estoy seguro del producto'},
-      {t: 'ul', items: [
-        'Inspecciona y saca la plaga real.',
-        'Sigue el primer paso del protocolo de esa plaga.',
-        'Si no hay respuesta, busca tratamientos anteriores en el calendario.',
-        'Si aun así no se resuelve, aplica el mejor tratamiento según tu criterio y anótalo.',
-        'Puedes mirar Dosis y productos en esta app.'
-      ]},
-      {t: 'h', text: 'No llevo el producto de siempre'},
-      {t: 'p', text: 'No debería pasar: el técnico sale con los biocidas y las herramientas. Si pasa, termina el trabajo con lo que tengas.'},
-      {t: 'h', text: 'No pueden abandonar la vivienda'},
-      {t: 'p', text: 'Tratamiento con productos sin plazo de seguridad. En el contrato, que si hace falta otro servicio tendrán que salir las horas necesarias.'},
-      {t: 'h', text: 'El coche se ha quedado tirado'},
-      {t: 'p', text: 'Lleva la documentación del seguro y el teléfono de la grúa. El coche va al Taller Híbrid, en Guargacho, calle Hipotenusa. Avisa en el grupo de fumigar.'},
-      {t: 'h', text: 'Hace falta dinero para millo u otro material'},
-      {t: 'p', text: 'Pide el dinero a quien esté en oficina, con la solicitud de dinero para material. Trae el cambio y la factura a nombre de Teneplagas SL, CIF B76725753.'}
-    ]
-  }
-];
+    ];
 
 const FOTO_PROD = 'fotos/productos/';
 const PRODUCTOS = [
@@ -698,6 +652,18 @@ const PRODUCTOS = [
           {label: 'Dosis', value: 'Consultar etiqueta'},
           {label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}
         ]
+      },
+      {
+        id: 'adylac-spray',
+        name: 'ADYLAC SPRAY',
+        file: 'adylac-spray.png',
+        alt: 'Aerosol Adylac, laca insecticida efecto barrera de Pba',
+        note: 'Pba (Prevención Bio Ambiental). Adylac Aerosol. Laca insecticida efecto barrera.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
       }
     ]
   },
@@ -715,6 +681,66 @@ const PRODUCTOS = [
           {label: 'Composición', value: 'Consultar etiqueta'},
           {label: 'Dosis', value: 'Consultar etiqueta'},
           {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
+      }
+    ]
+  },
+  {
+    id: 'avispas',
+    title: 'Avispas',
+    lead: 'Insecticida en spray contra avispas y nidos.',
+    items: [
+      {
+        id: 'insect-ibys-avispas',
+        name: 'INSECT IBYS AVISPAS',
+        file: 'insect-ibys-avispas.png',
+        alt: 'Spray Insect Ibys Avispas Evolution de Zapi Garden',
+        note: 'Zapi Garden. Insect Ibys Avispas Evolution. Insecticida en spray contra avispas, avispones y nidos de avispas, también avispa asiática. Difusor de largo alcance (4 metros).',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: '12 horas'}
+        ]
+      }
+    ]
+  },
+  {
+    id: 'roedores-productos',
+    title: 'Roedores',
+    lead: 'Portacebos y rodenticidas. Referencias de envase.',
+    items: [
+      {
+        id: 'portacebos-rata',
+        name: 'PORTACEBOS RATA',
+        file: 'portacebos-rata.png',
+        alt: 'Estación portacebos negra para ratas',
+        note: 'Estación portacebos para ratas. No es un biocida.',
+        fields: [
+          {label: 'Plazo de seguridad', value: 'Sin plazo de seguridad'}
+        ]
+      },
+      {
+        id: 'racumin-espuma',
+        name: 'RACUMIN ESPUMA',
+        file: 'racumin-espuma.png',
+        alt: 'Aerosol Racumin Foam de Envu, rodenticida de contacto',
+        note: 'Envu. Rodenticida de contacto contra ratas y ratones (Rattus norvegicus y Mus musculus). Espuma en aerosol, 500 ml. Uso profesional.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
+        ]
+      },
+      {
+        id: 'talon-block',
+        name: 'TALON BLOCK',
+        file: 'talon-block.png',
+        alt: 'Talon Block de Syngenta, cebo en bloque para ratas y ratones',
+        note: 'Syngenta. Rodenticida. Cebo en bloque para ratas y ratones en interior de edificios. Bloques con Bitrex.',
+        fields: [
+          {label: 'Composición', value: 'Consultar etiqueta'},
+          {label: 'Dosis', value: 'Consultar etiqueta'},
+          {label: 'Plazo de seguridad', value: 'Consultar etiqueta'}
         ]
       }
     ]
@@ -778,10 +804,25 @@ function renderPhotos(items, multi) {
 }
 
 function prodTitle(name) {
-  const needle = 'Stop rastreros';
-  const i = name.indexOf(needle);
-  if (i < 0) return esc(name);
-  return `${esc(name.slice(0, i))}<a data-go="#/productos/estopa-rastreros">${needle}</a>${esc(name.slice(i + needle.length))}`;
+  const links = [
+    ['Stop rastreros', '#/productos/estopa-rastreros'],
+    ['Adylac', '#/productos/adylac-spray']
+  ];
+  let rest = name;
+  let out = '';
+  while (rest) {
+    let best = null;
+    for (const [needle, href] of links) {
+      const i = rest.indexOf(needle);
+      if (i >= 0 && (!best || i < best.i || (i === best.i && needle.length > best.needle.length))) {
+        best = {i, needle, href};
+      }
+    }
+    if (!best) { out += esc(rest); break; }
+    out += esc(rest.slice(0, best.i)) + `<a data-go="${best.href}">${esc(best.needle)}</a>`;
+    rest = rest.slice(best.i + best.needle.length);
+  }
+  return out;
 }
 
 function renderProducts(list) {
@@ -892,7 +933,8 @@ function renderAyuda() {
 function route() {
   const parts = (location.hash.replace(/^#/, '') || '/').split('/').filter(Boolean);
   if (!parts.length) return {name: 'home'};
-  if (parts[0] === 'guias') return {name: 'guias'};
+  if (parts[0] === 'plagas' || parts[0] === 'guias') return {name: 'plagas'};
+  if (parts[0] === 'resenas') return {name: 'resenas'};
   if (parts[0] === 'productos') return {name: 'productos', anchor: parts[1] || ''};
   if (parts[0] === 'ayuda') return {name: 'ayuda'};
   if (parts[0] === 'info') return {name: 'info'};
@@ -909,39 +951,40 @@ function fileBanner() {
 }
 
 function renderHome() {
-  const plagas = GUIAS.filter(g => g.group === 'plaga');
+  const botones = [
+    ['#/plagas', '🐛', 'Plagas', 'Identificación y pasos del tratamiento'],
+    ['#/productos', '📦', 'Productos', 'Fichas, envases y dosis'],
+    ['#/ayuda', '❓', 'Ayuda', 'Preguntas del técnico y del cliente'],
+    ['#/resenas', '📝', 'Reseñas', 'Qué anotar y cómo duplicar la cita'],
+    ['#/info', 'ℹ️', 'Info', 'Cómo se usa e instalar la app']
+  ];
   return `${fileBanner()}
     <section class="hero">
       <img src="logo.png" alt="">
       <h1>TEAYUDA</h1>
       <p>Guías de campo para técnicos</p>
     </section>
-    <p class="kicker">Plagas</p>
-    ${plagas.map(card).join('')}
-    <p class="kicker">Material</p>
-    <button type="button" class="card" data-go="#/productos">
-      <div class="cardtop"><span class="pill on">Envases</span><span class="chev">›</span></div>
-      <h2>Productos</h2>
-      <p>Geles para cucarachas (Advion, Biogel, Defens, Victor Gel y Aquiles) y trampas de feromonas.</p>
-    </button>
-    <p class="kicker">Ayuda</p>
-    <button type="button" class="card" data-go="#/ayuda">
-      <div class="cardtop"><span class="pill on">Dudas</span><span class="chev">›</span></div>
-      <h2>Ayuda</h2>
-      <p>Parte, cobro, oficina y cucaracha alemana: identificación, tratamiento y seguimiento.</p>
-    </button>
-    <p class="note">Dosis y fuera de horario están en Guías. La cucaracha alemana es la guía con fotos.</p>`;
+    <nav class="homebtns" aria-label="Apartados">
+      ${botones.map(([href, ico, title, text]) =>
+        `<button type="button" class="homebtn" data-go="${href}"><span class="homeico" aria-hidden="true">${ico}</span><b>${title}</b><small>${text}</small></button>`
+      ).join('')}
+    </nav>`;
 }
 
-function renderGuias() {
+function renderPlagas() {
   const plagas = GUIAS.filter(g => g.group === 'plaga');
-  const otras = GUIAS.filter(g => g.group === 'consulta');
-  return `<h1>Guías</h1>
-    <p class="muted">Protocolos de vivienda y dos consultas rápidas.</p>
-    <h2>Plagas</h2>
-    ${plagas.map(card).join('')}
-    <h2>Consulta</h2>
-    ${otras.map(card).join('')}`;
+  return `<h1>Plagas</h1>
+    <p class="muted">Identificación, nombres y pasos del tratamiento.</p>
+    ${plagas.map(card).join('')}`;
+}
+
+function renderResenas() {
+  const g = byId('alemana');
+  const step = g.steps.find(s => s.blocks && s.blocks.some(b => b.t === 'h' && b.text === 'Qué anotar en la reseña'));
+  const i = step.blocks.findIndex(b => b.t === 'h' && b.text === 'Qué anotar en la reseña');
+  return `<h1>Reseñas</h1>
+    <p class="muted">Qué anotar en el calendario y cómo duplicar la cita. El mismo texto está en el cierre de la cucaracha alemana.</p>
+    ${renderBlocks(step.blocks.slice(i))}`;
 }
 
 function renderInfo() {
@@ -950,7 +993,7 @@ function renderInfo() {
     <div class="card">
       <h3>Cómo se usa en ruta</h3>
       <p>Abre la plaga, entra en el paso y sigue el texto. En alemana, las fotos van en el orden de la visita: identificar, presentarse, infestación, gel, trampas, cobro y pegatina del cuadro. Al final de ese paso están el vídeo de cómo duplicar la reseña y el ejemplo de cómo debe quedar en el calendario.</p>
-      <p>Oficina, de 9:00 a 17:00. A partir de las 17:30 usa Fuera de horario. Los geles y las trampas de feromonas están en Productos.</p>
+      <p>Oficina, de 9:00 a 17:00. A partir de las 17:30, las dudas están en Ayuda, categoría Fuera de horario. Las dosis están en Productos.</p>
     </div>
     <div class="card">
       <h3>De dónde sale</h3>
@@ -983,7 +1026,13 @@ function renderProductos() {
   }).join('');
   return `<h1>Productos</h1>
     <p class="muted">Referencias para reconocer el material en la furgoneta.</p>
-    ${blocks}`;
+    ${blocks}
+    <h2 id="dosis">Dosis</h2>
+    <div class="card">${renderBlocks(DOSIS)}</div>
+    <h2>Lo que figuraba en cada plaga</h2>
+    ${GUIAS.filter(g => g.products && g.products.length).map(g =>
+      `<h3>${esc(g.title)}</h3>${renderProducts(g.products)}`
+    ).join('')}`;
 }
 
 function renderDetail(g) {
@@ -1005,7 +1054,6 @@ function renderDetail(g) {
     <p>${esc(g.summary)}</p>
     <button type="button" class="go" data-go="#/plaga/${g.id}/1">Empezar por el paso 1</button>
     ${renderWarnings(g.warnings)}
-    ${renderProducts(g.products)}
     <h2>Pasos</h2>
     ${steps}
     <p class="note">Fuente: ${esc(g.source)}</p>`;
@@ -1051,11 +1099,16 @@ function render() {
   let showBack = false;
   let html = '';
 
-  if (r.name === 'guias') {
-    tab = 'guias';
-    subtitle = 'Guías de campo';
-    html = renderGuias();
-    document.title = 'Guías · TeAyuda';
+  if (r.name === 'plagas') {
+    tab = 'plagas';
+    subtitle = 'Plagas';
+    html = renderPlagas();
+    document.title = 'Plagas · TeAyuda';
+  } else if (r.name === 'resenas') {
+    tab = 'resenas';
+    subtitle = 'Reseñas';
+    html = renderResenas();
+    document.title = 'Reseñas · TeAyuda';
   } else if (r.name === 'info') {
     tab = 'info';
     subtitle = 'Información';
@@ -1073,7 +1126,7 @@ function render() {
     document.title = 'Ayuda · TeAyuda';
   } else if (r.name === 'plaga') {
     const g = byId(r.id);
-    tab = sessionStorage.getItem('ta-from') === 'guias' ? 'guias' : 'home';
+    tab = sessionStorage.getItem('ta-from') === 'plagas' ? 'plagas' : 'home';
     showBack = true;
     if (!g) {
       subtitle = 'Guía';
@@ -1184,7 +1237,7 @@ document.addEventListener('click', e => {
   const go = e.target.closest('[data-go]');
   if (go) {
     const r = route();
-    if (r.name === 'home' || r.name === 'guias') sessionStorage.setItem('ta-from', r.name === 'home' ? 'home' : 'guias');
+    if (r.name === 'home' || r.name === 'plagas') sessionStorage.setItem('ta-from', r.name === 'home' ? 'home' : 'plagas');
     location.hash = go.dataset.go;
     return;
   }
@@ -1199,14 +1252,14 @@ document.getElementById('tabs').addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
   const tab = b.dataset.tab;
-  sessionStorage.setItem('ta-from', tab === 'guias' ? 'guias' : 'home');
+  sessionStorage.setItem('ta-from', tab === 'plagas' ? 'plagas' : 'home');
   location.hash = tab === 'home' ? '#/' : '#/' + tab;
 });
 
 document.getElementById('back').addEventListener('click', () => {
   const r = route();
   if (r.name === 'plaga' && r.step > 0) location.hash = '#/plaga/' + r.id;
-  else if (sessionStorage.getItem('ta-from') === 'guias') location.hash = '#/guias';
+  else if (sessionStorage.getItem('ta-from') === 'plagas') location.hash = '#/plagas';
   else location.hash = '#/';
 });
 

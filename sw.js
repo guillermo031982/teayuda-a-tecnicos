@@ -1,9 +1,10 @@
-const C = 'ta-v5';
+const C = 'ta-v20';
 const F = [
   './',
   'index.html',
   'app.css',
   'app.js',
+  'ayuda.json',
   'updater.js',
   'manifest.json',
   'logo.png',
@@ -21,16 +22,24 @@ const F = [
   'fotos/cucaracha-alemana/07-pegatina-cuadro.png',
   'fotos/cucaracha-alemana/08-ejemplo-resena-calendario.png',
   'videos/ejemplo-duplicar-resena.mp4',
-  'fotos/productos/geles-cucarachas.png',
   'fotos/productos/advion-gel-cucarachas.png',
   'fotos/productos/biogel.png',
+  'fotos/productos/biogel-hormigas.png',
   'fotos/productos/defens-gel-cucarachas.png',
   'fotos/productos/victor-gel.png',
   'fotos/productos/aquiles-cucarachas.png',
-  'fotos/productos/trampas-feromonas-cucarachas.png',
   'fotos/productos/trap-a-roach-azul.png',
   'fotos/productos/trap-a-roach-negro.png',
-  'fotos/productos/trampa-teneplagas.png'
+  'fotos/productos/trampa-teneplagas.png',
+  'fotos/productos/ecorex-action-plus-ambiental.png',
+  'fotos/productos/nupilac-dc-green.png',
+  'fotos/productos/dobol-granulado.png',
+  'fotos/productos/estopa-rastreros.png',
+  'fotos/productos/adylac-spray.png',
+  'fotos/productos/insect-ibys-avispas.png',
+  'fotos/productos/portacebos-rata.png',
+  'fotos/productos/racumin-espuma.png',
+  'fotos/productos/talon-block.png'
 ];
 self.addEventListener('install', e => {
   self.skipWaiting();

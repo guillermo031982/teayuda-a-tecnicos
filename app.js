@@ -255,7 +255,7 @@ const GUIAS = [
     status: 'texto',
     title: 'Cucaracha americana',
     latin: 'Periplaneta americana',
-    summary: 'Fontanería, laca en tuberías, trampas, gel y fumigación si pueden salir.',
+    summary: 'Fontanería, laca en tuberías, trampas, gel y fumigación con Adylac en spray si pueden salir de la casa.',
     source: 'protocolos-texto/cucaracha-americana.txt',
     products: [
       {name: 'Nupilac DC Green', dose: 'Listo al uso', note: 'Tuberías y arquetas'},
@@ -263,7 +263,7 @@ const GUIAS = [
       {name: 'Massoside polvo', dose: 'Listo al uso', note: 'Tuberías o arquetas'},
       {name: 'Gel Max Force Prime', dose: 'Listo al uso', note: 'Interior, sitios calientes'},
       {name: 'Trampas Trap-A-Roach', dose: '3 a 5 hasta 100 m²', note: 'Feromonas'},
-      {name: 'Adylac o Stop rastreros', dose: 'Listo al uso', note: 'Fumigación si abandonan la vivienda'}
+      {name: 'Adylac o Stop rastreros', dose: 'Listo al uso', note: 'Fumigación con Adylac en spray si pueden salir de la casa'}
     ],
     warnings: [
       {title: 'La laca lleva disolvente', text: 'Nupilac puede dañar pintura y madera. No fumigues tuberías a ciegas sobre acabados.'},
@@ -334,7 +334,7 @@ const GUIAS = [
       },
       {
         short: 'Fumigar',
-        title: 'Fumigar si pueden abandonar la vivienda',
+        title: 'Fumigación con Adylac en spray si pueden salir de la casa',
         summary: 'Adylac o, si no hay, Stop rastreros.',
         blocks: [
           {t: 'p', text: 'Lo recomendable en este tratamiento es que el cliente salga. Si sale, fumiga toda la vivienda con Adylac Spray o, en última opción, Stop rastreros.'},

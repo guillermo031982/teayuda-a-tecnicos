@@ -1,4 +1,4 @@
-const C = 'ta-v25';
+const C = 'ta-v26';
 const F = [
   './',
   'index.html',

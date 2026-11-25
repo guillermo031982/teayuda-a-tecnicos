@@ -958,6 +958,7 @@ function route() {
   if (parts[0] === 'resenas') return {name: 'resenas'};
   if (parts[0] === 'productos') return {name: 'productos', anchor: parts[1] || ''};
   if (parts[0] === 'ayuda') return {name: 'ayuda'};
+  if (parts[0] === 'datos') return {name: 'datos'};
   if (parts[0] === 'info') return {name: 'info'};
   if (parts[0] === 'plaga' && parts[1]) {
     const step = parts[2] ? parseInt(parts[2], 10) : 0;
@@ -975,6 +976,7 @@ function renderHome() {
   const botones = [
     ['#/plagas', '🐛', 'Plagas', 'Identificación y pasos del tratamiento'],
     ['#/productos', '📦', 'Productos', 'Fichas, envases y dosis'],
+    ['#/datos', '🏦', 'Datos de empresa', 'Facturas y transferencia'],
     ['#/ayuda', '❓', 'Ayuda', 'Preguntas del técnico y del cliente'],
     ['#/resenas', '📝', 'Reseñas', 'Qué anotar y cómo duplicar la cita'],
     ['#/info', 'ℹ️', 'Info', 'Cómo se usa e instalar la app']
@@ -997,6 +999,65 @@ function renderPlagas() {
   return `<h1>Plagas</h1>
     <p class="muted">Identificación, nombres y pasos del tratamiento.</p>
     ${plagas.map(card).join('')}`;
+}
+
+function datosFactura() {
+  return 'TENEPLAGAS SL\nCIF: B76725753\nCALLE CAPELLANIA 11, YACO - GRANADILLA DE ABONA\n38677\nSANTA CRUZ DE TENERIFE';
+}
+
+function datosTransferencia(numero) {
+  const n = String(numero || '').trim();
+  return 'TENEPLAGAS SL\nBBVA ES7901825642840201593892\nConcepto: número de contrato o número de factura\nEjemplo: ' + (n || 'TF 123/27');
+}
+
+function waPhone(raw) {
+  let d = String(raw || '').replace(/\D/g, '');
+  if (d.startsWith('00')) d = d.slice(2);
+  if (!d) return '';
+  if (d.startsWith('34')) return d;
+  return '34' + d;
+}
+
+function waUrl(text, phone) {
+  const q = 'text=' + encodeURIComponent(text);
+  const p = waPhone(phone);
+  return p ? 'https://wa.me/' + p + '?' + q : 'https://wa.me/?' + q;
+}
+
+async function copiarTexto(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (e) {
+    const t = document.createElement('textarea');
+    t.value = text;
+    t.setAttribute('readonly', '');
+    t.style.position = 'fixed';
+    t.style.left = '-9999px';
+    document.body.appendChild(t);
+    t.select();
+    document.execCommand('copy');
+    t.remove();
+  }
+  if (window.toast) toast('Copiado');
+}
+
+function renderDatos() {
+  return `<h1>Datos de empresa</h1>
+    <h2>Facturas de compras</h2>
+    <p class="muted">Datos para pedir que nos facturen las compras.</p>
+    <pre class="datos" id="factura-txt">${esc(datosFactura())}</pre>
+    <button type="button" class="btn" id="copiar-factura">Copiar datos</button>
+    <h2>Transferencia de cliente</h2>
+    <p class="muted">Datos para que el cliente pague por transferencia.</p>
+    <label class="buscar">Número de contrato o factura
+      <input id="transfer-num" type="text" autocomplete="off" placeholder="Opcional. Sustituye al ejemplo">
+    </label>
+    <label class="buscar">Teléfono del cliente
+      <input id="transfer-tel" type="tel" inputmode="tel" autocomplete="off" placeholder="Opcional. Abre su chat">
+    </label>
+    <pre class="datos" id="transfer-txt">${esc(datosTransferencia(''))}</pre>
+    <button type="button" class="btn" id="copiar-transfer">Copiar</button>
+    <button type="button" class="wa" id="enviar-wa">Enviar por WhatsApp</button>`;
 }
 
 function renderResenas() {
@@ -1144,6 +1205,11 @@ function render() {
     subtitle = 'Reseñas';
     html = renderResenas();
     document.title = 'Reseñas · TeAyuda';
+  } else if (r.name === 'datos') {
+    tab = 'datos';
+    subtitle = 'Datos de empresa';
+    html = renderDatos();
+    document.title = 'Datos de empresa · TeAyuda';
   } else if (r.name === 'info') {
     tab = 'info';
     subtitle = 'Información';
@@ -1208,6 +1274,19 @@ function render() {
 }
 
 function bind(view) {
+  const factura = view.querySelector('#copiar-factura');
+  if (factura) {
+    const num = view.querySelector('#transfer-num');
+    const tel = view.querySelector('#transfer-tel');
+    const prev = view.querySelector('#transfer-txt');
+    const pintar = () => { prev.textContent = datosTransferencia(num.value); };
+    num.addEventListener('input', pintar);
+    factura.addEventListener('click', () => copiarTexto(datosFactura()));
+    view.querySelector('#copiar-transfer').addEventListener('click', () => copiarTexto(datosTransferencia(num.value)));
+    view.querySelector('#enviar-wa').addEventListener('click', () => {
+      location.href = waUrl(datosTransferencia(num.value), tel.value);
+    });
+  }
   const q = view.querySelector('#ayudaq');
   if (q) {
     const items = [...view.querySelectorAll('.faq')];

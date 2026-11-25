@@ -314,11 +314,11 @@ const GUIAS = [
       },
       {
         short: 'Tuberías',
-        title: 'Fumigar tuberías con laca',
+        title: 'Fumigar tuberías con laca o Ecorex',
         summary: 'Nupilac, con cuidado del disolvente.',
         blocks: [
           {t: 'p', text: 'Fumiga todas las tuberías de la vivienda con laca líquida. Lo habitual es Nupilac.'},
-          {t: 'callout', title: 'Cuidado', text: 'La laca lleva disolvente y puede dañar pinturas o maderas. No manchees acabados.'},
+          {t: 'callout', title: 'Cuidado', text: 'La laca lleva disolvente y puede dañar pinturas o maderas. No manches acabados.'},
           {t: 'photos', items: [
             {src: 'fotos/cucaracha-americana/07-fumigar-tuberia.webp', alt: 'Pulverizador con lanza aplicando en el desagüe del fregadero', cap: 'Pulverizador con lanza aplicando en el desagüe del fregadero'}
           ]}

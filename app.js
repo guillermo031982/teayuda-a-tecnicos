@@ -255,7 +255,7 @@ const GUIAS = [
     status: 'texto',
     title: 'Cucaracha americana',
     latin: 'Periplaneta americana',
-    summary: 'Fontanería, laca en tuberías, trampas, gel y fumigación con Adylac en spray si pueden salir de la casa.',
+    summary: 'Revisar conexiones de fontanería, laca en tuberías, trampas, gel y fumigación con Adylac en spray si pueden salir de la casa.',
     source: 'protocolos-texto/cucaracha-americana.txt',
     products: [
       {name: 'Nupilac DC Green', dose: 'Listo al uso', note: 'Tuberías y arquetas'},

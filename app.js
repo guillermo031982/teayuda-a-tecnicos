@@ -1345,6 +1345,7 @@ function render() {
     else b.removeAttribute('aria-current');
   });
   bind(view);
+  fitNav();
   const anchor = r.anchor && document.getElementById(r.anchor);
   if (anchor) anchor.scrollIntoView({block: 'start'});
   else window.scrollTo(0, 0);
@@ -1458,6 +1459,13 @@ document.addEventListener('click', e => {
     if (img) openLightbox(img.getAttribute('src'), img.alt);
   }
 });
+
+function fitNav() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  document.documentElement.style.setProperty('--nav-h', Math.ceil(nav.getBoundingClientRect().height) + 'px');
+}
+addEventListener('resize', fitNav);
 
 document.getElementById('tabs').addEventListener('click', e => {
   const b = e.target.closest('button');

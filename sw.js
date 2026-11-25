@@ -1,4 +1,4 @@
-const C = 'ta-v26';
+const C = 'ta-v27';
 const F = [
   './',
   'index.html',
@@ -14,6 +14,8 @@ const F = [
   'fotos/recomendaciones/recomendaciones-cucarachas.jpg',
   'fotos/recomendaciones/recomendaciones-hormigas.jpg',
   'fotos/cucaracha-americana/01-ciclo-vida.webp',
+  'fotos/cucaracha-americana/02-sellado-antes.webp',
+  'fotos/cucaracha-americana/03-sellado-despues.webp',
   'fotos/cucaracha-alemana/01-identificacion-blatella.png',
   'fotos/cucaracha-alemana/02-presentacion.png',
   'fotos/cucaracha-alemana/03-inspeccion.jpg',

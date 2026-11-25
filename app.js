@@ -297,7 +297,11 @@ const GUIAS = [
         summary: 'Huecos, tubos y grietas a tu alcance.',
         blocks: [
           {t: 'p', text: 'Revisa la fontanería de cocina, baños, solanas y patios interiores: tubos abiertos, tuberías mal selladas, grietas, hueco de la lavadora.'},
-          {t: 'p', text: 'Sella con silicona lo que esté a tu alcance, para que no vuelvan a salir por ahí.'}
+          {t: 'p', text: 'Sella con silicona lo que esté a tu alcance, para que no vuelvan a salir por ahí.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/02-sellado-antes.webp', alt: 'Hueco de tubería de desagüe sin sellar: posible entrada de cucarachas americanas', cap: 'Hueco de tubería de desagüe sin sellar: posible entrada de cucarachas americanas'},
+            {src: 'fotos/cucaracha-americana/03-sellado-despues.webp', alt: 'Cómo debe quedar: tubería sellada por el técnico de Teneplagas', cap: 'Cómo debe quedar: tubería sellada por el técnico de Teneplagas'}
+          ]}
         ]
       },
       {

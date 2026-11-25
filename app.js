@@ -252,7 +252,7 @@ const GUIAS = [
   {
     id: 'americana',
     group: 'plaga',
-    status: 'texto',
+    status: 'fotos',
     title: 'Cucaracha americana',
     latin: 'Periplaneta americana',
     summary: 'Revisar conexiones de fontanería, laca en tuberías, trampas, gel y fumigación con Adylac en spray si pueden salir de la casa.',
@@ -266,8 +266,7 @@ const GUIAS = [
       {name: 'Adylac o Stop rastreros', dose: 'Listo al uso', note: 'Fumigación con Adylac en spray si pueden salir de la casa'}
     ],
     warnings: [
-      {title: 'La laca lleva disolvente', text: 'Nupilac puede dañar pintura y madera. No fumigues tuberías a ciegas sobre acabados.'},
-      {title: 'Fotos de los pasos', text: 'La lámina de identificación ya está. Las fotos del paso a paso todavía no están en la app.'}
+      {title: 'La laca lleva disolvente', text: 'Nupilac puede dañar pintura y madera. No fumigues tuberías a ciegas sobre acabados.'}
     ],
     steps: [
       {
@@ -371,7 +370,10 @@ const GUIAS = [
         summary: 'Dos casos que se miran siempre.',
         blocks: [
           {t: 'callout', title: 'Terraza de picón, césped o jardín', text: 'Fumiga la zona con emulsión. Lo habitual: Ecorex, 75 ml por garrafa.'},
-          {t: 'callout', title: 'Arquetas o sumideros', text: 'Revisa frente y laterales. Si hay arqueta por donde puedan pasar, fumígala con Nupilac o, si no, con Ecorex.'}
+          {t: 'callout', title: 'Arquetas o sumideros', text: 'Revisa frente y laterales. Si hay arqueta por donde puedan pasar, fumígala con Nupilac o, si no, con Ecorex.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/12-terraza-arquetas.webp', alt: 'Tratamiento en terraza, jardín y arquetas', cap: 'Tratamiento en terraza, jardín y arquetas'}
+          ]}
         ]
       },
       {
@@ -1245,8 +1247,10 @@ function renderDetail(g) {
       ${steps}
       <p class="note">Fuente: ${esc(g.source)}</p>`;
   }
+  const marca = g.status === 'fotos' ? '<span class="pill on">Con fotos</span>' : '';
   return `${portada}
     <p class="kicker">${esc(g.latin)}</p>
+    ${marca}
     <h1>${esc(g.title)}</h1>
     <p>${esc(g.summary)}</p>
     ${empezar}

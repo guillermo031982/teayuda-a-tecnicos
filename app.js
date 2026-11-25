@@ -336,6 +336,11 @@ const GUIAS = [
             'Detrás de la nevera.',
             'Bajos de cocina, sacando el zócalo si se puede.',
             'Otro punto si la vivienda lo pide.'
+          ]},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/08-trampa-nevera.webp', alt: 'Trampa detrás de la nevera, junto al motor', cap: 'Trampa detrás de la nevera, junto al motor'},
+            {src: 'fotos/cucaracha-americana/09-trampa-fregadero.webp', alt: 'Trampa bajo el fregadero', cap: 'Trampa bajo el fregadero'},
+            {src: 'fotos/cucaracha-americana/10-trampa-lavadora.webp', alt: 'Trampa junto a la lavadora', cap: 'Trampa junto a la lavadora'}
           ]}
         ]
       },

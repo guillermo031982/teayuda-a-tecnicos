@@ -275,7 +275,10 @@ const GUIAS = [
         title: 'Hablar con el cliente',
         summary: 'Que te oriente de dónde puede venir.',
         blocks: [
-          {t: 'p', text: 'Habla con el cliente. Te dará pistas de por dónde entra o dónde se concentra la americana.'}
+          {t: 'p', text: 'Habla con el cliente. Te dará pistas de por dónde entra o dónde se concentra la americana.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/04-hablar-cliente.webp', alt: 'Técnico de Teneplagas hablando con el cliente en la puerta', cap: 'Técnico de Teneplagas hablando con el cliente en la puerta'}
+          ]}
         ]
       },
       {

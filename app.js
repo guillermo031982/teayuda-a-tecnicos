@@ -1026,6 +1026,21 @@ function waUrl(text, phone) {
   return p ? 'https://wa.me/' + p + '?' + q : 'https://wa.me/?' + q;
 }
 
+function esAndroid() {
+  return /Android/i.test(navigator.userAgent || '');
+}
+
+function abrirWhatsApp(text, phone) {
+  const web = waUrl(text, phone);
+  if (!esAndroid()) {
+    location.href = web;
+    return;
+  }
+  const p = waPhone(phone);
+  const query = (p ? 'phone=' + encodeURIComponent(p) + '&' : '') + 'text=' + encodeURIComponent(text);
+  location.href = 'intent://send?' + query + '#Intent;scheme=whatsapp;package=com.whatsapp.w4b;S.browser_fallback_url=' + encodeURIComponent(web) + ';end';
+}
+
 async function copiarTexto(text) {
   try {
     await navigator.clipboard.writeText(text);
@@ -1059,7 +1074,7 @@ function renderDatos() {
     </label>
     <pre class="datos" id="transfer-txt">${esc(datosTransferencia(''))}</pre>
     <button type="button" class="btn" id="copiar-transfer">Copiar</button>
-    <button type="button" class="wa" id="enviar-wa">Enviar por WhatsApp</button>`;
+    <button type="button" class="wa" id="enviar-wa">Enviar por WhatsApp Business</button>`;
 }
 
 const HOJAS = [
@@ -1084,9 +1099,7 @@ function hojaPublica(file) {
   return HOJA_PUBLIC + file;
 }
 
-async function compartirHoja(hoja, phone) {
-  const pub = hojaPublica(hoja.file);
-  const text = hoja.text + '\n' + pub;
+async function compartirImagen(hoja) {
   try {
     const blob = await (await fetch(hoja.file)).blob();
     const file = new File([blob], hoja.file.split('/').pop(), {type: blob.type || 'image/jpeg'});
@@ -1097,7 +1110,7 @@ async function compartirHoja(hoja, phone) {
   } catch (e) {
     if (e && e.name === 'AbortError') return;
   }
-  location.href = waUrl(text, phone);
+  if (window.toast) toast('Este navegador no comparte el archivo. Usa Enviar por WhatsApp Business.');
 }
 
 function renderRecomendaciones() {
@@ -1110,7 +1123,8 @@ function renderRecomendaciones() {
       <label class="buscar">Teléfono del cliente
         <input class="hoja-tel" type="tel" inputmode="tel" autocomplete="off" placeholder="Opcional. Abre su chat">
       </label>
-      <button type="button" class="wa hoja-wa">Enviar por WhatsApp</button>
+      <button type="button" class="wa hoja-wa">Enviar por WhatsApp Business</button>
+      <button type="button" class="wa-sec hoja-share">Compartir imagen</button>
       <a class="btn" href="${esc(h.file)}" download="${esc(h.file.split('/').pop())}">Descargar</a>
     </article>`).join('');
   return `<h1>Recomendaciones</h1>
@@ -1342,8 +1356,9 @@ function bind(view) {
     if (!hoja) return;
     card.querySelector('.hojathumb').addEventListener('click', () => openSheet(hoja.file, hoja.alt));
     card.querySelector('.hoja-wa').addEventListener('click', () => {
-      compartirHoja(hoja, card.querySelector('.hoja-tel').value);
+      abrirWhatsApp(hoja.text + '\n' + hojaPublica(hoja.file), card.querySelector('.hoja-tel').value);
     });
+    card.querySelector('.hoja-share').addEventListener('click', () => compartirImagen(hoja));
   });
   const factura = view.querySelector('#copiar-factura');
   if (factura) {
@@ -1355,7 +1370,7 @@ function bind(view) {
     factura.addEventListener('click', () => copiarTexto(datosFactura()));
     view.querySelector('#copiar-transfer').addEventListener('click', () => copiarTexto(datosTransferencia(num.value)));
     view.querySelector('#enviar-wa').addEventListener('click', () => {
-      location.href = waUrl(datosTransferencia(num.value), tel.value);
+      abrirWhatsApp(datosTransferencia(num.value), tel.value);
     });
   }
   const q = view.querySelector('#ayudaq');

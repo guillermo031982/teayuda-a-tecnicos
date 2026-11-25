@@ -38,6 +38,7 @@ li{margin:4px 0}
 .datos{white-space:pre-wrap;font:600 .95rem/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:0 0 12px;background:#fff;border-radius:12px;padding:14px;box-shadow:0 2px 8px #0001;color:#222}
 .wa{display:block;width:100%;margin-top:10px;background:#128C7E;color:#fff;border:0;border-radius:8px;padding:16px;font-weight:800;font-size:1.05rem;text-align:center}
 .wa:active{transform:scale(.995)}
+.wa-sec{display:block;width:100%;margin-top:8px;background:#fff;color:#128C7E;border:2px solid #128C7E;border-radius:8px;padding:12px;font-weight:700;text-align:center}
 
 .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 8px #0001;margin-bottom:12px}
 button.card{width:100%;text-align:left;border:0;color:inherit;display:block}

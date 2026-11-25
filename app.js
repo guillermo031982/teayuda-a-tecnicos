@@ -292,7 +292,8 @@ const GUIAS = [
             'Alta: toda la casa.'
           ]},
           {t: 'photos', items: [
-            {src: 'fotos/cucaracha-americana/06-inspeccion-grado.webp', alt: 'Técnico de Teneplagas inspeccionando con linterna y espejo bajo el fregadero del lavadero', cap: 'Técnico de Teneplagas inspeccionando con linterna y espejo bajo el fregadero del lavadero'}
+            {src: 'fotos/cucaracha-americana/06-inspeccion-grado.webp', alt: 'Técnico de Teneplagas inspeccionando con linterna y espejo bajo el fregadero del lavadero', cap: 'Técnico de Teneplagas inspeccionando con linterna y espejo bajo el fregadero del lavadero'},
+            {src: 'fotos/cucaracha-americana/14-excrementos-americana.webp', alt: 'Ejemplo de excrementos en suelo y pared de una infestación de americanas', cap: 'Ejemplo de excrementos en suelo y pared de una infestación de americanas'}
           ]}
         ]
       },

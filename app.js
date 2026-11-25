@@ -387,7 +387,10 @@ const GUIAS = [
             'Pegatina de garantía en el cuadro de la luz, con número de contrato y fecha.',
             'Tarjeta de Google.'
           ]},
-          {t: 'p', text: 'Duplica la reseña del calendario y escribe la tuya antes de seguir la ruta: tratamiento, trampas, mililitros, contrato cobrado, pegatina con número y fecha, tarjeta Google, y cualquier otra cosa hablada o vista.'}
+          {t: 'p', text: 'Duplica la reseña del calendario y escribe la tuya antes de seguir la ruta: tratamiento, trampas, mililitros, contrato cobrado, pegatina con número y fecha, tarjeta Google, y cualquier otra cosa hablada o vista.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/13-contrato-cobro-resena.webp', alt: 'Contrato, cobro y reseña: entregar contrato, tarjeta de reseña, pegatina y hoja de recomendaciones', cap: 'Contrato, cobro y reseña: entregar contrato, tarjeta de reseña, pegatina y hoja de recomendaciones'}
+          ]}
         ]
       }
     ]

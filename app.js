@@ -267,7 +267,7 @@ const GUIAS = [
     ],
     warnings: [
       {title: 'La laca lleva disolvente', text: 'Nupilac puede dañar pintura y madera. No fumigues tuberías a ciegas sobre acabados.'},
-      {title: 'Fotos próximamente', text: 'El paso a paso ya está. Las fotos de este protocolo todavía no están en la app.'}
+      {title: 'Fotos de los pasos', text: 'La lámina de identificación ya está. Las fotos del paso a paso todavía no están en la app.'}
     ],
     steps: [
       {
@@ -1201,7 +1201,13 @@ function renderDetail(g) {
   ).join('');
   const portada = g.id === 'alemana'
     ? renderPhotos([ph('01-identificacion-blatella.png', 'Cucaracha alemana: ninfas, adulto y ooteca', 'Ninfas, adulto y ooteca')])
-    : '';
+    : g.id === 'americana'
+      ? renderPhotos([{
+          src: 'fotos/cucaracha-americana/01-ciclo-vida.webp',
+          alt: 'Ciclo de vida de la cucaracha americana, Periplaneta americana: ooteca, eclosión, ninfas de los estadios 1 a 4, pre-adulto y adulto',
+          cap: 'Ooteca, eclosión, ninfas, pre-adulto y adulto'
+        }])
+      : '';
   const empezar = `<button type="button" class="go" data-go="#/plaga/${g.id}/1">Empezar por el paso 1</button>`;
   if (g.id === 'alemana') {
     return `<h2 class="intro">Introducción</h2>

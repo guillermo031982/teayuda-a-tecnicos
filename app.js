@@ -291,6 +291,9 @@ const GUIAS = [
             'Baja: solo en la cocina.',
             'Media: cocina, sala y baño.',
             'Alta: toda la casa.'
+          ]},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/06-inspeccion-grado.webp', alt: 'Técnico de Teneplagas inspeccionando con linterna y espejo bajo el fregadero del lavadero', cap: 'Técnico de Teneplagas inspeccionando con linterna y espejo bajo el fregadero del lavadero'}
           ]}
         ]
       },

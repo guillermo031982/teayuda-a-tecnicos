@@ -349,7 +349,10 @@ const GUIAS = [
         title: 'Aplicar gel en sitios calientes',
         summary: 'Toda la casa, donde se refugian.',
         blocks: [
-          {t: 'p', text: 'Gel en toda la casa, en los sitios más calientes: bisagras de cocina, debajo de la encimera, muebles, horno, marcos de puertas, nevera, baños, habitaciones, sala, comedor, muebles y cajones.'}
+          {t: 'p', text: 'Gel en toda la casa, en los sitios más calientes: bisagras de cocina, debajo de la encimera, muebles, horno, marcos de puertas, nevera, baños, habitaciones, sala, comedor, muebles y cajones.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/11-aplicar-gel.webp', alt: 'Aplicación de gel: lavadero, cocina, baño y cajones de habitación', cap: 'Aplicación de gel: lavadero, cocina, baño y cajones de habitación'}
+          ]}
         ]
       },
       {

@@ -303,8 +303,10 @@ const GUIAS = [
           {t: 'p', text: 'Sella con silicona lo que esté a tu alcance, para que no vuelvan a salir por ahí.'},
           {t: 'photos', items: [
             {src: 'fotos/cucaracha-americana/02-sellado-antes.webp', alt: 'Hueco de tubería de desagüe sin sellar: posible entrada de cucarachas americanas', cap: 'Hueco de tubería de desagüe sin sellar: posible entrada de cucarachas americanas'},
-            {src: 'fotos/cucaracha-americana/03-sellado-despues.webp', alt: 'Cómo debe quedar: tubería sellada por el técnico de Teneplagas', cap: 'Cómo debe quedar: tubería sellada por el técnico de Teneplagas'}
-          ]}
+            {src: 'fotos/cucaracha-americana/03-sellado-despues.webp', alt: 'Cómo debe quedar: tubería sellada por el técnico de Teneplagas', cap: 'Cómo debe quedar: tubería sellada por el técnico de Teneplagas'},
+            {src: 'fotos/cucaracha-americana/05-racor-sellado.webp', alt: 'Racor recomendado para la tubería de desagüe', cap: 'Racor recomendado para la tubería de desagüe'}
+          ]},
+          {t: 'p', text: 'Decirle al cliente que, en un futuro, instale un racor como este en la zona sellada.'}
         ]
       },
       {

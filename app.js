@@ -959,6 +959,7 @@ function route() {
   if (parts[0] === 'productos') return {name: 'productos', anchor: parts[1] || ''};
   if (parts[0] === 'ayuda') return {name: 'ayuda'};
   if (parts[0] === 'datos') return {name: 'datos'};
+  if (parts[0] === 'recomendaciones') return {name: 'recomendaciones'};
   if (parts[0] === 'info') return {name: 'info'};
   if (parts[0] === 'plaga' && parts[1]) {
     const step = parts[2] ? parseInt(parts[2], 10) : 0;
@@ -977,6 +978,7 @@ function renderHome() {
     ['#/plagas', '🐛', 'Plagas', 'Identificación y pasos del tratamiento'],
     ['#/productos', '📦', 'Productos', 'Fichas, envases y dosis'],
     ['#/datos', '🏦', 'Datos de empresa', 'Facturas y transferencia'],
+    ['#/recomendaciones', '📄', 'Recomendaciones', 'Hojas para enviar al cliente'],
     ['#/ayuda', '❓', 'Ayuda', 'Preguntas del técnico y del cliente'],
     ['#/resenas', '📝', 'Reseñas', 'Qué anotar y cómo duplicar la cita'],
     ['#/info', 'ℹ️', 'Info', 'Cómo se usa e instalar la app']
@@ -1058,6 +1060,62 @@ function renderDatos() {
     <pre class="datos" id="transfer-txt">${esc(datosTransferencia(''))}</pre>
     <button type="button" class="btn" id="copiar-transfer">Copiar</button>
     <button type="button" class="wa" id="enviar-wa">Enviar por WhatsApp</button>`;
+}
+
+const HOJAS = [
+  {
+    id: 'cucarachas',
+    title: 'Recomendaciones tras tratamiento de cucarachas',
+    file: 'fotos/recomendaciones/recomendaciones-cucarachas.jpg',
+    alt: 'Hoja de recomendaciones después del tratamiento de cucarachas',
+    text: 'Recomendaciones tras el tratamiento de cucarachas. Teneplagas.'
+  },
+  {
+    id: 'hormigas',
+    title: 'Recomendaciones tras tratamiento de hormigas',
+    file: 'fotos/recomendaciones/recomendaciones-hormigas.jpg',
+    alt: 'Hoja de recomendaciones después del tratamiento de hormigas',
+    text: 'Recomendaciones tras el tratamiento de hormigas. Teneplagas.'
+  }
+];
+const HOJA_PUBLIC = 'https://guillermo031982.github.io/teayuda-a-tecnicos/';
+
+function hojaPublica(file) {
+  return HOJA_PUBLIC + file;
+}
+
+async function compartirHoja(hoja, phone) {
+  const pub = hojaPublica(hoja.file);
+  const text = hoja.text + '\n' + pub;
+  try {
+    const blob = await (await fetch(hoja.file)).blob();
+    const file = new File([blob], hoja.file.split('/').pop(), {type: blob.type || 'image/jpeg'});
+    if (navigator.canShare && navigator.canShare({files: [file]})) {
+      await navigator.share({files: [file], title: hoja.title, text: hoja.text});
+      return;
+    }
+  } catch (e) {
+    if (e && e.name === 'AbortError') return;
+  }
+  location.href = waUrl(text, phone);
+}
+
+function renderRecomendaciones() {
+  const cards = HOJAS.map(h => `<article class="hoja" data-hoja="${esc(h.id)}">
+      <h2>${esc(h.title)}</h2>
+      <button type="button" class="hojathumb" data-src="${esc(h.file)}" data-alt="${esc(h.alt)}">
+        <img src="${esc(h.file)}" alt="${esc(h.alt)}">
+      </button>
+      <p class="note">Toca la hoja para verla a pantalla completa. Vuelve a tocarla para ampliar.</p>
+      <label class="buscar">Teléfono del cliente
+        <input class="hoja-tel" type="tel" inputmode="tel" autocomplete="off" placeholder="Opcional. Abre su chat">
+      </label>
+      <button type="button" class="wa hoja-wa">Enviar por WhatsApp</button>
+      <a class="btn" href="${esc(h.file)}" download="${esc(h.file.split('/').pop())}">Descargar</a>
+    </article>`).join('');
+  return `<h1>Recomendaciones</h1>
+    <p class="muted">Hojas para el cliente después del tratamiento.</p>
+    ${cards}`;
 }
 
 function renderResenas() {
@@ -1205,6 +1263,11 @@ function render() {
     subtitle = 'Reseñas';
     html = renderResenas();
     document.title = 'Reseñas · TeAyuda';
+  } else if (r.name === 'recomendaciones') {
+    tab = 'recomendaciones';
+    subtitle = 'Recomendaciones';
+    html = renderRecomendaciones();
+    document.title = 'Recomendaciones · TeAyuda';
   } else if (r.name === 'datos') {
     tab = 'datos';
     subtitle = 'Datos de empresa';
@@ -1274,6 +1337,14 @@ function render() {
 }
 
 function bind(view) {
+  view.querySelectorAll('.hoja').forEach(card => {
+    const hoja = HOJAS.find(h => h.id === card.dataset.hoja);
+    if (!hoja) return;
+    card.querySelector('.hojathumb').addEventListener('click', () => openSheet(hoja.file, hoja.alt));
+    card.querySelector('.hoja-wa').addEventListener('click', () => {
+      compartirHoja(hoja, card.querySelector('.hoja-tel').value);
+    });
+  });
   const factura = view.querySelector('#copiar-factura');
   if (factura) {
     const num = view.querySelector('#transfer-num');
@@ -1337,6 +1408,17 @@ function bind(view) {
       if (box && gradoBlocks) box.innerHTML = renderBlocks(gradoBlocks[degree] || gradoBlocks.baja);
     });
   });
+}
+
+function openSheet(src, alt) {
+  const d = document.createElement('div');
+  d.className = 'lightbox sheet';
+  d.innerHTML = `<button type="button" class="lbx" aria-label="Cerrar">✕</button><div class="sheetview"><img src="${esc(src)}" alt="${esc(alt)}"></div>`;
+  const img = d.querySelector('img');
+  img.addEventListener('click', ev => { ev.stopPropagation(); img.classList.toggle('zoom'); });
+  d.querySelector('.lbx').addEventListener('click', ev => { ev.stopPropagation(); d.remove(); });
+  d.addEventListener('click', ev => { if (ev.target === d || ev.target.classList.contains('sheetview')) d.remove(); });
+  document.body.appendChild(d);
 }
 
 function openLightbox(src, alt) {

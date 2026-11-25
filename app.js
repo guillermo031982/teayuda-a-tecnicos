@@ -362,7 +362,10 @@ const GUIAS = [
         blocks: [
           {t: 'p', text: 'Lo recomendable en este tratamiento es que el cliente salga. Si sale, fumiga toda la vivienda con Adylac Spray o, en última opción, Stop rastreros.'},
           {t: 'p', text: 'Así salen las que están escondidas. Huevos que eclosionen después quedan para el gel y las trampas.'},
-          {t: 'callout', title: 'Si no pueden salir', text: 'No fuerces una fumigación con plazo de seguridad. Déjalo escrito y usa el tratamiento que sí se pueda hacer con gente dentro.'}
+          {t: 'callout', title: 'Si no pueden salir', text: 'No fuerces una fumigación con plazo de seguridad. Déjalo escrito y usa el tratamiento que sí se pueda hacer con gente dentro.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/15-adylac-spray.webp', alt: 'Fumigación con Adylac en spray: cocina, electrodomésticos, lavadero y salón', cap: 'Fumigación con Adylac en spray: cocina, electrodomésticos, lavadero y salón'}
+          ]}
         ]
       },
       {

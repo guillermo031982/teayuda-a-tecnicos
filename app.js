@@ -445,6 +445,9 @@ const GUIAS = [
           {t: 'ul', items: [
             'Hormiga común: más habitual en exteriores o casas terreras.',
             'Hormiga faraón: más habitual en interiores o pisos.'
+          ]},
+          {t: 'photos', items: [
+            {src: 'fotos/hormigas/hablar-cliente.webp', alt: 'La clienta indica dónde ve las hormigas y el técnico toma nota', cap: 'La clienta indica dónde ve las hormigas y el técnico toma nota'}
           ]}
         ]
       },

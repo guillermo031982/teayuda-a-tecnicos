@@ -490,7 +490,28 @@ const GUIAS = [
             'Pegatina en el cuadro, con número de contrato y que es la primera aplicación.',
             'Tarjeta de Google.'
           ]},
-          {t: 'p', text: 'Reseña antes de seguir la ruta: tratamiento, mililitros, contrato cobrado, pegatina, tarjeta Google y lo que hayas visto o hablado.'}
+          {t: 'p', text: 'Reseña antes de seguir la ruta: tratamiento, mililitros, contrato cobrado, pegatina, tarjeta Google y lo que hayas visto o hablado.'},
+          {t: 'photos', items: [
+            {src: 'fotos/cucaracha-americana/13-contrato-cobro-resena.webp', alt: 'Contrato, cobro y reseña: entregar contrato, tarjeta de reseña, pegatina y hoja de recomendaciones', cap: 'Contrato, cobro y reseña: entregar contrato, tarjeta de reseña, pegatina y hoja de recomendaciones'}
+          ]},
+          {t: 'h', text: 'Qué anotar en la reseña'},
+          {t: 'ul', items: [
+            'Tratamiento realizado.',
+            'Número de trampas colocadas.',
+            'Mililitros de biocida usado.',
+            'Contrato cobrado.',
+            'Pegatina puesta.',
+            'Tarjeta Google entregada.',
+            'Otro: lo que hayas visto o hablado con el cliente.'
+          ]},
+          {t: 'photos', items: [ph('07-pegatina-cuadro.png', 'Pegatina de garantía de Teneplagas en el cuadro de la luz', 'Pegatina de garantía en el cuadro')]},
+          {t: 'h', text: 'Ejemplo de cómo duplicar una reseña'},
+          {t: 'p', text: 'Abre la cita de oficina, pulsa Duplicar, escribe el trabajo encima y guarda. La reseña original se queda igual.'},
+          {t: 'video', src: 'videos/ejemplo-duplicar-resena.mp4', label: 'Ejemplo de cómo duplicar una reseña en el calendario', cap: 'Duplicar la cita, escribir el detalle y guardar'},
+          {t: 'h', text: 'Así debe quedar la reseña en el calendario'},
+          {t: 'p', text: 'A la izquierda queda la cita como la dejó oficina. A la derecha, el duplicado del técnico: los mismos datos de la cita y, encima, el detalle de la intervención.'},
+          {t: 'photos', items: [ph('08-ejemplo-resena-calendario.png', 'Ejemplo del calendario: reseña de oficina a la izquierda y duplicado del técnico a la derecha', 'Oficina y duplicado del técnico')]},
+          {t: 'note', text: 'Toca la imagen para verla grande.'}
         ]
       }
     ]

@@ -1282,12 +1282,23 @@ function renderDetail(g) {
     <p class="kicker">${esc(g.latin)}</p>
     ${marca}
     <h1>${esc(g.title)}</h1>
-    ${g.id === 'hormigas' ? `<p>La hormiga común —a menudo asociada a la hormiga negra de jardín (Lasius niger)— es un insecto pequeño y social que vive en colonias organizadas en el suelo, bajo piedras, en jardines o en el interior de viviendas. Las obreras suelen medir entre 3 y 5 mm, tienen un color marrón muy oscuro o negro y se mueven en fila siguiendo rastros químicos.</p>
+    ${g.id === 'hormigas' ? `<h2>Hormiga común</h2>
+    <p>La hormiga común —a menudo asociada a la hormiga negra de jardín (Lasius niger)— es un insecto pequeño y social que vive en colonias organizadas en el suelo, bajo piedras, en jardines o en el interior de viviendas. Las obreras suelen medir entre 3 y 5 mm, tienen un color marrón muy oscuro o negro y se mueven en fila siguiendo rastros químicos.</p>
     <ul>
       <li><b>Organización:</b> Forman colonias con reina (encargada de poner huevos y mucho más longeva), obreras (que buscan comida, cuidan crías y mantienen el nido) y machos.</li>
       <li><b>Alimentación:</b> Son omnívoras; buscan azúcares, néctar, melaza, restos de comida y pequeños insectos.</li>
       <li><b>Comunicación:</b> Usan antenas articuladas y feromonas para orientarse, avisar de alimento o defender la colonia.</li>
       <li><b>Presencia en casa:</b> Suelen entrar buscando agua y alimento, sobre todo en épocas cálidas o de mayor actividad.</li>
+    </ul>
+    <h2>Hormiga faraón</h2>
+    ${renderPhotos([{src: 'fotos/hormigas/faraon.webp', alt: 'Hormiga faraón (Monomorium pharaonis)', cap: 'Hormiga faraón (Monomorium pharaonis)'}])}
+    <p>La hormiga faraón (Monomorium pharaonis) es una hormiga diminuta (unos 1,5 a 2 mm) de color amarillo pálido, ámbar o marrón claro, con la punta del abdomen algo más oscura. Es una plaga de interior muy extendida y complicada de eliminar.</p>
+    <ul>
+      <li><b>Aspecto:</b> Obreras pequeñas y del mismo tamaño, de tono amarillento o rojizo claro y abdomen oscurecido al final.</li>
+      <li><b>Dónde vive:</b> Prefiere lugares cálidos y húmedos dentro de edificios (cocinas, baños, enchufes, tuberías, huecos de pared o zócalos), y en España figura como especie exótica invasora (presente también en Canarias).</li>
+      <li><b>Alimentación:</b> Come de todo: dulces, grasas, proteínas, restos de comida o pequeños insectos.</li>
+      <li><b>Por qué cuesta tanto quitarla:</b> Sus colonias suelen tener muchas reinas y se dividen en varios focos si se las molesta o se les echa insecticida en aerosol.</li>
+      <li><b>Riesgo:</b> No suele picar, pero puede transportar bacterias y contaminar alimentos o superficies, algo especialmente delicado en hospitales y zonas de comida.</li>
     </ul>` : ''}
     <p>${esc(g.summary)}</p>
     ${empezar}

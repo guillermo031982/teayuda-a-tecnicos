@@ -456,7 +456,11 @@ const GUIAS = [
         title: 'Inspeccionar y buscar el nido',
         summary: 'Sigue el rastro si hace falta.',
         blocks: [
-          {t: 'p', text: 'Inspecciona para localizar el nido o los nidos. Si no se ve, una dosis pequeña de biocida hace que coman y delaten el camino hacia el nido.'}
+          {t: 'p', text: 'Inspecciona para localizar el nido o los nidos. Si no se ve, una dosis pequeña de biocida hace que coman y delaten el camino hacia el nido.'},
+          {t: 'photos', items: [
+            {src: 'fotos/hormigas/inspeccion-nido.webp', alt: 'Seguir el rastro: encimera, zócalos, suelo y hasta la grieta donde está el nido', cap: 'Seguir el rastro: encimera, zócalos, suelo y hasta la grieta donde está el nido'}
+          ]},
+          {t: 'p', text: 'Truco: empieza aplicando un poco de gel en el rastro y obsérvalas comer. Sigue a las que se lo llevan: automáticamente lo llevarán al nido, y así lo localizas.'}
         ]
       },
       {

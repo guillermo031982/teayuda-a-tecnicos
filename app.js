@@ -473,7 +473,12 @@ const GUIAS = [
             'Faraón: en general Defens gel hormigas.',
             'Común: en general Optimus.',
             'Advion vale para las dos.'
-          ]}
+          ]},
+          {t: 'photos', items: [
+            {src: 'fotos/hormigas/gel-aplicador.webp', alt: 'Aplicar gotas pequeñas de gel en esquinas y junto al zócalo, en el rastro', cap: 'Aplicar gotas pequeñas de gel en esquinas y junto al zócalo, en el rastro'},
+            {src: 'fotos/hormigas/gel-comiendo.webp', alt: 'Las hormigas comen el gel y lo llevan al nido', cap: 'Las hormigas comen el gel y lo llevan al nido'}
+          ]},
+          {t: 'video', src: 'fotos/hormigas/gel-video.mp4', label: 'Vídeo: aplicación de gel en el rastro de hormigas', cap: 'Vídeo: aplicación de gel en el rastro de hormigas'}
         ]
       },
       {

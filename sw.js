@@ -1,4 +1,4 @@
-const C = 'ta-v43';
+const C = 'ta-v44';
 const F = [
   './',
   'index.html',
@@ -15,6 +15,7 @@ const F = [
   'fotos/recomendaciones/recomendaciones-hormigas.jpg',
   'fotos/hormigas/portada.webp',
   'fotos/hormigas/faraon.webp',
+  'fotos/hormigas/hablar-cliente.webp',
   'fotos/cucaracha-americana/01-ciclo-vida.webp',
   'fotos/cucaracha-americana/02-sellado-antes.webp',
   'fotos/cucaracha-americana/03-sellado-despues.webp',

@@ -420,7 +420,7 @@ const GUIAS = [
   {
     id: 'hormigas',
     group: 'plaga',
-    status: 'texto',
+    status: 'fotos',
     title: 'Hormigas',
     latin: 'Común y faraón',
     summary: 'Localizar el rastro, gel en interior y Ecorex si hay jardín.',
@@ -487,7 +487,13 @@ const GUIAS = [
         summary: 'Ecorex cuando el problema viene de fuera.',
         blocks: [
           {t: 'p', text: 'Solo si hay jardín y el problema es hormiga común: Ecorex, 75 ml por garrafa, en jardines, plantas y perímetro. Ecorex no afecta a las plantas.'},
-          {t: 'note', text: 'En la ficha de dosis, el perímetro de hormigas figura a 50 ml por garrafa. Si la reseña marca una dosis, manda la reseña.'}
+          {t: 'note', text: 'En la ficha de dosis, el perímetro de hormigas figura a 50 ml por garrafa. Si la reseña marca una dosis, manda la reseña.'},
+          {t: 'ul', items: [
+            'Cuando el problema viene del exterior, hacemos también un barrido de hormigas en el perímetro o en los jardines para bajar la población.'
+          ]},
+          {t: 'photos', items: [
+            {src: 'fotos/hormigas/jardin-barrido.webp', alt: 'Barrido del perímetro y del jardín con mochila pulverizadora', cap: 'Barrido del perímetro y del jardín con mochila pulverizadora'}
+          ]}
         ]
       },
       {
@@ -1234,7 +1240,7 @@ function renderInfo() {
     <div class="card">
       <h3>De dónde sale</h3>
       <p>Los protocolos viven en <b>protocolos-texto/</b>. Esta app los presenta para consultarlos en el móvil. Cucaracha alemana validada en octubre de 2026.</p>
-      <p class="note">Americana, hormigas y roedores están en texto. Las fotos de esas guías van después.</p>
+      <p class="note">Americana y roedores están en texto. Las fotos de esas guías van después.</p>
     </div>
     <div class="card">
       <h3>Instalar en el móvil</h3>

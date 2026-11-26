@@ -1,4 +1,4 @@
-const C = 'ta-v40';
+const C = 'ta-v41';
 const F = [
   './',
   'index.html',
@@ -13,6 +13,7 @@ const F = [
   'apple-touch-icon.png',
   'fotos/recomendaciones/recomendaciones-cucarachas.jpg',
   'fotos/recomendaciones/recomendaciones-hormigas.jpg',
+  'fotos/hormigas/portada.webp',
   'fotos/cucaracha-americana/01-ciclo-vida.webp',
   'fotos/cucaracha-americana/02-sellado-antes.webp',
   'fotos/cucaracha-americana/03-sellado-despues.webp',

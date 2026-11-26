@@ -433,8 +433,7 @@ const GUIAS = [
       {name: 'Ecorex Action Plus', dose: '75 ml / garrafa', note: 'Jardín o perímetro. 50 ml si la dosis lo indica así'}
     ],
     warnings: [
-      {title: 'Máximo 3 visitas al año', text: '1 inicial y 2 refuerzos. El cliente pide el refuerzo a la empresa. No está incluido un cuarto servicio.'},
-      {title: 'Fotos próximamente', text: 'Guía con el texto del protocolo. Sin fotos todavía.'}
+      {title: 'Máximo 3 visitas al año', text: '1 inicial y 2 refuerzos. El cliente pide el refuerzo a la empresa. No está incluido un cuarto servicio.'}
     ],
     steps: [
       {
@@ -1257,7 +1256,13 @@ function renderDetail(g) {
           alt: 'Ciclo de vida de la cucaracha americana, Periplaneta americana: ooteca, eclosión, ninfas de los estadios 1 a 4, pre-adulto y adulto',
           cap: 'Ooteca, eclosión, ninfas, pre-adulto y adulto'
         }])
-      : '';
+      : g.id === 'hormigas'
+        ? renderPhotos([{
+            src: 'fotos/hormigas/portada.webp',
+            alt: 'Hormigas siguiendo un rastro sobre una tubería',
+            cap: 'Hormigas siguiendo un rastro sobre una tubería'
+          }])
+        : '';
   const empezar = `<button type="button" class="go" data-go="#/plaga/${g.id}/1">Empezar por el paso 1</button>`;
   if (g.id === 'alemana') {
     return `<h2 class="intro">Introducción</h2>
@@ -1277,6 +1282,13 @@ function renderDetail(g) {
     <p class="kicker">${esc(g.latin)}</p>
     ${marca}
     <h1>${esc(g.title)}</h1>
+    ${g.id === 'hormigas' ? `<p>La hormiga común —a menudo asociada a la hormiga negra de jardín (Lasius niger)— es un insecto pequeño y social que vive en colonias organizadas en el suelo, bajo piedras, en jardines o en el interior de viviendas. Las obreras suelen medir entre 3 y 5 mm, tienen un color marrón muy oscuro o negro y se mueven en fila siguiendo rastros químicos.</p>
+    <ul>
+      <li><b>Organización:</b> Forman colonias con reina (encargada de poner huevos y mucho más longeva), obreras (que buscan comida, cuidan crías y mantienen el nido) y machos.</li>
+      <li><b>Alimentación:</b> Son omnívoras; buscan azúcares, néctar, melaza, restos de comida y pequeños insectos.</li>
+      <li><b>Comunicación:</b> Usan antenas articuladas y feromonas para orientarse, avisar de alimento o defender la colonia.</li>
+      <li><b>Presencia en casa:</b> Suelen entrar buscando agua y alimento, sobre todo en épocas cálidas o de mayor actividad.</li>
+    </ul>` : ''}
     <p>${esc(g.summary)}</p>
     ${empezar}
     ${renderWarnings(g.warnings)}
